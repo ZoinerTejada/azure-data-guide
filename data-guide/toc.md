@@ -3,7 +3,7 @@
 # [Common Architectures]()
 ## [Transactional Data]()
 ### [Relational data stores]()
-## [Non-Relational and No-SQL data stores]()
+### [Non-Relational and No-SQL data stores]()
 
 ## [Data Warehousing]()
 ### [Online Analytical Processing]()
