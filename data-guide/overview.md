@@ -9,4 +9,4 @@ o	Introduce polyglot persistence
 -	Maturity model, lens to put in perspective for reader?
 -	The following diagram used to structure the rest of the guide
 
-![Overview Data Pipeline](./overview/images/overall-data-pipeline.png)
+![Overview Data Pipeline](./images/overall-data-pipeline.png)

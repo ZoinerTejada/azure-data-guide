@@ -30,7 +30,7 @@ TBD
 TBD
 
 ## <a name="wheretogo"></a>Where to go from here
-Related Common Sub-Patterns
+Related Common Architectures
 - Non-relational and No-SQL data stores
 
 Related Solution Patterns
@@ -47,7 +47,7 @@ Related Solution Patterns
     - Troubleshooting & Diagnostics
 
 Related Technology Choices
-- Data Serving Storage
+- [Data Serving Storage](../technology-choices/data-serving-storage.md)
     - SQL Data Warehouse
     - SQL Database
     - HBase on HDInsight
