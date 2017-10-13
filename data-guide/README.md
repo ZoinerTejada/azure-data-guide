@@ -3,8 +3,8 @@
 # [Overview](./overview.md)
 
 # [Common Architectures]()
-## [Transactional Data](./transactional-data.md)
-### [Relational data stores](./relational-data-stores.md)
+## [Transactional Data](./common-architectures/transactional-data.md)
+### [Relational data stores](./common-architectures/relational-data-stores.md)
 ### [Non-Relational and No-SQL data stores]()
 
 ## [Data Warehousing]()
@@ -28,9 +28,9 @@
 
 
 # [Solution Patterns]()
-## [Handling Unstructured Data]()
-### [Processing CSV and JSON files]()
-### [Processing Free-form Text]()
+## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md)
+### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md)
+### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
 
 ## [Time Series Solutions]()
 ### [Internet of Things]()
@@ -106,13 +106,13 @@
 ### [Azure Functions]()
 ### [Event Processor Host]()
 
-## [Data Serving Storage]() 
-### [SQL Data Warehouse]()
-### [SQL Database]()
-### [HBase/Phoenix on HDInsight]()
-### [Hive LLAP on HDInsight]()
-### [Azure Analysis Services]()
-### [Cosmos DB]()
+## [Data Serving Storage](./technology-choices/data-serving-storage.md) 
+SQL Data Warehouse
+SQL Database
+HBase/Phoenix on HDInsight
+Hive LLAP on HDInsight
+Azure Analysis Services
+Cosmos DB
 
 ## [Machine Learning Model Training]()
 ### [Azure Machine Learning (Studio)]()
