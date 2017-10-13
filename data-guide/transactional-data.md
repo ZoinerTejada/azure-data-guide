@@ -6,13 +6,13 @@
 
 [When to use this architecture](#whentouse)
 
-[Benefits]()
+[Benefits](#benefits)
 
-[Challenges]()
+[Challenges](#challenges)
 
-[Best practices]()
+[Best practices](#bestpractices)
 
-[Where to go from here]()
+[Where to go from here](#wheretogo)
 
 The term transactional data refers to data describing an event, always having a time dimension, some numerical values and references other data. Transactional data is typically managed with create update delete pattern. It is important to note that transactional data usually allows modification. 
 
@@ -21,16 +21,16 @@ Examples of typical transactions include: e-commerce purchases, activity records
 ## <a name="whentouse"></a>When to use this architecture
 TBD
 
-## Benefits
+## <a name="benefits"></a>Benefits
 TBD
 
-## Challenges
+## <a name="challenges"></a>Challenges
 TBD
 
-## Best practices
+## <a name="bestpractices"></a>Best practices
 TBD
 
-## Where to go from here
+## <a name="wheretogo"></a>Where to go from here
 Related Common Patterns
 - Relational data stores
 - Non-relational and No-SQL data stores
