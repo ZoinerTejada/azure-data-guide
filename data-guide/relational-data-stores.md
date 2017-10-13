@@ -1,4 +1,4 @@
-# Transactional Data 
+# Relational data stores
 
 **In this article**
 
@@ -15,9 +15,7 @@
 [Where to go from here](#wheretogo)
 
 <a name="about"></a>
-The term transactional data refers to data describing an event, always having a time dimension, some numerical values and references to other data. Transactional data is typically managed with a create, update, delete pattern. It is important to note that transactional data usually allows modification. 
-
-Examples of typical transactions include: e-commerce purchases, activity records, travel records, etc. 
+ABOUT TBD
 
 ## <a name="whentouse"></a>When to use this architecture
 TBD
@@ -33,7 +31,6 @@ TBD
 
 ## <a name="wheretogo"></a>Where to go from here
 Related Common Sub-Patterns
-- [Relational data stores](./relational-data-stores.md)
 - Non-relational and No-SQL data stores
 
 Related Solution Patterns
