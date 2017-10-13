@@ -1,12 +1,11 @@
 # Azure Data Architecture Guide
 
-
 # [Overview](./overview.md)
 
 # [Common Architectures]()
-## [Transactional Data]()
-### [Relational data stores]()
-## [Non-Relational and No-SQL data stores]()
+## [Transactional Data](./transactional-data.md)
+### [Relational data stores](./relational-data-stores.md)
+### [Non-Relational and No-SQL data stores]()
 
 ## [Data Warehousing]()
 ### [Online Analytical Processing]()
