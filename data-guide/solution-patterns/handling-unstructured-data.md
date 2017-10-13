@@ -37,7 +37,8 @@ Related Common Architectures
 - Big Data
 
 Related Solution Patterns
--  
+- [Processing CSV and JSON files](./processing-csv-and-json-files.md)
+- [Processing free-form text](./processing-free-form-text.md)
 
 Related Technology Choices
 - [Data Serving Storage](../technology-choices/data-serving-storage.md)
