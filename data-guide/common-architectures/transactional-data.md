@@ -15,12 +15,37 @@
 [Where to go from here](#wheretogo)
 
 <a name="about"></a>
-The term transactional data refers to data describing an event, always having a time dimension, some numerical values and references to other data. Transactional data is typically managed with a create, update, delete pattern. It is important to note that transactional data usually allows modification. 
+The term transactional data refers to data describing an event, always having a time dimension, some numerical values and references to other data. Transactional data has very strong consistency requirements and the transactional data stores that support it leverage transactions using pessimistic locking to ensure all data are 100% consistent for all users and processes. 
 
-Examples of typical transactions include: e-commerce purchases, activity records, travel records, etc. 
+Examples of typical transactions include: 
+- e-commerce order management
+- inventory
+- accounting
+
+
+
 
 ## <a name="whentouse"></a>When to use this architecture
-TBD
+
+Transactional data tends to have the following requirements:
+
+### Data Type Requirements
+| Requirement | Description |
+| --- | --- |
+| Normalization: | Highly normalized |
+| Schema: | Schema on write, strongly enforced|
+| Consistency: | Strong consistency, ACID guarantees |
+| Integrity: | High integrity |
+| Uses Transactions: | Yes |
+| Locking Strategy: | Pessimistic |
+| Updateable: | Yes |
+| Appendable: | Yes |
+| Workload: | Heavy writes, moderate reads |
+| Indexing: | Primary and secondary indexes |
+| Datum size: | Small to medium sized |
+| Data shape: | Tabular |
+| Query flexibility: | Highly flexible |
+| Scale: | Small (MB's) to Large (a few TB's) |
 
 ## <a name="benefits"></a>Benefits
 TBD

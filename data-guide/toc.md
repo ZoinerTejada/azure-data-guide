@@ -1,13 +1,24 @@
 # [Overview](./overview.md)
 
-# [Common Architectures]()
-## [Transactional Data](./common-architectures/transactional-data.md)
-### [Relational data stores](./common-architectures/relational-data-stores.md)
-### [Non-Relational and No-SQL data stores]()
+# [Common Data Architectures](./common-architectures/overview.md)
 
-## [Data Warehousing]()
-### [Online Analytical Processing]()
-### [Massively Parallel Processing]()
+I need to work with ...
+## [Relational data](./common-architectures/relational-data-stores.md)
+### [Transactional Data](./common-architectures/transactional-data.md)
+- Online Transaction Processing
+### [Multi-dimensional data]()
+- Data Warehousing
+- Online Analytical Processing
+- Massively Parallel Processing
+
+## [Non-Relational & No-SQL Data]() 
+### [Document Data]()
+### [Columnar Data]()
+### [Key/value Data]()
+### [Graph Data]()
+### [Time Series Data]()
+### [Object Data]()
+
 
 ## [Big Data]()
 ### [Data Lake]()
@@ -24,7 +35,7 @@
 ### [Deep Learning]()
 ### [Artificial Intelligence]()
 
-
+What solution patterns can you use to handle that data?
 # [Solution Patterns]()
 ## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md)
 ### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md)
@@ -59,6 +70,7 @@
 ### [Alerting]()
 ### [Troubleshooting & Diagnostics]()
 
+What technologies should you use for your data needs?
 # [Technology Choices]()
 ## [Pipeline Orchestration, Control Flow and Data Movement]()
 ### [Azure Data Factory]()
