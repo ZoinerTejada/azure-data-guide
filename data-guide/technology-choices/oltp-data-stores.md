@@ -1,6 +1,15 @@
 # Online Transaction Processing (OLTP) data stores
 
-## What are your options when choosing an OLTP data store?
+[About]()  
+[What are your options when choosing an OLTP data store?](#options)  
+[How do you choose?](#howtochoose)  
+[Key Selection Criteria](#criteria)  
+[Capability Matrix](#matrix)   
+[Where to go from here](#wheretogo)  
+
+<a name="about"></a>
+
+## <a name="options"></a> What are your options when choosing an OLTP data store?
 In Azure, all of the following data stores will meet the core requirements for OLTP and for the management of transaction data:
 - Azure SQL Database
 - Azure SQL Database Managed Instance
@@ -8,10 +17,10 @@ In Azure, all of the following data stores will meet the core requirements for O
 - Azure Database for MySQL 
 - Azure Database for PostgreSQL
 
-## How do you choose?
+## <a name="howtochoose"></a> How do you choose?
 Each data store brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements. 
 
-### Key Selection Criteria
+## <a name="criteria"></a> Key Selection Criteria
 
 The following table summarize the key differences in capabilities between each. For OLTP scenarios, being choosing the appropriate database for your needs by answering these questions:
 - Do you want a managed service or do you prefer to manage the VM's running the database server?
@@ -29,7 +38,7 @@ The following table summarize the key differences in capabilities between each. 
 - Does your database need to be highly available across geo-graphic regions?
     - If yes, consider the options that provide support for geo-graphic replication. Also consider the options that support the automatic failover from the primary to the secondary.
 
-### Capability Matrix
+## <a name="matrix"></a> Capability Matrix
 
 | | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
 | --- | --- | --- | --- | --- | --- | 
@@ -61,4 +70,19 @@ The following table summarize the key differences in capabilities between each. 
 | Active Directory authentication (integrated authentication) | Yes | Yes | Yes | No | No |
 | Programmability | T-SQL, .NET | T-SQL, .NET, R, Python | T-SQL, .NET, R, Python | SQL | SQL |
 
+## <a name="wheretogo"></a>Where to go from here
+Read Next:
+Data Warehouse Solution Pattern
 
+See Also:
+
+Related Solution Patterns
+- Working with transactional data
+    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
+    - Online Analytical Processing (OLAP)
+    - Data Warehousing
+
+Related Technology Choices
+- Transactional data stores
+    - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
+    - [Data Warehouses](../technology-choices/data-warehouses.md)
