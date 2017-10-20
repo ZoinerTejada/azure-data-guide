@@ -2,34 +2,24 @@
 
 **In this article**
 
-[About]()
-
-[When to use this data architecture](#whentouse)
-
-[Benefits](#benefits)
-
-[Challenges](#challenges)
-
-[Best practices](#bestpractices)
-
-[Where to go from here](#wheretogo)
+[About]()  
+[Typical Requirements](#requirements)  
+[Best practices](#bestpractices)  
+[Where to go from here](#wheretogo)  
 
 <a name="about"></a>
-The term transactional data refers to data describing an event, always having a time dimension, some numerical values and references to other data. Transactional data has very strong consistency requirements and the transactional data stores that support it leverage transactions using pessimistic locking to ensure all data are 100% consistent for all users and processes. 
+Transactional data refers to data describing an event, always having a time dimension, some numerical values and references to other data. Transactional data is information an organization collects that tracks the interactions related to what the organization does. These interactions are typically business transactions such as payments received from customers or payments made to suppliers, products moving thru inventory, orders taken or services delivered.
 
-Examples of typical transactions include: 
-- e-commerce order management
-- inventory
-- accounting
+ Transactional data has very strong consistency requirements and the transactional data stores that support it leverage transactions using pessimistic locking to ensure all data are 100% consistent for all users and processes. 
 
+The most common deployment architecture utilizing transactional data is as the data store tier in a 3-tier architecture having a presentation tier, business logic tier and data store tier, or an [N-tier](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) architecture which may have multiple middle-tiers handling business logic. 
 
+![Example of a 3-tier application](./images/three-tier-application.png)
 
-
-## <a name="whentouse"></a>When to use this architecture
-
+<a name="requirements"></a>
+### Typical Requirements
 Transactional data tends to have the following requirements:
 
-### Data Type Requirements
 | Requirement | Description |
 | --- | --- |
 | Normalization: | Highly normalized |
@@ -43,29 +33,23 @@ Transactional data tends to have the following requirements:
 | Workload: | Heavy writes, moderate reads |
 | Indexing: | Primary and secondary indexes |
 | Datum size: | Small to medium sized |
+| Model: | Relational |
 | Data shape: | Tabular |
 | Query flexibility: | Highly flexible |
 | Scale: | Small (MB's) to Large (a few TB's) |
 
-## <a name="benefits"></a>Benefits
-TBD
-
-## <a name="challenges"></a>Challenges
-TBD
-
-## <a name="bestpractices"></a>Best practices
-TBD
-
 ## <a name="wheretogo"></a>Where to go from here
 Related Common Architectures
 - [Relational data stores](./relational-data-stores.md)
+
+Alternative Common Architectures
 - Non-relational and No-SQL data stores
 
 Related Solution Patterns
 - Working with transactional data
     - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)]()
-    - [Data Warehousing]()
+    - Online Analytical Processing (OLAP)
+    - Data Warehousing
 
 Related Technology Choices
 - Transactional data stores

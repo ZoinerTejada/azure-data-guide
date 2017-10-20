@@ -26,7 +26,7 @@ The design of a relational database schema emphasizes minimizing the duplication
 ## <a name="common"></a> Common Architectures
 The common architectures for relational data are:
 - [Transactional Data](./transactional-data.md): predominantly used for write heavy scenarios such as order entry. 
-- [Multidimensional Data](./multidimensional-data.md): predominantly used for read heavy scenarios such as analytics and data warehousing.
+- [Semantic Modeling](./semantic-modeling.md): predominantly used for read heavy scenarios such as analytics and data warehousing.
 
 ## <a name="wheretogo"></a>Where to go from here
 Related Common Architectures
