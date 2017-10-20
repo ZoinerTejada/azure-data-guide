@@ -31,7 +31,7 @@ The common architectures for relational data are:
 ## <a name="wheretogo"></a>Where to go from here
 Related Common Architectures
 - [Transactional Data](./transactional-data.md)
-- [Multidimensional Data](./multidimensional-data.md)
+- [Semantic Modeling](./semantic-modeling.md)
 
 Alternative Common Architectures
 - [Non-relational and No-SQL common architectures]()

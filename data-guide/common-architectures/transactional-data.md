@@ -4,7 +4,7 @@
 
 [About]()
 
-[When to use this architecture](#whentouse)
+[When to use this data architecture](#whentouse)
 
 [Benefits](#benefits)
 
@@ -62,21 +62,14 @@ Related Common Architectures
 - Non-relational and No-SQL data stores
 
 Related Solution Patterns
-- Hybrid On-Premises and Cloud Solutions
-    - On-premises Data Stores
-    - Extending Data Stores to the Cloud
-- Secure Solutions
-    - Data Protection
-    - Access Control
-    - Auditing
-- Monitoring Data Solutions
-    - Performance Monitoring
-    - Alerting
-    - Troubleshooting & Diagnostics
+- Working with transactional data
+    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)]()
+    - [Data Warehousing]()
 
 Related Technology Choices
-- [Data Serving Storage](../technology-choices/data-serving-storage.md)
-    - SQL Data Warehouse
-    - SQL Database
-    - HBase on HDInsight
-    - Cosmos DB
+- Transactional data stores
+    - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
+    - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
+    - [Data Warehouses](../technology-choices/data-warehouses.md)
+

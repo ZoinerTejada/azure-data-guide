@@ -3,13 +3,10 @@
 # [Common Data Architectures](./common-architectures/overview.md)
 
 I need to work with ...
-## [Relational data](./common-architectures/relational-data-stores.md)
+## [Relational data](./common-architectures/relational-data.md)
 ### [Transactional Data](./common-architectures/transactional-data.md)
-- Online Transaction Processing
-### [Multi-dimensional data]()
-- Data Warehousing
-- Online Analytical Processing
-- Massively Parallel Processing
+### [Semantic Modeling](./common-architectures/semantic-modeling.md)
+
 
 ## [Non-Relational & No-SQL Data]() 
 ### [Document Data]()
@@ -37,6 +34,12 @@ I need to work with ...
 
 What solution patterns can you use to handle that data?
 # [Solution Patterns]()
+## [Working with transactional data]()
+### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md)
+### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytics-processing.md)
+### [Data Warehousing](./solution-patterns/data-warehousing.md)
+- Massively Parallel Processing
+
 ## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md)
 ### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md)
 ### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
@@ -72,6 +75,11 @@ What solution patterns can you use to handle that data?
 
 What technologies should you use for your data needs?
 # [Technology Choices]()
+## Transactional data stores
+### [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md)
+### [Online Analytical Processing (OLAP) data stores](./technology-choices/olap-data-stores.md)
+### [Data Warehouses](./technology-choices/data-warehouses.md)
+
 ## [Pipeline Orchestration, Control Flow and Data Movement]()
 ### [Azure Data Factory]()
 ### [Oozie on HDInsight]()
