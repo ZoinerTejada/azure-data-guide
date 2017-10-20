@@ -30,7 +30,7 @@ In Azure, applications have bidirectional communication with the OLTP system. Ap
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-[Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
+[Online Transaction Processing (OLTP) data store technology choices](../technology-choices/oltp-data-stores.md)
 
 See Also:
 
