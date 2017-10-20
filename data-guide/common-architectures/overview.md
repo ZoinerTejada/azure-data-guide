@@ -15,7 +15,7 @@ To understand how to apply a common data architecture to your scenario, start wi
 - Data pipelines
 - Advanced analytics
 
-The common data architectures will guide you down a path of concepts that get more granular from the concept down to the generic form of technologies used in the architecture. 
+The common data architectures will guide you down a path of concepts that get more granular from the concept down to the generic form of technologies used in the architecture, and ultimately to help you make a choice amongst the various Azure options that exist. 
 
 Use the following flow chart to begin your exploration:
 

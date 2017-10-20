@@ -26,7 +26,7 @@ The design of a relational database schema emphasizes minimizing the duplication
 ## <a name="common"></a> Common Architectures
 The common architectures for relational data are:
 - [Transactional Data](./transactional-data.md): predominantly used for write heavy scenarios such as order entry. 
-- [Semantic Modeling](./semantic-modeling.md): predominantly used for read heavy scenarios such as analytics and data warehousing.
+- [Semantic Modeling](./semantic-modeling.md): predominantly used for read heavy scenarios such as analytics and business intelligence.
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next: [Transactional Data Common Architecture](./transactional-data.md)
@@ -38,24 +38,16 @@ Related Common Architectures
 - [Semantic Modeling](./semantic-modeling.md)
 
 Alternative Common Architectures
-- [Non-relational and No-SQL common architectures]()
+- Non-relational and No-SQL common architectures
 
 Related Solution Patterns
-- Hybrid On-Premises and Cloud Solutions
-    - On-premises Data Stores
-    - Extending Data Stores to the Cloud
-- Secure Solutions
-    - Data Protection
-    - Access Control
-    - Auditing
-- Monitoring Data Solutions
-    - Performance Monitoring
-    - Alerting
-    - Troubleshooting & Diagnostics
+- Working with transactional data
+    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
+    - Online Analytical Processing (OLAP)
+    - Data Warehousing
 
 Related Technology Choices
-- [Data Serving Storage](../technology-choices/data-serving-storage.md)
-    - SQL Data Warehouse
-    - SQL Database
-    - HBase on HDInsight
-    - Cosmos DB
+- Transactional data stores
+    - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
+    - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
+    - [Data Warehouses](../technology-choices/data-warehouses.md)
