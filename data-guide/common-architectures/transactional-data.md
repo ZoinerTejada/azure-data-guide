@@ -39,6 +39,10 @@ Transactional data tends to have the following requirements:
 | Scale: | Small (MB's) to Large (a few TB's) |
 
 ## <a name="wheretogo"></a>Where to go from here
+Read Next: [Online Transaction Processing (OLTP) Solution Pattern](../solution-patterns/online-transaction-processing.md)
+
+See Also:
+
 Related Common Architectures
 - [Relational data stores](./relational-data-stores.md)
 

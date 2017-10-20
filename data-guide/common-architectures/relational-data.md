@@ -29,6 +29,10 @@ The common architectures for relational data are:
 - [Semantic Modeling](./semantic-modeling.md): predominantly used for read heavy scenarios such as analytics and data warehousing.
 
 ## <a name="wheretogo"></a>Where to go from here
+Read Next: [Transactional Data Common Architecture](./transactional-data.md)
+
+See Also:
+
 Related Common Architectures
 - [Transactional Data](./transactional-data.md)
 - [Semantic Modeling](./semantic-modeling.md)
