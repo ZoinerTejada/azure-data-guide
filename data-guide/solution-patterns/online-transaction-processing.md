@@ -4,7 +4,7 @@
 [When to use this data architecture](#whentouse)  
 [Benefits](#benefits)  
 [Challenges](#challenges)  
-[OLTP in Azure](#challenges)   
+[OLTP in Azure](#inazure)   
 [Where to go from here](#wheretogo)  
 
 <a name="about"></a>
