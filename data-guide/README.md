@@ -2,14 +2,22 @@
 
 # [Overview](./overview.md)
 
-# [Common Architectures]()
-## [Transactional Data](./common-architectures/transactional-data.md)
-### [Relational data stores](./common-architectures/relational-data-stores.md)
-### [Non-Relational and No-SQL data stores]()
+# [Common Data Architectures](./common-architectures/overview.md)
 
-## [Data Warehousing]()
-### [Online Analytical Processing]()
-### [Massively Parallel Processing]()
+I need to work with ...
+## [Relational data](./common-architectures/relational-data.md)
+### [Transactional Data](./common-architectures/transactional-data.md)
+### [Semantic Modeling](./common-architectures/semantic-modeling.md)
+
+
+## [Non-Relational & No-SQL Data](./common-architectures/non-relational-data.md) 
+### [Document Data]()
+### [Columnar Data]()
+### [Key/value Data]()
+### [Graph Data]()
+### [Time Series Data]()
+### [Object Data]()
+
 
 ## [Big Data]()
 ### [Data Lake]()
@@ -26,8 +34,14 @@
 ### [Deep Learning]()
 ### [Artificial Intelligence]()
 
-
+What solution patterns can you use to handle that data?
 # [Solution Patterns]()
+## [Working with transactional data]()
+### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md)
+### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytics-processing.md)
+### [Data Warehousing](./solution-patterns/data-warehousing.md)
+- Massively Parallel Processing
+
 ## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md)
 ### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md)
 ### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
@@ -61,7 +75,13 @@
 ### [Alerting]()
 ### [Troubleshooting & Diagnostics]()
 
+What technologies should you use for your data needs?
 # [Technology Choices]()
+## Transactional data stores
+### [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md)
+### [Online Analytical Processing (OLAP) data stores](./technology-choices/olap-data-stores.md)
+### [Data Warehouses](./technology-choices/data-warehouses.md)
+
 ## [Pipeline Orchestration, Control Flow and Data Movement]()
 ### [Azure Data Factory]()
 ### [Oozie on HDInsight]()

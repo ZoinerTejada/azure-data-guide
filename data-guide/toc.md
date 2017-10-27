@@ -8,7 +8,7 @@ I need to work with ...
 ### [Semantic Modeling](./common-architectures/semantic-modeling.md)
 
 
-## [Non-Relational & No-SQL Data]() 
+## [Non-Relational & No-SQL Data](./common-architectures/non-relational-data.md) 
 ### [Document Data]()
 ### [Columnar Data]()
 ### [Key/value Data]()

@@ -37,38 +37,56 @@ The following table summarize the key differences in capabilities between each. 
     - If yes, choose an option that supports readable secondaries. 
 - Does your database need to be highly available across geo-graphic regions?
     - If yes, consider the options that provide support for geo-graphic replication. Also consider the options that support the automatic failover from the primary to the secondary.
+- Does your database have specific security needs?
+    - If yes, examine the options that provide capabilities like Row Level Security, Data Masking and Transparent Data Encryption.
 
 ## <a name="matrix"></a> Capability Matrix
 
+### General Capabilities
 | | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
 | --- | --- | --- | --- | --- | --- | 
 | Is Managed Service | Yes | Yes | No | Yes | Yes |
-| Max Data Size | 4 TB | 4 TB | 524 PB | 1 TB | 1 TB |
+| Runs on Platform | Windows | Windows | Windows, Linux, Docker | Linux | Linux |  
 | JSON, XML and Spatial Data Support | Yes | Yes | Yes | Yes | Yes |
-| Temporal tables | Yes | Yes | Yes | No | No |
-| In-Memory Tables | Yes | Yes | Yes | No | No |
+| Programmability | T-SQL, .NET | T-SQL, .NET, R, Python | T-SQL, .NET, R, Python | SQL | SQL |
+
+### Scalability Capabilities
+| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
+| --- | --- | --- | --- | --- | --- | 
+| Max Data Size | 4 TB | 4 TB | 524 PB | 1 TB | 1 TB |
 | Supports Capacity Pools  | Yes | No | No | No | No |
 | Supports Clusters Scale Out  | No | No | Yes | No | No |
 | Dynamic scalability (scale up)  | Yes | Yes | No | Yes | Yes |
-| Rowstore Support | Yes | Yes | Yes | Yes | Yes | 
+
+### Analytic Workload Capabilities
+| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
+| --- | --- | --- | --- | --- | --- | 
+| Temporal tables | Yes | Yes | Yes | No | No |
+| In-Memory Tables | Yes | Yes | Yes | No | No |
 | Columnstore Support | Yes | Yes | Yes | No | No |
-| Multiple Storage Engines | Yes | Yes | Yes | Yes | No| 
 | In-Memory Columnstore Support | Yes | Yes | Yes | No | No |
+| Multiple Storage Engines | Yes | Yes | Yes | Yes | No| 
 | Adaptive Query Processing | Yes | Yes | Yes | No | No |
-| Platforms | Windows | Windows | Windows, Linux, Docker | Linux | Linux |  
-| Two-node High Availability | Yes | Yes | Yes | Yes | Yes | 
-| Multi-node High Availability | Yes | Yes | Yes | Yes | Yes | 
+
+
+### Availability Capabilities
+| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
+| --- | --- | --- | --- | --- | --- | 
 | Supports Readable Secondaries | Yes | Yes | Yes | No | No | 
 | Supports Geo-Graphic Replication | Yes | Yes | Yes | No | No | 
 | Supports Automatic Failover to Secondary | Yes | No | No | No | No|
 | Supports Point-in-time Restore | Yes | Yes | Yes | Yes | Yes |
+
+
+### Security Capabilities
+| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
+| --- | --- | --- | --- | --- | --- | 
 | Row Level Security | Yes | Yes | Yes | Yes | Yes | 
 | Data Masking | Yes | Yes | Yes | No | No |
 | Transparent Data Encryption | Yes | Yes | Yes | Yes | Yes | 
 | Restrict access to specific IP addresses | Yes | Yes | Yes | Yes | Yes |  
 | Restrict access to allow VNET access only | Yes | Yes | Yes | No | No |  
 | Active Directory authentication (integrated authentication) | Yes | Yes | Yes | No | No |
-| Programmability | T-SQL, .NET | T-SQL, .NET, R, Python | T-SQL, .NET, R, Python | SQL | SQL |
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
