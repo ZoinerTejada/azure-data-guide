@@ -117,14 +117,14 @@ The boxes that are shaded gray show components of an IoT system that are not dir
 
 ## <a name="wheretogo"></a>Where to go from here
 
-Read Next: Handling Unstructured Data Solution Pattern
+Read Next: Processing CSV and JSON Files Solution Pattern
 
 See Also:
 
 Related Solution Patterns
 - Handling unstructured data
     - Processing CSV and JSON files
-    - Free-form text files
+    - [Processing free-form text files](../solution-patterns/processing-free-form-text.md)
 - Time-series solutions
     - Internet of Things
     - Real-Time Analytics
