@@ -71,7 +71,7 @@ The lambda architecture is a pipeline architecture originally devised with the g
 
 * A "cold" path, or batch layer, that stores all of the incoming data for batch processing, where data processing can take anywhere from minutes to hours
 
-![Lambda architecture diagram](./images/lambda.png)
+![Lambda architecture diagram]{PLACEHOLDER}
 
 Data that flows into the "hot" path is constrained by latency requirements imposed by the speed layer so that it can be processed as quickly as possible, as data in this layer is typically desired in real time. Oftentimes, this requires a tradeoff of some level of accuracy in favor of data that is ready as quickly as possible. An example of this is incoming temperatures from a large swath of IoT devices. In this scenario, the speed layer may be used to process a subset of this incoming data in order to provide a live dashboard of temperature readings for several locations. The data in this case may be reduced by processing sliding windows of several seconds apiece, allowing the processing layer to perform calculations in a timely manner.
 
@@ -89,7 +89,7 @@ There are some similarities to the lambda architectures cold path....
 
 Event-driven architectures are central to IoT solutions. The following diagram shows a possible logical architecture for IoT. The diagram emphasizes the event-streaming components of the architecture.
 
-![](./images/iot.png)
+![IoT architecture]{PLACEHOLDER}
 
 The **cloud gateway** ingests device events at the cloud boundary, using a reliable, low latency messaging system.
 
