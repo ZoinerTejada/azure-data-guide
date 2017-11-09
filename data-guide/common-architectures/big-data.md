@@ -124,6 +124,8 @@ Relevant Azure Service:
 [Event Hubs](https://azure.microsoft.com/services/event-hubs/)  
 [Stream Analytics](https://azure.microsoft.com/services/stream-analytics/)  
 
+Learn more about IoT on Azure by reading the [Azure IoT reference architecture](https://azure.microsoft.com/updates/microsoft-azure-iot-reference-architecture-available/).
+
 ## <a name="wheretogo"></a>Where to go from here
 
 Read Next: Processing CSV and JSON Files Solution Pattern
