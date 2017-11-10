@@ -83,13 +83,17 @@ Eventually, the hot and cold paths converge at the analytics client application.
 
 The kappa architecture is another type of pipeline with the same basic goals as the lambda architecture, but with one important distinction: all data (called events in this architecture) flows through a single hot path, where all processing occurs in a near-real-time streaming mode. It was created due to the nature of lambda architectures containing two paths, leading to potentially duplicate computation logic and the complexity of managing the architecture for both paths. Because there is no cold path in this architecture, any recomputation of data is performed by streaming through the kappa pipeline once again.
 
-There are some similarities to the lambda architectures cold path....
+![Kappa architecture diagram](./images/kappa.png)
+
+There are some similarities to the lambda architecture's cold path, in that the event data is immutable and all of it is collected, instead of a subset. The data, or events, are ingested into a distributed and fault tolerant unified log, of which there is a single deployment. These events are ordered, and the current state of an event is changed only by a new event being appended. Similar to a lambda architecture's hot path, all processing of events is performed on the input streams and persisted as a real-time view. This data can be recomputed at any point, as it is persisted to sclable, fault-tolerant storage.
 
 ### <a name="internetofthings"></a> Internet of Things (IoT)
 
+From a practical viewoint, Internet of Things (IoT) represents any device that is connected to the internet. This includes your PC, mobile phone, smart watch, smart thermostat, smart refrigerator, connected automobile, heart monitoring implants, and anything else that connects to the internet and sends or receives data. The number of connected devices grows every day, as does the amount of data collected from them. Oftentimes this data is being collected on the edge, in highly constrained, sometimes high latency environments. In other cases, data is sent from low latency environments by thousands or millions of devices, requiring the ability to rapidly ingest the barrage of data and process accordingly. Therefore, proper planning is required to handle these constraints and unique requirements.
+
 Event-driven architectures are central to IoT solutions. The following diagram shows a possible logical architecture for IoT. The diagram emphasizes the event-streaming components of the architecture.
 
-![](./images/iot.png)
+![IoT architecture](./images/iot.png)
 
 The **cloud gateway** ingests device events at the cloud boundary, using a reliable, low latency messaging system.
 
@@ -114,6 +118,13 @@ The boxes that are shaded gray show components of an IoT system that are not dir
 - The **provisioning API** is a common external interface for provisioning and registering new devices.
 
 - Some IoT solutions allow **command and control messages** to be sent to devices.
+
+Relevant Azure Service:  
+[IoT Hub](https://azure.microsoft.com/services/iot-hub/)  
+[Event Hubs](https://azure.microsoft.com/services/event-hubs/)  
+[Stream Analytics](https://azure.microsoft.com/services/stream-analytics/)  
+
+Learn more about IoT on Azure by reading the [Azure IoT reference architecture](https://azure.microsoft.com/updates/microsoft-azure-iot-reference-architecture-available/).
 
 ## <a name="wheretogo"></a>Where to go from here
 
