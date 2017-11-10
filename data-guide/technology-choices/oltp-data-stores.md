@@ -48,7 +48,7 @@ The following table summarize the key differences in capabilities between each. 
 | Is Managed Service | Yes | Yes | No | Yes | Yes |
 | Runs on Platform | Windows | Windows | Windows, Linux, Docker | Linux | Linux |  
 | JSON, XML and Spatial Data Support | Yes | Yes | Yes | Yes | Yes |
-| Programmability | T-SQL, .NET | T-SQL, .NET, R, Python | T-SQL, .NET, R, Python | SQL | SQL |
+| Programmability | T-SQL, .NET, R | T-SQL, .NET, R, Python | T-SQL, .NET, R, Python | SQL | SQL |
 
 ### Scalability Capabilities
 | | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
