@@ -15,7 +15,14 @@ In Azure, the following services will help you process CSV and JSON files:
 - Azure Logic Apps
 - Azure Functions
 - App Service
+- Azure Data Lake Analytics
 - Azure HDInsight
+    - Spark SQL
+    - HBase
+    - Hive
+- SQL Data Warehouse
+- Azure Machine Learning
+- SQL SSIS
 
 Whether you are importing your CSV and JSON files into Azure Storage/Azure Data Lake Store, or into a database such as Azure SQL or Cosmos DB, [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/copy-activity-overview) provides a great option to automate the process for either one-time or recurring operations. Use the copy activity to copy your on-premises or cloud-based files into a number of [supported data stores](https://docs.microsoft.com/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats).
 
