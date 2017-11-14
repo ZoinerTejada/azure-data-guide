@@ -1,6 +1,6 @@
 # Azure Data Architecture Guide
 
-# [Overview](./overview.md)
+# [Overview](./overview.md) - Stub Only
 
 # [Common Data Architectures](./common-architectures/overview.md) 
 
