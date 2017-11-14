@@ -38,11 +38,11 @@ What solution patterns can you use to handle that data?
 # Solution Patterns
 ## Working with transactional data
 ### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) 
-### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytics-processing.md) 
-### [Data Warehousing](./solution-patterns/data-warehousing.md) 
+### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytics-processing.md) - Stub Only
+### [Data Warehousing](./solution-patterns/data-warehousing.md) - Stub Only
 - Massively Parallel Processing
 
-## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md) 
+## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md) - Stub Only
 ### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md) 
 ### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
 
@@ -79,8 +79,8 @@ What technologies should you use for your data needs?
 # Technology Choices
 ## Transactional data stores
 ### [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md) 
-### [Online Analytical Processing (OLAP) data stores](./technology-choices/olap-data-stores.md) - Coming Soon
-### [Data Warehouses](./technology-choices/data-warehouses.md) - Coming Soon
+### Online Analytical Processing (OLAP) data stores
+### Data Warehouses
 
 ## Pipeline Orchestration, Control Flow and Data Movement
 ### Azure Data Factory
@@ -126,7 +126,7 @@ What technologies should you use for your data needs?
 ### Azure Functions
 ### Event Processor Host
 
-## [Data Serving Storage](./technology-choices/data-serving-storage.md) 
+## [Data Serving Storage](./technology-choices/data-serving-storage.md) - Stub Only
 SQL Data Warehouse
 SQL Database
 HBase/Phoenix on HDInsight
