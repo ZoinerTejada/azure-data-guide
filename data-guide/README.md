@@ -127,12 +127,12 @@ What technologies should you use for your data needs?
 ### Event Processor Host
 
 ## [Data Serving Storage](./technology-choices/data-serving-storage.md) - Stub Only
-SQL Data Warehouse
-SQL Database
-HBase/Phoenix on HDInsight
-Hive LLAP on HDInsight
-Azure Analysis Services
-Cosmos DB
+### SQL Data Warehouse
+### SQL Database
+### HBase/Phoenix on HDInsight
+### Hive LLAP on HDInsight
+### Azure Analysis Services
+### Cosmos DB
 
 ## Machine Learning Model Training
 ### Azure Machine Learning (Studio)
