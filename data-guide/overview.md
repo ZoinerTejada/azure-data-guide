@@ -5,7 +5,7 @@
 -	Caching (it’s everywhere, how its related to data an analytics)
 -	Machine Learning and AI (how we define our focus)
 -	What has changed? Here’s what your used to thinking about, here’s what’s changed…
-o	Introduce polyglot persistence
+    - Introduce polyglot persistence
 -	Maturity model, lens to put in perspective for reader?
 -	The following diagram used to structure the rest of the guide 
 
