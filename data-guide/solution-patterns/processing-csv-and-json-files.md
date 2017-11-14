@@ -45,7 +45,9 @@ Once stored, you can process the documents in batch or real-time. Both pipelines
 
 Batch processing is used in a variety of scenarios, from the initial data munging efforts to a more complete ETL (extract-transform-load) pipeline, to preparing data for ultimate consumption over very large data sets or where the computation takes significant time. Batch processing typically either leads to further interactive exploration (downstream analytics), provides the modeling-ready data for machine learning, or lands the data in a data store optimized for analytics and visualization.
 
-A concrete example of batch processing is transforming a large set of flat, semi-structured CSV or JSON files into a schematized (and structured format) that is ready for further querying. Along with this, typically the format is converted from the raw formats used for ingest (such as CSV) to binary formats that are more performant for querying because they store data in a columnar format, and often provide indexes and inline statistics about the data contained.
+One example of batch processing is transforming a large set of flat, semi-structured CSV or JSON files into a schematized (and structured format) that is ready for further querying. Along with this, typically the format is converted from the raw formats used for ingest (such as CSV) to binary formats that are more performant for querying because they store data in a columnar format, and often provide indexes and inline statistics about the data contained.
+
+With batch processing, typically there is a bit of orchestration required to migrate or copy the data into your data storage, batch processing, analtyical data store, and reporting layers.
 
 ![Batch processing CSV and JSON files in Azure](./images/big-data-batch.png)
 
@@ -53,11 +55,11 @@ Real-time processing is defined as the processing of a typically infinite stream
 
 ![Real-time processing of CSV and JSON files in Azure](./images/big-data-real-time.png)
 
-Processed data oftentimes land in an analytical data store, which is optimized for analytics and visualizations. In other cases, the processed data can be ingested directly into the analytics and reporting layer for analysis, business intelligence, and real-time dashboard visualization.
+Processed data oftentimes land in an analytical data store, which is optimized for analytics and visualization. In other cases, the processed data can be ingested directly into the analytics and reporting layer for analysis, business intelligence, and real-time dashboard visualization.
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-[Data Serving Storage (aka analytical data store) technology choices](../technology-choices/data-serving-storage.md)
+[CSV and JSON file processing technology choices](../technology-choices/csv-json-options.md)
 
 See Also:
 
