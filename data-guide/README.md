@@ -2,131 +2,131 @@
 
 # [Overview](./overview.md)
 
-# [Common Data Architectures](./common-architectures/overview.md) - Drafted
+# [Common Data Architectures](./common-architectures/overview.md) 
 
 I need to work with ...
-## [Relational data](./common-architectures/relational-data.md) - Drafted
-### [Transactional Data](./common-architectures/transactional-data.md) - Drafted
-### [Semantic Modeling](./common-architectures/semantic-modeling.md) - Drafted
+## [Relational data](./common-architectures/relational-data.md)
+### [Transactional Data](./common-architectures/transactional-data.md) 
+### [Semantic Modeling](./common-architectures/semantic-modeling.md)
 
 
-## [Non-Relational & No-SQL Data](./common-architectures/non-relational-data.md) - Drafted
-### [Document Data]() - Coming Soon
-### [Columnar Data]() - Coming Soon
-### [Key/value Data]() - Coming Soon
-### [Graph Data]() - Coming Soon
-### [Time Series Data]() - Coming Soon
-### [Object Data]() - Coming Soon
+## [Non-Relational & No-SQL Data](./common-architectures/non-relational-data.md)
+### Document Data
+### Columnar Data
+### Key/value Data
+### Graph Data
+### Time Series Data
+### Object Data
 
 
-## [Big Data]() - Coming Soon
-### [Data Lake]() - Coming Soon
-### [Lambda Architecture]() - Coming Soon
-### [Kappa Architecture]() - Coming Soon
-### [Internet of Things]() - Coming Soon
+## Big Data
+### Data Lake
+### Lambda Architecture
+### Kappa Architecture
+### Internet of Things
 
-## [Data Pipeline]() - Coming Soon
-### [Extract, Load & Transform]() - Coming Soon
-### [Data Flow & Control Flow]() - Coming Soon
+## Data Pipeline
+### Extract, Load & Transform
+### Data Flow & Control Flow
 
-## [Advanced Analytics]() - Coming Soon
-### [Machine Learning]() - Coming Soon
-### [Deep Learning]() - Coming Soon
-### [Artificial Intelligence]() - Coming Soon
+## Advanced Analytics
+### Machine Learning
+### Deep Learning
+### Artificial Intelligence
 
 What solution patterns can you use to handle that data?
-# [Solution Patterns]() - Coming Soon
-## [Working with transactional data]() - Coming Soon
-### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) - Drafted
-### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytics-processing.md) - Drafted
-### [Data Warehousing](./solution-patterns/data-warehousing.md) - Drafted
+# Solution Patterns
+## Working with transactional data
+### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) 
+### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytics-processing.md) 
+### [Data Warehousing](./solution-patterns/data-warehousing.md) 
 - Massively Parallel Processing
 
-## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md) - Drafted
-### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md) - Drafted
-### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md) - Drafted
+## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md) 
+### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md) 
+### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
 
-## [Time Series Solutions]() - Coming Soon
-### [Internet of Things]() - Coming Soon
-### [Real-time Analytics]() - Coming Soon
+## Time Series Solutions
+### Internet of Things
+### Real-time Analytics
 
-## [Hybrid On-Premises and Cloud Solutions]() - Coming Soon
-### [Network Shares]() - Coming Soon
-### [On-premise Data Stores]() - Coming Soon
-### [Extending Data Stores to the Cloud]() - Coming Soon
+## Hybrid On-Premises and Cloud Solutions
+### Network Shares
+### On-premise Data Stores
+### Extending Data Stores to the Cloud
 
-## [Secure Solutions]() - Coming Soon
-### [Data Protection]() - Coming Soon
-### [Access Control]() - Coming Soon
-### [Auditing]() - Coming Soon
+## Secure Solutions
+### Data Protection
+### Access Control
+### Auditing
 
-## [Data Governance]() - Coming Soon
-### [Data Catalog]() - Coming Soon
-### [Data Lineage]() - Coming Soon
-### [Data Sovereignty]() - Coming Soon
-### [Data Sensitivity/Risk Classification]() - Coming Soon
+## Data Governance
+### Data Catalog
+### Data Lineage
+### Data Sovereignty
+### Data Sensitivity/Risk Classification
 
-## [Machine Learning at Scale]() - Coming Soon
-### [Predictive Solutions]() - Coming Soon
-### [Online Learning Solutions]() - Coming Soon
+## Machine Learning at Scale
+### Predictive Solutions
+### Online Learning Solutions
 
-## [Monitoring Data Solutions]() - Coming Soon
-### [Performance Monitoring]() - Coming Soon
-### [Alerting]() - Coming Soon
-### [Troubleshooting & Diagnostics]() - Coming Soon
+## Monitoring Data Solutions
+### Performance Monitoring
+### Alerting
+### Troubleshooting & Diagnostics
 
 What technologies should you use for your data needs?
-# [Technology Choices]() - Coming Soon
+# Technology Choices
 ## Transactional data stores
-### [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md) - Drafted
+### [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md) 
 ### [Online Analytical Processing (OLAP) data stores](./technology-choices/olap-data-stores.md) - Coming Soon
 ### [Data Warehouses](./technology-choices/data-warehouses.md) - Coming Soon
 
-## [Pipeline Orchestration, Control Flow and Data Movement]() - Coming Soon
-### [Azure Data Factory]() - Coming Soon
-### [Oozie on HDInsight]() - Coming Soon
-### [SQL Server Integration Services]() - Coming Soon
+## Pipeline Orchestration, Control Flow and Data Movement
+### Azure Data Factory
+### Oozie on HDInsight
+### SQL Server Integration Services
 
-## [Data Transfer]() - Coming Soon
-### [Azure Import/Export service]() - Coming Soon
-### [Command Line Tools]() - Coming Soon
-### [Graphical User Interface Tools]() - Coming Soon
-### [Azure Data Box]() - Coming Soon
+## Data Transfer
+### Azure Import/Export servic
+### Command Line Tools
+### Graphical User Interface Tools
+### Azure Data Box
 
-## [Data Ingest]()  - Coming Soon
-### [Azure Storage Blob containers]() - Coming Soon
-### [Azure Data Lake Store]() - Coming Soon
-### [Cosmos DB]() - Coming Soon
-### [HBase on HDInsight]() - Coming Soon
-### [Event Hubs]() - Coming Soon
-### [IoT Hub]() - Coming Soon
-### [Kafka on HDInsight]() - Coming Soon
+## Data Ingest
+### Azure Storage Blob containers
+### Azure Data Lake Store
+### Cosmos DB
+### HBase on HDInsight
+### Event Hubs
+### IoT Hub
+### Kafka on HDInsight
 
-## [Data Exploration & Data Wrangling]() - Coming Soon
-### [SQL Data Warehouse]() - Coming Soon
-### [Spark and Spark SQL on HDInsight]() - Coming Soon
-### [Hive LLAP on HDInsight]() - Coming Soon
-### [Phoenix on HDInsight]() - Coming Soon
-### [Azure Machine Learning Workbench & Model Exploration Service]() - Coming Soon
-### [Data Science Virtual Machine]() - Coming Soon
+## Data Exploration & Data Wrangling
+### SQL Data Warehouse
+### Spark and Spark SQL on HDInsight
+### Hive LLAP on HDInsight
+### Phoenix on HDInsight
+### Azure Machine Learning Workbench & Model Exploration Service
+### Data Science Virtual Machine
 
-## [Batch Processing]() - Coming Soon
-### [Azure Data Lake Analytics]() - Coming Soon
-### [Azure Batch]() - Coming Soon
-### [SQL Data Warehouse]() - Coming Soon
-### [Spark on HDInsight]() - Coming Soon
-### [Hive on HDInsight ]() - Coming Soon
-### [Pig on HDInsight]() - Coming Soon
-### [Microsoft Machine Learning Server]() - Coming Soon
+## Batch Processing
+### Azure Data Lake Analytics
+### Azure Batch
+### SQL Data Warehouse
+### Spark on HDInsight
+### Hive on HDInsight
+### Pig on HDInsight
+### Microsoft Machine Learning Server
 
-## [Real-time Processing]() - Coming Soon
-### [Azure Stream Analytics]() - Coming Soon
-### [Spark Streaming on HDInsight]() - Coming Soon
-### [Storm on HDInsight]() - Coming Soon
-### [Azure Functions]() - Coming Soon
-### [Event Processor Host]() - Coming Soon
+## Real-time Processing
+### Azure Stream Analytics
+### Spark Streaming on HDInsight
+### Storm on HDInsight
+### Azure Functions
+### Event Processor Host
 
-## [Data Serving Storage](./technology-choices/data-serving-storage.md) - Drafted
+## [Data Serving Storage](./technology-choices/data-serving-storage.md) 
 SQL Data Warehouse
 SQL Database
 HBase/Phoenix on HDInsight
@@ -134,23 +134,23 @@ Hive LLAP on HDInsight
 Azure Analysis Services
 Cosmos DB
 
-## [Machine Learning Model Training]() - Coming Soon
-### [Azure Machine Learning (Studio)]() - Coming Soon
-### [Azure Machine Learning Experimentation Service]() - Coming Soon
-### [Spark ML]() - Coming Soon
-### [Microsoft Machine Learning Server]() - Coming Soon
-### [SQL Machine Learning Services]() - Coming Soon
+## Machine Learning Model Training
+### Azure Machine Learning (Studio)
+### Azure Machine Learning Experimentation Service
+### Spark ML
+### Microsoft Machine Learning Server
+### SQL Machine Learning Services
 
-## [Machine Learning Model Deployment & Scoring]() - Coming Soon
-### [Azure Machine Learning (Studio)]() - Coming Soon
-### [Azure Machine Learning Model Management Service]() - Coming Soon
-### [Microsoft Machine Learning Server]() - Coming Soon
-### [SQL Machine Learning Services]() - Coming Soon
+## Machine Learning Model Deployment & Scoring
+### Azure Machine Learning (Studio)
+### Azure Machine Learning Model Management Service
+### Microsoft Machine Learning Server
+### SQL Machine Learning Services
 
-## [Applied Artificial Intelligence]() - Coming Soon
-### [Cognitive Services (computer vision, sentiment, etc.)]() - Coming Soon
+## Applied Artificial Intelligence
+### Cognitive Services (computer vision, sentiment, etc.)
 
-## [Analysis, Visualizations & Reporting]() - Coming Soon
-### [Power BI]() - Coming Soon
-### [Jupyter Notebooks]() - Coming Soon
-### [Microsoft Azure Notebooks]() - Coming Soon
+## Analysis, Visualizations & Reporting
+### Power BI
+### Jupyter Notebooks
+### Microsoft Azure Notebooks
