@@ -24,11 +24,11 @@ In Azure, the following services will help you process CSV and JSON files:
 - Azure Machine Learning
 - SQL SSIS
 
-Whether you are importing your CSV and JSON files into Azure Storage/Azure Data Lake Store, or into a database such as Azure SQL or Cosmos DB, [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/copy-activity-overview) provides a great option to automate the process for either one-time or recurring operations. Use the copy activity to copy your on-premises or cloud-based files into a number of [supported data stores](https://docs.microsoft.com/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats).
+Whether you are importing your CSV and JSON files into Azure Storage/Azure Data Lake Store, or into a database such as Azure SQL, SQL DW, or Cosmos DB, [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/copy-activity-overview) provides a great option to automate the process for either one-time or recurring operations. Use the copy activity to copy your on-premises or cloud-based files into a number of [supported data stores](https://docs.microsoft.com/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats).
 
 Once stored, there are a number of options for processing your files. Because many programming languages can easily work with CSV and JSON files from applications that run on a virtual machine or locally, we are going to focus on Azure services you can use, some of which require no programming.
 
-Starting out with a code-free option for working with CSV and JSON files, you could use [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps/) to create an automated workflow that processes these files, and translates them to another format, such as XML, or sends the data to a connected service or mobile device. You use an [integration account](https://docs.microsoft.com/azure/logic-apps/logic-apps-enterprise-integration-create-integration-account) and link it to your logic app to [work with your flat files](https://docs.microsoft.com/azure/logic-apps/logic-apps-enterprise-integration-flatfile). What you get out of Flat Files decoding is an XML document and you may further convert that document to JSON using the [workflow definition language](https://docs.microsoft.com/azure/logic-apps/logic-apps-workflow-definition-language) json() function. In the opposite direction, you may convert JSON data to XML content using the xml() function of the workflow definition language.
+Starting out with a visual design-driven option for working with CSV and JSON files, you could use [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps/) to create an automated workflow that processes these files, and translates them to another format, such as XML, or sends the data to a connected service or mobile device. You use an [integration account](https://docs.microsoft.com/azure/logic-apps/logic-apps-enterprise-integration-create-integration-account) and link it to your logic app to [work with your flat files](https://docs.microsoft.com/azure/logic-apps/logic-apps-enterprise-integration-flatfile). What you get out of Flat Files decoding is an XML document and you may further convert that document to JSON using the [workflow definition language](https://docs.microsoft.com/azure/logic-apps/logic-apps-workflow-definition-language) json() function. In the opposite direction, you may convert JSON data to XML content using the xml() function of the workflow definition language.
 
 An option that requires coding, but still allows you not have to manage infrastructure due to its serverless nature, is to use [Azure Functions](https://azure.microsoft.com/services/functions/). Azure Functions is an event driven, compute-on-demand service that helps you implement code triggered by events occurring in virtually any Azure or 3rd party service as well as on-premisis systems. In one scenario, you may have a process that stores your CSV or JSON files in blob storage, then create an Azure Function that is triggered any time a file is added, to do some processing of that file. Another option is to use a webhook trigger on an Azure Function to parse and process JSON data sent from an online service like GitHub or Salesforce. Since Azure Functions can be written in C#, F#, Node.js, or Python, it is very easy to write code that can work CSV and JSON files. There are also [many bindings](https://docs.microsoft.com/azure/azure-functions/functions-reference#bindings) for triggering functions, automatically working with inputs, and outputting processed information.
 
@@ -49,26 +49,81 @@ Each service brings with it a unique set of capabilities, giving you options in 
 
 Answer the following questions to help you narrow down your choices, then use the matrices below to select your options for your scenario:
 
-
+- Do you need big data capabilities for processing your files? Usually this means multi-gigabytes to terabytes of data.
+    - If yes, then narrow your options to those that are big data services.
+- Do you need to apply predictive machine learning models on your data?
+    - If yes, then you will need to choose between one of the options that provides machine learning out-of-the-box or through additional tools.
+- Does your solution require moving data stored in one location into another?
+    - If so, also look at the orchestration options.
+- Does your data arrive via REST endpoints or through uploads through a web application?
+    - If yes, compare options provided in the Compute category.
+- Does your data need to be processed in real-time? In other words, do you need to process streaming data?
+    - If so, consider the options that provide stream processing.
 
 ## <a name="matrix"></a> Capability Matrix
 
-### General Capabilities
+Capabilities are separated into the following categories: Big Data, Machine Learning, Compute, and Orchestration. These categories help compare like-services, due to the breadth of options and scenarios for processing CSV and JSON files.
 
+TODO: WHERE SHOULD WE FIT SQL DW?
 
-### Scalability Capabilities
+### Big Data Capabilities
 
+When you need to work with very large data sets, or process streaming data in real-time, compare the capabilities of these big data services:
 
-### Analytic Workload Capabilities
+| | Azure Data Lake Analytics | HDInsight |
+| --- | --- | --- |
+| Is Managed Service | Yes | Yes - but requires manual configuration and scaling |
+| Batch Processing | Yes | Yes |
+| Stream (Real-time Processing) | No | Yes - using Spark Streaming, Storm, and/or Kafka |
+| Interactive Queries | No | Yes - using [Spark](https://azure.microsoft.com/services/hdinsight/apache-spark/) or [HDInsight Interactive Query (Hive LLAP)](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-interactive-hive) |
+| Programmability | U-SQL (combination of C# and T-SQL) | Python, Scala, Java, SQL (via Spark SQL or HiveQL), C# (when using Storm) |
+| Scalability | Can scale individual queries | Scale by adding additional worker nodes |
+| Install Additional Software | No | Yes - [manually](https://docs.microsoft.com/azure/hdinsight/hdinsight-apps-install-custom-applications) or through the [Marketplace](https://docs.microsoft.com/azure/hdinsight/hdinsight-apps-install-applications) |
+| Cost Platform | Only pay for processing (analytic units) | Pay by the hour for lifetime of the cluster |
 
+### Machine Learning Capabilities
 
+Of these options, HDInsight provides full processing capabilities for your CSV and JSON files, in addition to a host of machine learning libraries it can use, including Azure Machine Learning, to add predictive analytics to your solution. When using SQL Server Machine Learning Services, you must first process the data and store it within one or more SQL databases before you can conduct predictive analytics against that data. Azure Machine Learning (AML) can directly import CSV files from various data sources, including blob storage, but cannot import and process JSON files. One of the most common ways to work with CSV and JSON files from AML is to have it use Spark on HDInsight as a compute source, or reference processed data stored in Hive tables. Another option is to operationalize your AML model, then call it from within an Azure Data Factory (ADF) pipeline that sends data to it read from CSV and JSON files.
 
-### Availability Capabilities
+Model Operationalization in the table below refers to whether the predictive model is made available for consumption by external clients. AML automatically does this through hosted web services or docker containers.
 
+| | Azure Machine Learning (AML) | HDInsight (H2O, Spark ML) | SQL Server Machine Learning Services |
+| --- | --- | --- | --- |
+| Managed | Yes | No | No |
+| Data Cap | None (10 GB for free workspace) | None | 4 TB |
+| Programmability | Python, R | Python, Scala, R | Python, R |
+| Model Operationalization | Yes | No | No |
+| Directly Process CSV and JSON files | No | Yes | No |
 
+### Compute Capabilities
 
-### Security Capabilities
+TODO: SHOULD WE RENAME THIS CATEGORY?
 
+Services in this category encompass serverless and web-based solutions for processing your CSV and JSON files. Serverless does not mean there are no servers, just that developers and admins do not need to worry about provisioning or managing servers.
+
+| | Logic Apps | Azure Functions | App Services |
+| --- | --- | --- | --- |
+| Programmability | None (uses workflow definition language) | C#, F#, Node.js, Python | .NET, .NET Core, Java, Ruby, Node.js, PHP, Python |
+| Development Model | Visual Designer | Web application, WebJobs for background tasks | Functions with triggers |
+| Serverless | Yes | Yes | No |
+
+### Orchestration
+
+When it comes to orchestration, Azure Data Factory (ADF) and SSIS both offer a multitude of data sources and destinations you can use to move and transform your CSV and JSON file data. When your data destination is an Azure service, such as Azure Storage or HDInsight, ADF is the natural choice.
+
+| | Azure Data Factory (ADF) | SQL Server Integration Services (SSIS) |
+| --- | --- | --- |
+| Managed | Yes | No |
+| Cloud-based | Yes | No (local) |
+| Prerequisite | Azure Subscription | SQL Server  |
+| Management Tools | Azure Portal, PowerShell, CLI, .NET SDK | SSMS, PowerShell |
+| Pricing | Pay per usage | Licensing / Pay for features |
+| Copy Data | Yes | Yes |
+| Custom Transformations (C#) | Yes | Yes |
+| Azure ML Scoring | Yes | Yes (with scripting) |
+| HDInsight On-Demand | Yes | No |
+| Azure Batch | Yes | No |
+| Pig and Hive | Yes | No |
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
