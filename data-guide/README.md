@@ -25,8 +25,9 @@ I need to work with ...
 ### Kappa Architecture
 ### Internet of Things
 
-## Data Pipeline
-### Extract, Load & Transform
+## [Data Pipeline](./common-architectures/data-pipeline.md)
+### Extract, Transform, and Load
+### Extract, Load, and Transform
 ### Data Flow & Control Flow
 
 ## Advanced Analytics
@@ -88,7 +89,7 @@ What technologies should you use for your data needs?
 ### SQL Server Integration Services
 
 ## Data Transfer
-### Azure Import/Export servic
+### Azure Import/Export service
 ### Command Line Tools
 ### Graphical User Interface Tools
 ### Azure Data Box
