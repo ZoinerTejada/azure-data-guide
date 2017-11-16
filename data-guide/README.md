@@ -83,7 +83,7 @@ What technologies should you use for your data needs?
 ### Online Analytical Processing (OLAP) data stores
 ### Data Warehouses
 
-## Pipeline Orchestration, Control Flow and Data Movement
+## [Pipeline Orchestration, Control Flow, and Data Movement](./technology-choices/pipeline-orchestration-data-movement.md)
 ### Azure Data Factory
 ### Oozie on HDInsight
 ### SQL Server Integration Services
