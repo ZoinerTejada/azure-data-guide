@@ -134,7 +134,7 @@ See Also:
 
 Related Solution Patterns
 - Handling unstructured data
-    - Processing CSV and JSON files
+    - [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
     - [Processing free-form text files](../solution-patterns/processing-free-form-text.md)
 - Time-series solutions
     - Internet of Things
