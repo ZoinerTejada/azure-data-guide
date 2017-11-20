@@ -24,7 +24,7 @@ Consider an advanced analytics architectures when you need to:
 ![Overall data pipeline diagram](../images/overall-data-pipeline.png)
 
 Most advanced analytics architectures include some or all of the following components:
-
+ [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
 * **Data storage**: Advanced analyics solutions require data to train machine learning models. Data scientists typically need to explore the data to identify its predictive *features* and the statistical relationships between them and the *labels* they predict.
 
 * **Batch processing**: To train a machine learning model, you typically need to process a large volume of training data. This training can be performed using scipts written in languages such as Python or R, and can be scaled out to reduce training time using distributed processing platforms like Apache Spark hosted in HDInsight or a Docker container.
@@ -68,10 +68,10 @@ Read Next: ???
 See Also:
 
 Related Solution Patterns
-- Interactive Data Exploration
+- [Interactive Data Exploration](../solution-patterns/interactive-data-exploration.md)
 - Machine Learning
 
 Related Technology Choices
-- Machine Learning Modeling
+- Data Science and Machine Learning
 - Cognitive Services
 
