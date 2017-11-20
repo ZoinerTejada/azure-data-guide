@@ -1,4 +1,4 @@
-# Big Data
+or # Big Data
 
 **In this article**
 
@@ -12,7 +12,7 @@
 <a name="about"></a>
 A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems. The threshold at which organizations enter into the big data realm differs, depending on the capabilities of the users and their tools. For some, it can mean hundreds of gigabytes of data, while for others it means hundreds of terabytes. As tools to help you work with big data sets advance, so does the meaning of "big data". More and more, this term relates to the value you can extract from your data sets through advanced analytics, like predictive or user behavior analytics, than strictly the size of your data set, though in these cases they tend to be quite large.
 
-Over the years, the data landscape has changed. What you can do, are expected to do, with that data has changed. The cost of storage keeps plummeting, while the means by which data is collected keeps growing. The old data doesn't just go away, in many respects. Some data arrives at a rapid pace, constantly demanding to be collected and observed. Others come in slow, but very large chunks, oftentimes in the form of decades of historical data. You might be facing an advanced analytics problem, or one that requires machine learning. These are all examples of challenges that big data architectures seek to solve.
+Over the years, the data landscape has changed. What you can do, or are expected to do, with that data has changed. The cost of storage keeps plummeting, while the means by which data is collected keeps growing. The old data doesn't just go away, in many respects. Some data arrives at a rapid pace, constantly demanding to be collected and observed. Others come in slow, but very large chunks, oftentimes in the form of decades of historical data. You might be facing an advanced analytics problem, or one that requires machine learning. These are all examples of challenges that big data architectures seek to solve.
 
 Big data solutions typically involve one or more of the following types of workload:
 
@@ -56,7 +56,7 @@ If you have read anything about big data before now, it is very likely you've se
 
 A data lake consists of both storage and processing. Data lake storage is built with several goals in mind: fault-tolerance, inifinite scalability, optimized for both real-time and long-term storage ingest velocities of data with varying shapes and sizes. Data lake processing involves one or more processing engines built with these goals in mind, and can operate on data stored in a data lake at scale.
 
-Data lake stores are oftentimes used in event streaming or IoT scenarios, given their ability to persist vast amounts of relational and nonrelational data without transformation or schema definition. They are built to handle high volumes of small writes at low latency, and are optimized for massive throughput.
+Data lake stores are often used in event streaming or IoT scenarios, given their ability to persist vast amounts of relational and nonrelational data without transformation or schema definition. They are built to handle high volumes of small writes at low latency, and are optimized for massive throughput.
 
 Another term commonly used in data scenarios, is _datamart_. Typically, a datamart is a store of data that is cleansed, packaged, and structured for easy consumption. Where a data lake store differs is in its handling, or non-handling, of data. It is built for ingesting raw data, leaving it in its original or least-processed form to allow questions to be asked of it in various ways, and at various times. If this data is cleansed and structured in a specific way, like in a datamart, then it is difficult to adapt how the data is processed and analyzed when new questions or tools come about in the future. This is why a data lake is composed of both storage and processing as separate entities.
 
@@ -73,7 +73,7 @@ The lambda architecture is a pipeline architecture originally devised with the g
 
 ![Lambda architecture diagram](./images/lambda.png)
 
-Data that flows into the "hot" path is constrained by latency requirements imposed by the speed layer so that it can be processed as quickly as possible, as data in this layer is typically desired in real time. Oftentimes, this requires a tradeoff of some level of accuracy in favor of data that is ready as quickly as possible. An example of this is incoming temperatures from a large swath of IoT devices. In this scenario, the speed layer may be used to process a subset of this incoming data in order to provide a live dashboard of temperature readings for several locations. The data in this case may be reduced by processing sliding windows of several seconds apiece, allowing the processing layer to perform calculations in a timely manner.
+Data that flows into the "hot" path is constrained by latency requirements imposed by the speed layer so that it can be processed as quickly as possible, as data in this layer is typically desired in real time. Often, this requires a tradeoff of some level of accuracy in favor of data that is ready as quickly as possible. An example of this is incoming temperatures from a large swath of IoT devices. In this scenario, the speed layer may be used to process a subset of this incoming data in order to provide a live dashboard of temperature readings for several locations. The data in this case may be reduced by processing sliding windows of several seconds apiece, allowing the processing layer to perform calculations in a timely manner.
 
 Data flowing into the "cold" path, on the other hand, is not subject to the same low latency requirements. This allows for high accuracy computation across large data sets, which can be very time-intensive. In addition, data in this path is immutable, meaning any changes to the value of a particular datum are stored alongside existing values in the form of new, timestamped datum. This allows for re-computation of a particular datam at any point in time across the history of the data collected. The hot path is enabled by today's ability to capture and store all raw, immutable data, allowing us to recompute this data through batch computation at any time.
 
@@ -89,7 +89,7 @@ There are some similarities to the lambda architecture's cold path, in that the 
 
 ### <a name="internetofthings"></a> Internet of Things (IoT)
 
-From a practical viewoint, Internet of Things (IoT) represents any device that is connected to the internet. This includes your PC, mobile phone, smart watch, smart thermostat, smart refrigerator, connected automobile, heart monitoring implants, and anything else that connects to the internet and sends or receives data. The number of connected devices grows every day, as does the amount of data collected from them. Oftentimes this data is being collected on the edge, in highly constrained, sometimes high latency environments. In other cases, data is sent from low latency environments by thousands or millions of devices, requiring the ability to rapidly ingest the barrage of data and process accordingly. Therefore, proper planning is required to handle these constraints and unique requirements.
+From a practical viewpoint, Internet of Things (IoT) represents any device that is connected to the internet. This includes your PC, mobile phone, smart watch, smart thermostat, smart refrigerator, connected automobile, heart monitoring implants, and anything else that connects to the internet and sends or receives data. The number of connected devices grows every day, as does the amount of data collected from them. Oftentimes this data is being collected on the edge, in highly constrained, sometimes high latency environments. In other cases, data is sent from low latency environments by thousands or millions of devices, requiring the ability to rapidly ingest the barrage of data and process accordingly. Therefore, proper planning is required to handle these constraints and unique requirements.
 
 Event-driven architectures are central to IoT solutions. The following diagram shows a possible logical architecture for IoT. The diagram emphasizes the event-streaming components of the architecture.
 
