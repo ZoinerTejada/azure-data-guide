@@ -1,4 +1,4 @@
-or # Advanced Analytics
+# Advanced Analytics
 
 **In this article**
 
