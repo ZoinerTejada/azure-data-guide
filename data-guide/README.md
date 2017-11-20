@@ -30,7 +30,7 @@ I need to work with ...
 ### Extract, Load, and Transform
 ### Data Flow & Control Flow
 
-## Advanced Analytics
+## [Advanced Analytics](./common-architectures/advanced-analytics.md)
 ### Machine Learning
 ### Deep Learning
 ### Artificial Intelligence
