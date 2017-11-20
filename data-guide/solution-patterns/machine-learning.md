@@ -23,4 +23,4 @@ When a model is ready to be deployed, it can be encapsulated as a web service an
 
 ## Next Steps
 Related Technology Choices:
-* Data Science and Machine Learning
+* [Data Science and Machine Learning](../technology-choices/data-science-and-machine-learning.md)
