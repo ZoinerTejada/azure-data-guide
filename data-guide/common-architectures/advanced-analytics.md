@@ -69,9 +69,9 @@ See Also:
 
 Related Solution Patterns
 - [Interactive Data Exploration](../solution-patterns/interactive-data-exploration.md)
-- Machine Learning
+- [Machine Learning](../solution-patterns/machine-learning.md)
 
 Related Technology Choices
-- Data Science and Machine Learning
+- [Data Science and Machine Learning](../technology-choices/data-science-and-machine-learning.md)
 - Cognitive Services
 
