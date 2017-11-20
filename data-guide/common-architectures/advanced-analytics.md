@@ -39,7 +39,7 @@ Most advanced analytics architectures include some or all of the following compo
 
 * **Orchestration**: Although the initial data exploration and modeling is performed interactively by data scientists, many advanced analytics solutions periodically re-train models with new data - contionually refining the accuracy of the models. This retraining can be automated using an orchestrated workflow.
 
-## <a name="machinelearning"></a> Machine Learning
+### <a name="machinelearning"></a> Machine Learning
 Machine Learning is a mathematical modeling technique used to train a predictive model. The general principle is to apply a statistical algorithm to a large dataset of historical data to uncover relationships between the fields it contains.
 
 Machine Learning modeling is usually performed by data scientists, who need to thoroughly explore and prepare the data before training a model. This exploration and preparation typically involved a great deal of interactive data analaysis and visualization - usually using languages such as Python and R in interactive tools and environments that are specifically designed for this task.
