@@ -1,4 +1,4 @@
-or # Big Data
+# Big Data
 
 **In this article**
 
