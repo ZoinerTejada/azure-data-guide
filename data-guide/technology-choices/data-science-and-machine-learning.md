@@ -70,4 +70,58 @@ Considerations:
 * Online only - no offline development environment.
 * No support for the latest deep learning models and frameworks.
 
-### Azure Machine Learning Experimentation Service
+## Tools and Services for Deploying Machine Learning Models
+After a data scientist has created a machine learning model, you will typically need to deploy it and consume it from applications or in other data flows. There are a number of potential deployment targets for machine learning models.
+
+### Spark on Azure HDInsight
+Apache Spark includes *SparkML*, a framework and library for machine learning models. Additionally, the Microsoft Machine Learning library for Spark (*MMLSpark*) provides deep learning algorithms support for predictive models in Spark.
+
+Key Benefits:
+* Spark is a distributed platform that offers high scalability for  high-volume machine learning processes.
+* You can deploy models directly to Spark in HDinsight from Azure Machine Learning Workbench, and manage them using the Azure Machine Learning Model Management service.
+
+Considerations:
+* Spark runs in an HDinsght cluster, which incurs charges the whole time it is running. If the machine learning service will only be used occassionally, this may result in unnecessary costs.
+
+### Web Service in a Container
+You can deploy a machine learning model as a Python web service in a docker container. This enables you to deploy the model to the cloud (in the Azure Container Service) or to an edge device where it can be used locally with the data on which it operates.
+
+Key Benefits:
+* Containers are a lightweight and generally cost effective way to package and deploy services.
+* Azure Container Service makes it possible to scale your service in a Kubernates cluster.
+* The ability to deploy to an edge device menables you to move your predictive logic closer to the data.
+* You can deploy to a container directly from Azure Machine Learning Workbench.
+
+Considerations:
+* This deployment model is ased on Docker containers; so you should be familiar with this technology before deploying a web service this way.
+
+### Microsoft Machine Learning Server
+ML Server (formerly Microsoft R Server) is a scalable platform for R and Python code, specicially designed for Machine Learning scenarios.
+
+Key Benefits:
+* High scalability
+* Direct deployment from Azure Machine Learning Workbench
+
+Considerations:
+* You need to deploy and manage ML Server in your enterprise.
+
+### Microsoft SQL Server
+Microsoft SQL Server supports R and Python natively, enabling you to encapsulate machine learning models built in these languages as Transact-SQL functions in a database.
+
+Key Benefits:
+* Encapsulate predictive logic in a database function, making it easy to include in data-tier logic.
+
+Consideratons:
+* Assumes a SQL Server database as the data-tier for your application.
+
+### Azure Machine Learning Web Service
+When you create a machine learning model using Azure Machine Learnign Studio, you can deploy it as a web service. This ca then be consumed through a REST interface from any client applications capable of communicating by HTTP.
+
+Key Benefits:
+* Ease of development and deployment
+* Web Service management portal with basic monitoring metrics
+
+Considerations:
+* Only available for models built using Azure Machine Learning Studio.
+* Web-based access only
+
