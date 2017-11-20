@@ -53,7 +53,7 @@ The following table summarize the key differences in capabilities between each. 
 ### Scalability Capabilities
 | | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
 | --- | --- | --- | --- | --- | --- | 
-| Max Data Size | 4 TB | 4 TB | 524 PB | 1 TB | 1 TB |
+| Max Data Size | 4 TB | 35 TB | 256 TB | 1 TB | 1 TB |
 | Supports Capacity Pools  | Yes | No | No | No | No |
 | Supports Clusters Scale Out  | No | No | Yes | No | No |
 | Dynamic scalability (scale up)  | Yes | Yes | No | Yes | Yes |
