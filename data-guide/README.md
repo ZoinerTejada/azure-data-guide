@@ -80,7 +80,7 @@ What technologies should you use for your data needs?
 # Technology Choices
 ## Transactional data stores
 ### [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md) 
-### Online Analytical Processing (OLAP) data stores
+### [Online Analytical Processing (OLAP) data stores](./technology-choices/olap-data-stores.md)  
 ### Data Warehouses
 
 ## [Pipeline Orchestration, Control Flow, and Data Movement](./technology-choices/pipeline-orchestration-data-movement.md)
