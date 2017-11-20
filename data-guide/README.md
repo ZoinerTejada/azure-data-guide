@@ -39,7 +39,7 @@ What solution patterns can you use to handle that data?
 # Solution Patterns
 ## Working with transactional data
 ### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) 
-### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytics-processing.md)  
+### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytical-processing.md)  
 ### [Data Warehousing](./solution-patterns/data-warehousing.md) - Stub Only
 - Massively Parallel Processing
 
