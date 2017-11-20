@@ -120,6 +120,10 @@ When you create a machine learning model using Azure Machine Learnign Studio, yo
 Key Benefits:
 * Ease of development and deployment
 * Web Service management portal with basic monitoring metrics
+* Built-in support for calling Azure Machine Learning web services from:
+  * Azure Data Lake Analytics
+  * Azure Data Factory
+  * Azure Stream Analytics
 
 Considerations:
 * Only available for models built using Azure Machine Learning Studio.
