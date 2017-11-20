@@ -68,7 +68,8 @@ Read Next: ???
 See Also:
 
 Related Solution Patterns
-- Machine Learning at Scale
+- Interactive Data Exploration
+- Machine Learning
 
 Related Technology Choices
 - Machine Learning Modeling
