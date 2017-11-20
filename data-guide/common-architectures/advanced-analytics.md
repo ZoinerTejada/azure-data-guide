@@ -73,5 +73,5 @@ Related Solution Patterns
 
 Related Technology Choices
 - [Data Science and Machine Learning](../technology-choices/data-science-and-machine-learning.md)
-- Cognitive Services
+- [Cognitive Services](../technology-choices/cognitive-services.md)
 
