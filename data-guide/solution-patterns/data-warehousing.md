@@ -1,4 +1,4 @@
-# WIP - Data Warehousing
+# Data Warehousing
 
 [About]()  
 [When to use this data architecture](#whentouse)  
