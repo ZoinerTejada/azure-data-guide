@@ -47,7 +47,7 @@ Batch processing is used in a variety of scenarios, from the initial data mungin
 
 One example of batch processing is transforming a large set of flat, semi-structured CSV or JSON files into a schematized (and structured format) that is ready for further querying. Along with this, typically the format is converted from the raw formats used for ingest (such as CSV) to binary formats that are more performant for querying because they store data in a columnar format, and often provide indexes and inline statistics about the data contained.
 
-With batch processing, typically there is a bit of orchestration required to migrate or copy the data into your data storage, batch processing, analtyical data store, and reporting layers.
+With batch processing, typically there is a bit of orchestration required to migrate or copy the data into your data storage, batch processing, analytical data store, and reporting layers.
 
 ![Batch processing CSV and JSON files in Azure](./images/big-data-batch.png)
 

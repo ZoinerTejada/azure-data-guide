@@ -61,7 +61,7 @@ The following tables summarize the key differences in capabilities between each.
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-Data Warehouse Solution Pattern
+[Data Warehousing Solution Pattern](../solution-patterns/data-warehousing.md)
 
 See Also:
 
@@ -69,7 +69,7 @@ Related Solution Patterns
 - Working with transactional data
     - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
     - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
-    - Data Warehousing
+    - [Data Warehousing](../solution-patterns/data-warehousing.md)
 
 Related Technology Choices
 - Transactional data stores
