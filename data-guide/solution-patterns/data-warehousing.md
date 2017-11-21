@@ -34,7 +34,11 @@ Data warehouses are optimized for read access, resulting in faster report genera
 
 ## <a name="challenges"></a>Challenges
 
-TODO: ADD CHALLENGES
+Properly configuring a data warehouse to fit the needs of your business can bring with it some of the following challenges:
+
+* Committing the time required to properly model your business concepts. This is an important step, as data warehouses are information-driven, where concept mapping drives the rest of the project. This involves standardizing business-related terms and common formats (numeric, currency, dates, etc.), and restructuring the schema in a way that makes sense to business users but still ensures accuracy of data aggregates and relationships.
+* Planning and setting up your data orchestration. Deciding how and how often to copy data over to your warehouse. Deciding on when, or if, to move historical data out of your operational data stores and into the warehouse.
+* Coming up with a strategy to maintain and improve your data quality by cleaning your data as it is imported into your warehouse.
 
 ## <a name="inazure"></a>Data warehousing in Azure
 
