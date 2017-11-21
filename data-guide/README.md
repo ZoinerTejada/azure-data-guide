@@ -81,7 +81,7 @@ What technologies should you use for your data needs?
 ## Transactional data stores
 ### [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md) 
 ### [Online Analytical Processing (OLAP) data stores](./technology-choices/olap-data-stores.md)  
-### Data Warehouses
+### [Data Warehouses](./technology-choices/data-warehouses.md)
 
 ## [Pipeline Orchestration, Control Flow, and Data Movement](./technology-choices/pipeline-orchestration-data-movement.md)
 ### Azure Data Factory
