@@ -1,6 +1,6 @@
 # Azure Data Architecture Guide
 
-# [Overview](./overview.md) - Stub Only
+# [Overview](./overview.md)
 
 # [Common Data Architectures](./common-architectures/overview.md) 
 
@@ -36,7 +36,7 @@ I need to work with ...
 ### Artificial Intelligence
 
 What solution patterns can you use to handle that data?
-# Solution Patterns
+# Solution Pipelines
 ## Working with transactional data
 ### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) 
 ### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytical-processing.md)  

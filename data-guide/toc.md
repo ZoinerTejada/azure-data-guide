@@ -33,7 +33,7 @@ I need to work with ...
 ### [Artificial Intelligence]()
 
 What solution patterns can you use to handle that data?
-# [Solution Patterns]()
+# [Solution Pipelines]()
 ## [Working with transactional data]()
 ### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md)
 ### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytics-processing.md)
