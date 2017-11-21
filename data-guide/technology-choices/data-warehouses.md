@@ -15,11 +15,11 @@ There are several options for using a data warehouse in Azure, depending on your
 SMP (small/medium data):
 
 - [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
-- [SQL Server in a VM](https://docs.microsoft.com/sql/analysis-services/analysis-services)
+- [SQL Server in a VM](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)
 
 MPP (big data):
 
-- [Azure Data Warehouse](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
+- [Azure Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
 - [Apache Hive on HDInsight](https://docs.microsoft.com/azure/hdinsight/hadoop/hdinsight-use-hive)
 - [Interactive Query (Hive LLAP) on HDInsight](https://docs.microsoft.com/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
 
