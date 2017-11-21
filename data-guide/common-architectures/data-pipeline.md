@@ -75,10 +75,10 @@ Related Solution Patterns
 
 Related Technology Choices
 - Transactional Data Stores
-    - Online Transaction Processing (OLTP) data stores
-    - Online Analytical Processing (OLAP) data stores
-    - Data Warehouses
-- Pipeline Orchestration, Control Flow and Data Movement
+    - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
+    - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
+    - [Data Warehouses](../technology-choices/data-warehouses.md)
+- [Pipeline Orchestration, Control Flow, and Data Movement](../technology-choices/pipeline-orchestration-data-movement.md)
     - Azure Data Factory
     - Oozie on HDInsight
     - SQL Server Integration Services

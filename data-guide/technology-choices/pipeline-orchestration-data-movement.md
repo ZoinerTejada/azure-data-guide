@@ -77,7 +77,7 @@ Related Solution Patterns
 - Working with transactional data
     - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
     - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
-    - Data Warehousing
+    - [Data Warehousing](../solution-patterns/data-warehousing.md)
 
 Related Technology Choices
 - Transactional data stores
