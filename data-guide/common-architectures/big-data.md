@@ -128,13 +128,12 @@ Learn more about IoT on Azure by reading the [Azure IoT reference architecture](
 
 ## <a name="wheretogo"></a>Where to go from here
 
-Read Next: Processing CSV and JSON Files Solution Pattern
+Read Next: [Processing CSV and JSON Files Solution Pipeline](../solution-patterns/processing-csv-and-json-files.md)
 
 See Also:
 
-Related Solution Patterns
+Related Solution Pipelines
 - Handling unstructured data
-    - [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
     - [Processing free-form text files](../solution-patterns/processing-free-form-text.md)
 - Time-series solutions
     - Internet of Things
@@ -142,8 +141,9 @@ Related Solution Patterns
 
 Related Technology Choices
 - Handling unstructured data
-    - Processing CSV and JSON files
-    - Free-form text files
+    - [Options for processing CSV and JSON files](../technology-choices/csv-json-options.md)
+    - [Enabling full text search on free-form text files](../technology-choices/search-options.md)
+    - [Processing free-form text files with natural language processing](../technology-choices/natural-language-processing.md)
 - Time-series solutions
     - Internet of Things
     - Real-Time Analytics
