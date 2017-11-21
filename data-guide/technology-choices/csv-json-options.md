@@ -81,9 +81,7 @@ When you need to work with very large data sets, or process streaming data in re
 
 ### Compute Capabilities
 
-TODO: SHOULD WE RENAME THIS CATEGORY?
-
-Services in this category encompass serverless and web-based solutions for processing your CSV and JSON files. Serverless does not mean there are no servers, just that developers and admins do not need to worry about provisioning or managing servers.
+Services in this category utilize serverless and web-based solutions for processing your CSV and JSON files. Serverless does not mean there are no servers, just that developers and admins do not need to worry about provisioning or managing servers.
 
 Azure Functions and SQL Data Warehouse are both useful for streaming/real-time processing scenarios. For example, Azure Functions can be used directly by Cosmos DB to create a serverless, globally distributed microservices apps, providing real-time customer experiences based on data and events. The natural choice between CSV and JSON files in this scenario is JSON. SQL Data Warehouse, on the other hand, can be used in an architecture that captures CSV or JSON files and documents in real-time through Kafka on HDInsight or Event Hubs, processed in real-time using Spark or Storm on HDInsight, or with Stream Analytics, then ingested into SQL Data Warehouse through micro-batching offered by Event Grid, which sends processed data using PolyBase.
 
