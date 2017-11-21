@@ -1,4 +1,4 @@
-# Data Warehousing
+# WIP - Data Warehousing
 
 [About]()  
 [When to use this data architecture](#whentouse)  
@@ -32,9 +32,11 @@ Data warehouses are optimized for read access, resulting in faster report genera
 
 ## <a name="challenges"></a>Challenges
 
+TODO: ADD CHALLENGES
 
 ## <a name="inazure"></a>Data warehousing in Azure
 
+TODO: ADD INFO + DIAGRAM
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
