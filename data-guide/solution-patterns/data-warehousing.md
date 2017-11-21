@@ -12,6 +12,8 @@ A data warehouse is a central organizational, relational repository of integrate
 
 To move data into a data warehouse, it is extracted on a periodic basis from various sources that contain important business information. As the data is moved, it is formatted, cleaned, validated, summarized, and reorganized. It becomes a permanent storage space for data used for reporting, analysis, and forming important business decisions using business intelligence (BI) tools.
 
+![Data warehousing](./images/data-warehouses.png)
+
 ## <a name="whentouse"></a>When to use this architecture
 
 Choose a data warehouse when you need to turn massive amounts of data from operational systems into a format that is easy to understand, current, and accurate so decisions can be made on the data. Data warehouses do not need to follow the same terse data structure you may be using in your operational/OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify data relationships, and consolidate many tables, such as customers, into one. These steps help guide users who need to create ad-hoc reports, or create reports and analyze the data in BI systems, without the help of a DBA or data developer.
