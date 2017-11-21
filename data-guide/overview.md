@@ -1,6 +1,6 @@
 # Azure Data Architecture Guide
 
-This guide presents a structured approach for designing data-centric solutions on Azure. It is based on proven practices that we have learned from customer engagements and is intended as an entry point for all data related topics in Azure. The guide covers the big picture concepts in common architectures, which lead you to the solution pipelines used by that architecture. The solution pipelines are used to describe how the various processing and storage components fit together in handling the data. Finally, the technology choices will help you narrow the list of candidate Azure services appropriate to your solution pipeline down to those services that are most appropriate to your specific requirements. 
+This guide presents a structured approach for designing data-centric solutions on Azure. It is based on proven practices that we have learned from customer engagements and is intended as an entry point for all data related topics in Azure. The guide covers the big picture concepts in common data architectures, which lead you to the solution pipelines used by that architecture. The solution pipelines are used to describe how the various processing and storage components fit together in handling the data. Finally, the technology choices will help you narrow the list of candidate Azure services appropriate to your solution pipeline down to those services that are most appropriate to your specific requirements. 
 
 ![Overview of the structure of the guide](./images/overview-flowchart.png)
 
@@ -20,7 +20,7 @@ At the end of each article is provided a Read Next link which you can follow to 
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-[Relational data](./common-architectures/relational-data.md)
+[Common Data Architectures](./common-architectures/overview.md)
 
 See Also:
 
