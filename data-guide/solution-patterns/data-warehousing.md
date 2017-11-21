@@ -38,7 +38,9 @@ TODO: ADD CHALLENGES
 
 ## <a name="inazure"></a>Data warehousing in Azure
 
-TODO: ADD INFO + DIAGRAM
+In Azure, you may have one or more sources of data, whether from customer transactions, or from various business applications used by various departments. This data is traditionally stored in one or more [OLTP](online-transaction-processing.md) databases. The data could also be persisted in other storage mediums such as network shares, blob storage, or a [data lake](../common-architectures/big-data.md#datalake). Your data warehouse would reside in the analytical data store layer. You will need some level of orchestration to periodically move or copy data from your data storage to the warehouse. Finally, analytics and reporting BI tools will connect to the data warehouse for the single source of truth.
+
+![Data warehousing in Azure]](./images/analytical-data-store.png)
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
