@@ -154,4 +154,5 @@ What technologies should you use for your data needs?
 ## [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
 ### Power BI
 ### Jupyter Notebooks
+### Zeppelin Notebooks
 ### Microsoft Azure Notebooks
