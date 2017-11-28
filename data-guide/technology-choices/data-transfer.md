@@ -177,6 +177,8 @@ The following tables summarize the key differences in capabilities between each.
 | Upload to Blob storage | Yes | Yes | Yes |
 | Upload to Data Lake Store | Yes | Yes | Yes |
 | Orchestrate data transfers | No | No | Yes |
+| Custom data transformations | No | No | Yes |
+| Pricing model | Free | Free | Pay per usage |
 
 \* Azure Portal in this case means using the web-based exploration tools for Blob storage and Data Lake Store. This excludes using the portal for other services, such as Azure Data Factory.
 
