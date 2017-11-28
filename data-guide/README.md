@@ -88,7 +88,7 @@ What technologies should you use for your data needs?
 ### Oozie on HDInsight
 ### SQL Server Integration Services
 
-## Data Transfer
+## [Data Transfer](./technology-choices/data-transfer.md)
 ### Azure Import/Export service
 ### Command Line Tools
 ### Graphical User Interface Tools
