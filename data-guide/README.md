@@ -151,7 +151,7 @@ What technologies should you use for your data needs?
 ## Applied Artificial Intelligence
 ### Cognitive Services (computer vision, sentiment, etc.)
 
-## Analysis, Visualizations & Reporting
+## [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
 ### Power BI
 ### Jupyter Notebooks
 ### Microsoft Azure Notebooks
