@@ -4,46 +4,28 @@
 
 # [Common Data Architectures](./common-architectures/overview.md) 
 
-I need to work with ...
-## [Relational data](./common-architectures/relational-data.md)
+## [Relational Data](./common-architectures/relational-data.md)
 ### [Transactional Data](./common-architectures/transactional-data.md) 
 ### [Semantic Modeling](./common-architectures/semantic-modeling.md)
 
 
 ## [Non-Relational & No-SQL Data](./common-architectures/non-relational-data.md)
-### Document Data
-### Columnar Data
-### Key/value Data
-### Graph Data
-### Time Series Data
-### Object Data
-
 
 ## [Big Data](./common-architectures/big-data.md)
-### Data Lake
-### Lambda Architecture
-### Kappa Architecture
-### Internet of Things
+
 
 ## [Data Pipeline](./common-architectures/data-pipeline.md)
-### Extract, Transform, and Load
-### Extract, Load, and Transform
-### Data Flow & Control Flow
 
 ## [Advanced Analytics](./common-architectures/advanced-analytics.md)
-### Machine Learning
-### Deep Learning
-### Artificial Intelligence
 
-What solution patterns can you use to handle that data?
 # Solution Pipelines
+
 ## Working with transactional data
 ### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) 
 ### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytical-processing.md)  
 ### [Data Warehousing](./solution-patterns/data-warehousing.md)
-- Massively Parallel Processing
 
-## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md) - Stub Only
+## Handling Unstructured Data
 ### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md) 
 ### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
 
@@ -61,12 +43,6 @@ What solution patterns can you use to handle that data?
 ### Access Control
 ### Auditing
 
-## Data Governance
-### Data Catalog
-### Data Lineage
-### Data Sovereignty
-### Data Sensitivity/Risk Classification
-
 ## Machine Learning at Scale
 ### Predictive Solutions
 ### Online Learning Solutions
@@ -76,7 +52,6 @@ What solution patterns can you use to handle that data?
 ### Alerting
 ### Troubleshooting & Diagnostics
 
-What technologies should you use for your data needs?
 # Technology Choices
 ## Transactional data stores
 ### [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md) 
@@ -84,24 +59,10 @@ What technologies should you use for your data needs?
 ### [Data Warehouses](./technology-choices/data-warehouses.md)
 
 ## [Pipeline Orchestration, Control Flow, and Data Movement](./technology-choices/pipeline-orchestration-data-movement.md)
-### Azure Data Factory
-### Oozie on HDInsight
-### SQL Server Integration Services
 
 ## [Data Transfer](./technology-choices/data-transfer.md)
-### Azure Import/Export service
-### Command Line Tools
-### Graphical User Interface Tools
-### Azure Data Box
 
 ## [Data Ingest](./technology-choices/data-ingest.md)
-### Azure Storage Blob containers
-### Azure Data Lake Store
-### Cosmos DB
-### HBase on HDInsight
-### Event Hubs
-### IoT Hub
-### Kafka on HDInsight
 
 ## Data Exploration & Data Wrangling
 ### SQL Data Warehouse
