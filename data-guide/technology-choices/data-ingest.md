@@ -53,11 +53,25 @@ Azure Data Lake Store can be accessed from Hadoop (available through HDInsight) 
 
 #### Cosmos DB
 
-Blah
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/) is Microsoft’s globally distributed multi-model database. Azure Cosmos DB was built from the ground up with global distribution and horizontal scale at its core. It offers turnkey global distribution across any number of Azure regions by transparently scaling and replicating your data wherever your users are. Elastically scale throughput and storage worldwide, and pay only for the throughput and storage you need. Azure Cosmos DB guarantees single-digit-millisecond latencies at the 99th percentile anywhere in the world, offers multiple well-defined consistency models to fine-tune performance, and guarantees high availability with multi-homing capabilities—all backed by industry leading service level agreements (SLAs).
+
+Azure Cosmos DB is truly schema-agnostic; it automatically indexes all the data without requiring you to deal with schema and index management. It’s also multi-model, natively supporting document, key-value, graph, and column-family data models. With Azure Cosmos DB, you can access your data using APIs of your choice, as DocumentDB SQL (document), MongoDB (document), Azure Table Storage (key-value), and Gremlin (graph) are all natively supported.
+
+Cosmos DB features:
+
+- [Turnkey global distribution](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)
+- [Elastic scaling of throughput and storage](https://docs.microsoft.com/azure/cosmos-db/partition-data) worldwide
+- Single-digit millisecond latencies at the 99th percentile
+- [Five well-defined consistency levels](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)
+- Guaranteed high availability
 
 #### HBase on HDInsight
 
-Blah
+[Apache HBase](http://hbase.apache.org/) is an open-source, NoSQL database that is built on Hadoop and modeled after Google BigTable. HBase provides random access and strong consistency for large amounts of unstructured and semi-structured data in a schemaless database organized by column families.
+
+Data is stored in the rows of a table, and data within a row is grouped by column family. HBase is a schemaless database in the sense that neither the columns nor the type of data stored in them need to be defined before using them. The open-source code scales linearly to handle petabytes of data on thousands of nodes. It can rely on data redundancy, batch processing, and other features that are provided by distributed applications in the Hadoop ecosystem.
+
+The [HDInsight implementation](https://docs.microsoft.com/azure/hdinsight/hbase/apache-hbase-overview) leverages the scale-out architecture of HBase to provide automatic sharding of tables, strong consistency for reads and writes, and automatic failover. Performance is enhanced by in-memory caching for reads and high-throughput streaming for writes. In most cases, you'll want to [create the HBase cluster inside a virtual network](https://docs.microsoft.com/azure/hdinsight/hbase/apache-hbase-provision-vnet) so other HDInsight clusters and applications can directly access the tables.
 
 ### <a name="streaming"></a> Streaming/Real-time Ingest
 
@@ -113,6 +127,15 @@ The following tables summarize the key differences in capabilities between each.
 
 | | Cosmos DB | HBase on HDInsight |
 | --- | --- | --- |
+| Primary database model | Document store, Graph DBMS, Key-value store, Wide column store | Wide column store |
+| Data types | Yes (JSON data types) | No |
+| Secondary indexes | Yes | No |
+| SQL language support | Yes | No |
+| Available APIs | [DocumentDB](https://docs.microsoft.com/azure/cosmos-db/documentdb-introduction), [MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction), [Graph](https://docs.microsoft.com/azure/cosmos-db/graph-introduction) (Gremlin), RESTful HTTP, [Table](https://docs.microsoft.com/azure/cosmos-db/table-introduction), [Cassandra](https://docs.microsoft.com/azure/cosmos-db/cassandra-introduction) | Java, RESTful HTTP, Thrift |
+| Consistency | Strong, Bounded-staleness, Session, Consistent Prefix, Eventual | Strong |
+| Native Azure Functions integration | [Yes](https://docs.microsoft.com/azure/cosmos-db/serverless-computing-database) | No |
+| Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |
+| Pricing model | Elastically scalable request units (RUs) charged per-second as needed; Elastically scalable storage | Per-hour pricing for HDInsight cluster (horizontal scaling of nodes); Storage |
 
 ### Streaming/Real-time Ingest Capabilities
 
