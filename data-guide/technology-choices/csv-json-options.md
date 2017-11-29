@@ -24,7 +24,7 @@ In Azure, the following services will help you process CSV and JSON files:
 - Azure Machine Learning Workbench
 - SQL SSIS
 
-Whether you are importing your CSV and JSON files into Azure Storage/Azure Data Lake Store, or processing and loading the data into a database such as Azure SQL, SQL DW, or Cosmos DB, [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/copy-activity-overview) provides a great option to automate the process for either one-time or recurring operations. Use the copy activity to copy your on-premises or cloud-based files into a number of [supported data stores](https://docs.microsoft.com/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats).
+Whether you are importing your CSV and JSON files into Azure Storage/Azure Data Lake Store, or processing and loading the data into a database such as Azure SQL, SQL Data Warehouse, or Cosmos DB, [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/copy-activity-overview) provides a great option to automate the process for either one-time or recurring operations. Use the copy activity to copy your on-premises or cloud-based files into a number of [supported data stores](https://docs.microsoft.com/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats).
 
 Once stored, there are a number of options for processing your files. Because many programming languages can easily work with CSV and JSON files from applications that run on a virtual machine or locally, we are going to focus on Azure services you can use, some of which require no programming.
 
@@ -34,13 +34,13 @@ An option that requires coding, but still allows you not have to manage infrastr
 
 Process CSV and JSON files through web and API apps with [App Service](https://docs.microsoft.com/azure/app-service/) for a more traditional web-based approach. Create web apps that can accept CSV and JSON files that are uploaded, or stored in Azure Storage or Azure Data Lake Store for processing, using .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python.
 
-When you need a big data solution, use [Azure HDInsight](https://docs.microsoft.com/azure/hdinsight/), a managed Open Source Big Data analytics service for the enterprise. With it, you can create and use optimized Hadoop, Spark, Hive, HBase, Storm, Kafka, and Microsoft R Server clusters to process and analyze your files at scale. Another option in this space is [Azure Data Lake Analytics](https://docs.microsoft.com/azure/data-lake-analytics/), which runs massively parallel data transformation and processing programs using a T-SQL/C# hybrid called U-SQL, R, Python, and .NET over petabytes of data. Its capabilities for working with CSV and JSON files is mostly in line with HDInsight for batch operations. If you are interested in real-time stream processing of your files, such as live log analytics, HDInsight offers options for doing so with Hadoop technologies like Spark, HBase, and Storm.
+When you need a big data solution, use [Azure HDInsight](https://docs.microsoft.com/azure/hdinsight/), a managed open source big data analytics service for the enterprise. With it, you can create and use optimized Hadoop, Spark, Hive, HBase, Storm, and Microsoft R Server clusters to process and analyze your files at scale. Another option in this space is [Azure Data Lake Analytics](https://docs.microsoft.com/azure/data-lake-analytics/), which runs massively parallel data transformation and processing programs using a T-SQL/C# hybrid called U-SQL, R, Python, and .NET over petabytes of data. Its capabilities for working with CSV and JSON files is mostly in line with HDInsight for batch operations. If you are interested in real-time stream processing of your files, such as live log analytics, HDInsight offers options for doing so with Hadoop technologies like Spark, HBase, and Storm.
 
 If you would like to use advanced data preparation tools for efficiently exploring, understanding, and fixing problems in your source CSV or JSON data, consider using [Data Preparation](https://docs.microsoft.com/azure/machine-learning/preview/data-prep-getting-started) as part of the [Azure Machine Learning Workbench](https://docs.microsoft.com/azure/machine-learning/preview/scenario-big-data) experience. You can work with files stored locally, or in Azure Blob Storage. Once you have prepared your data, you can export it to another datastore more suitable for querying, or use it do develop a machine learning model using different compute targets, like Ubuntu DSVM or an Azure HDInsight cluster, for experimentation.
 
 Consider using [SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/) when you need to integrate your relational and non-relational data, such as data stored in CSV and JSON files, in a cloud-based, scale-out database capable of processing massive volumes of data. This is an ideal solution for those more comfortable with using SQL Server Transact-SQL (T-SQL) and related tools. PolyBase is what allows SQL Data Warehouse to access and combine both non-relational and relational data. It allows you to run queries on external data in Hadoop or Azure blob storage. PolyBase uses external tables to access data in Azure Blob storage. By simply using Transact-SQL (T-SQL) statements, you can import and export data back and forth between relational tables in SQL Server and non-relational data stored in Hadoop or Azure Blob Storage. You can also query the external data using a T-SQL query and join it with relational data. However, the most common use of PolyBase is to load data into the data warehouse as part of the ETL process, rather than performing ad-hoc queries against CSV and JSON files.
 
-[SQL Server Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services) (SSIS) is a platform for data integration and workflow applications capable of a broad range of data migration tasks. SSIS can be used to extract and transform data from a wide variety of sources such as CSV and JSON files, and then load the data into one or more destinations. Consider using SSIS for these tasks as part of your ETL process when using SQL Server or SQL Data Warehouse as your data store.
+[SQL Server Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services) (SSIS) is a platform for data integration and workflow applications capable of a broad range of data migration tasks. SSIS can be used to extract and transform data from a wide variety of sources such as CSV and JSON files, and then load the data into one or more destinations. Consider using SSIS for these tasks as part of your ETL process when using SQL Server or SQL Data Warehouse as your data store, or using Azure Data Factory to orchestrate your data pipeline processing.
 
 ## <a name="howtochoose"></a> How do you choose?
 Each service brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements. You need to consider your specific challenges, like scale. Do you need to process one at a time, in large batches, or lots of incoming files streaming in real-time?
@@ -72,16 +72,16 @@ When you need to work with very large data sets, or process streaming data in re
 | --- | --- | --- |
 | Is Managed Service | Yes | Yes - but requires manual configuration and scaling |
 | Batch Processing | Yes | Yes |
-| Stream (Real-time Processing) | No | Yes - using Spark Streaming, Storm, and/or Kafka |
+| Stream (Real-time Processing) | No | Yes - using Spark Streaming, Storm, and/or Kafka (using the Streams API)|
 | Interactive Queries | No | Yes - using [Spark](https://azure.microsoft.com/services/hdinsight/apache-spark/) or [HDInsight Interactive Query (Hive LLAP)](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-interactive-hive) |
 | Programmability | U-SQL (combination of C# and T-SQL) | Python, Scala, Java, SQL (via Spark SQL or HiveQL), C# (when using Storm) |
 | Scalability | Can scale individual queries | Scale by adding additional worker nodes |
 | Install Additional Software | No | Yes - [manually](https://docs.microsoft.com/azure/hdinsight/hdinsight-apps-install-custom-applications) or through the [Marketplace](https://docs.microsoft.com/azure/hdinsight/hdinsight-apps-install-applications) |
-| Cost Platform | Only pay for processing (analytic units) | Pay by the hour for lifetime of the cluster |
+| Cost Platform | Only pay for query processing (analytic units) | Pay by the hour for lifetime of the cluster |
 
 ### Compute Capabilities
 
-Services in this category utilize serverless and web-based solutions for processing your CSV and JSON files. Serverless does not mean there are no servers, just that developers and admins do not need to worry about provisioning or managing servers.
+Services in this category utilize serverless and web-based solutions for processing your CSV and JSON files. Serverless does not mean there are no servers, just that developers and admins do not need to worry about provisioning, patching or managing servers.
 
 Azure Functions and SQL Data Warehouse are both useful for streaming/real-time processing scenarios. For example, Azure Functions can be used directly by Cosmos DB to create a serverless, globally distributed microservices apps, providing real-time customer experiences based on data and events. The natural choice between CSV and JSON files in this scenario is JSON. SQL Data Warehouse, on the other hand, can be used in an architecture that captures CSV or JSON files and documents in real-time through Kafka on HDInsight or Event Hubs, processed in real-time using Spark or Storm on HDInsight, or with Stream Analytics, then ingested into SQL Data Warehouse through micro-batching offered by Event Grid, which sends processed data using PolyBase.
 
@@ -94,7 +94,7 @@ Azure Functions and SQL Data Warehouse are both useful for streaming/real-time p
 
 ### Orchestration
 
-When it comes to orchestration, Azure Data Factory (ADF) and SSIS both offer a multitude of data sources and destinations you can use to move and transform your CSV and JSON file data. When your data destination is an Azure service, such as Azure Storage or HDInsight, ADF is the natural choice.
+When it comes to orchestration, Azure Data Factory and SQL Server Integration Services both offer a multitude of data sources and destinations you can use to move and transform your CSV and JSON file data. When your data destination is an Azure service, such as Azure Storage or HDInsight, ADF is the natural choice.
 
 | | Azure Data Factory (ADF) | SQL Server Integration Services (SSIS) |
 | --- | --- | --- |
@@ -112,7 +112,7 @@ When it comes to orchestration, Azure Data Factory (ADF) and SSIS both offer a m
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-Data Warehouse Solution Pattern
+[Data Warehousing](../solution-patterns/data-warehousing.md)
 
 See Also:
 
@@ -120,7 +120,6 @@ Related Solution Patterns
 - Working with transactional data
     - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
     - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../solution-patterns/data-warehousing.md)
 
 Related Technology Choices
 - Transactional data stores
