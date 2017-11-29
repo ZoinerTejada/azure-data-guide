@@ -35,18 +35,19 @@ Semantic modeling and analytical processing tends to have the following requirem
 
 | Requirement | Description |
 | --- | --- |
-| Normalization: | Normalized |
+| Normalization: | Highly normalized |
+| Schema: | Schema on write, strongly enforced|
 | Uses Transactions: | No |
 | Locking Strategy: | None |
-| Updateable: | No |
-| Appendable: | No |
-| Workload: | Heavy reads |
+| Updateable: | No (typically requires recomputing cube) |
+| Appendable: | No (typically requires recomputing cube) |
+| Workload: | Heavy reads, read-only |
 | Indexing: | Multidimensional indexing |
 | Datum size: | Medium to large sized |
 | Model: | Multidimensional |
 | Data shape: | Cube or Star/snowflake schema |
 | Query flexibility: | Highly flexible |
-| Scale: | Large |
+| Scale: | Large (10's-100's GBs) |
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next: [Online Analytical Processing (OLAP) Solution Pattern](../solution-patterns/online-analytical-processing.md)
