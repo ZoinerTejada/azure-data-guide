@@ -16,10 +16,8 @@ Semantic modeling is predominately used for read heavy scenarios, such as analyt
 
 There are two primary types of semantic models:
 
-* Tabular (newer): Relational modeling constructs (model, tables, columns). Internally, metadata is inherited from OLAP modeling constructs (cubes, dimensions, measures). Code and script use OLAP metadata.
-* Multidimensional: Traditional OLAP modeling constructs (cubes, dimensions, measures)
-
-A secondary semantic model type provided by some services is Power Pivot, offering visual data modeling in Excel, with server support provided by SharePoint.
+* Tabular: Uses relational modeling constructs (model, tables, columns). Internally, metadata is inherited from OLAP modeling constructs (cubes, dimensions, measures). Code and script use OLAP metadata.
+* Multidimensional: Leverages traditional OLAP modeling constructs (cubes, dimensions, measures).
 
 Relevant Azure Service: [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/)
 
@@ -37,18 +35,19 @@ Semantic modeling and analytical processing tends to have the following requirem
 
 | Requirement | Description |
 | --- | --- |
-| Normalization: | De-normalized |
+| Normalization: | Highly normalized |
+| Schema: | Schema on write, strongly enforced|
 | Uses Transactions: | No |
-| Locking Strategy: | Pessimistic |
-| Updateable: | Yes |
-| Appendable: | Yes |
-| Workload: | Heavy reads, moderate writes |
+| Locking Strategy: | None |
+| Updateable: | No (typically requires recomputing cube) |
+| Appendable: | No (typically requires recomputing cube) |
+| Workload: | Heavy reads, read-only |
 | Indexing: | Multidimensional indexing |
-| Datum size: | Medium to large sized |
+| Datum size: | Small to medium sized |
 | Model: | Multidimensional |
-| Data shape: | Star/snowflake schema |
+| Data shape: | Cube or Star/snowflake schema |
 | Query flexibility: | Highly flexible |
-| Scale: | Large |
+| Scale: | Large (10's-100's GBs) |
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next: [Online Analytical Processing (OLAP) Solution Pattern](../solution-patterns/online-analytical-processing.md)
@@ -59,13 +58,13 @@ Related Common Architectures
 - [Relational data stores](./relational-data-stores.md)
 
 Alternative Common Architectures
-- Non-relational and No-SQL data stores
+- [Non-relational and No-SQL data stores](./non-relational-data.md)
 
 Related Solution Patterns
 - Working with transactional data
     - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
     - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
-    - Data Warehousing
+    - [Data Warehousing](../solution-patterns/data-warehousing.md)
 
 Related Technology Choices
 - Transactional data stores

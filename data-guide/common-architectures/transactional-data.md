@@ -27,7 +27,7 @@ Transactional data tends to have the following requirements:
 | Consistency: | Strong consistency, ACID guarantees |
 | Integrity: | High integrity |
 | Uses Transactions: | Yes |
-| Locking Strategy: | Pessimistic |
+| Locking Strategy: | Pessimistic or Optimistic|
 | Updateable: | Yes |
 | Appendable: | Yes |
 | Workload: | Heavy writes, moderate reads |
@@ -47,13 +47,13 @@ Related Common Architectures
 - [Relational data stores](./relational-data-stores.md)
 
 Alternative Common Architectures
-- Non-relational and No-SQL data stores
+- [Non-relational and No-SQL data stores](./non-relational-data-stores.md)
 
 Related Solution Patterns
 - Working with transactional data
     - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - Online Analytical Processing (OLAP)
-    - Data Warehousing
+    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
+    - [Data Warehousing](../solution-patterns/data-warehousing.md)
 
 Related Technology Choices
 - Transactional data stores
