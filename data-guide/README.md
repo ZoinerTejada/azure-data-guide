@@ -64,14 +64,6 @@
 
 ## [Data Ingest](./technology-choices/data-ingest.md)
 
-## Data Exploration & Data Wrangling
-### SQL Data Warehouse
-### Spark and Spark SQL on HDInsight
-### Hive LLAP on HDInsight
-### Phoenix on HDInsight
-### Azure Machine Learning Workbench & Model Exploration Service
-### Data Science Virtual Machine
-
 ## Batch Processing
 ### Azure Data Lake Analytics
 ### Azure Batch
@@ -96,24 +88,8 @@
 ### Azure Analysis Services
 ### Cosmos DB
 
-## Machine Learning Model Training
-### Azure Machine Learning (Studio)
-### Azure Machine Learning Experimentation Service
-### Spark ML
-### Microsoft Machine Learning Server
-### SQL Machine Learning Services
-
-## Machine Learning Model Deployment & Scoring
-### Azure Machine Learning (Studio)
-### Azure Machine Learning Model Management Service
-### Microsoft Machine Learning Server
-### SQL Machine Learning Services
-
 ## Applied Artificial Intelligence
 ### Cognitive Services (computer vision, sentiment, etc.)
 
 ## [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
-### Power BI
-### Jupyter Notebooks
-### Zeppelin Notebooks
-### Microsoft Azure Notebooks
+
