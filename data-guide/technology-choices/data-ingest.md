@@ -35,11 +35,11 @@ After storing files in Blob storage, you can access them from anywhere in the wo
 
 There are three types of blobs -- block blobs, page blobs (used for VHD files), and append blobs.
 
-- Block blobs are used to hold ordinary files up to about 4.7 TB.
+- Block blobs are used to hold ordinary files up to about 4.7 TB. This is the type most commonly used for any form of analytics. 
 - Page blobs are used to hold random access files up to 8 TB in size. These are used for the VHD files that back VMs.
 - Append blobs are made up of blocks like the block blobs, but are optimized for append operations. These are used for things like logging information to the same blob from multiple VMs.
 
-Azure Blob storage can be accessed from Hadoop (available through HDInsight). HDInsight can use a blob container in Azure Storage as the default file system for the cluster. Through a Hadoop distributed file system (HDFS) interface, the full set of components in HDInsight can operate directly on structured or unstructured data stored as blobs.
+Azure Blob storage can be accessed from Hadoop (available through HDInsight). HDInsight can use a blob container in Azure Storage as the default file system for the cluster. Through a Hadoop distributed file system (HDFS) interface, the full set of components in HDInsight can operate directly on structured or unstructured data stored as blobs. Azure Blob storage can also be accessed via Azure SQL Data Warehouse using its PolyBase feature. 
 
 #### Azure Data Lake Store
 
@@ -47,7 +47,7 @@ Azure Blob storage can be accessed from Hadoop (available through HDInsight). HD
 
 ADLS does not impose any limits on account sizes, file sizes, or the amount of data that can be stored in a data lake. Data is stored durably by making multiple copies and there is no limit on the duration of time for which the data can be stored in the data lake. In addition to making multiple copies of files to guard against any unexpected failures, data lake spreads parts of a file over a number of individual storage servers. This improves the read throughput when reading the file in parallel for performing data analytics.
 
-Azure Data Lake Store can be accessed from Hadoop (available through HDInsight) using the WebHDFS-compatible REST APIs. It is specifically designed to enable analytics on the stored data and is tuned for performance for data analytics scenarios. Out of the box, it includes all the enterprise-grade capabilities—security, manageability, scalability, reliability, and availability—essential for real-world enterprise use cases.
+Azure Data Lake Store can be accessed from Hadoop (available through HDInsight) using the WebHDFS-compatible REST APIs. It is specifically designed to enable analytics on the stored data and is tuned for performance for data analytics scenarios. Out of the box, it includes all the enterprise-grade capabilities—security, manageability, scalability, reliability, and availability—essential for real-world enterprise use cases. ADLS can also be accessed via Azure SQL Data Warehouse using its PolyBase feature. 
 
 ### <a name="nosql"></a> NoSQL Databases
 
@@ -55,7 +55,7 @@ Azure Data Lake Store can be accessed from Hadoop (available through HDInsight) 
 
 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/) is Microsoft’s globally distributed multi-model database. Azure Cosmos DB was built from the ground up with global distribution and horizontal scale at its core. It offers turnkey global distribution across any number of Azure regions by transparently scaling and replicating your data wherever your users are. Elastically scale throughput and storage worldwide, and pay only for the throughput and storage you need. Azure Cosmos DB guarantees single-digit-millisecond latencies at the 99th percentile anywhere in the world, offers multiple well-defined consistency models to fine-tune performance, and guarantees high availability with multi-homing capabilities—all backed by industry leading service level agreements (SLAs).
 
-Azure Cosmos DB is truly schema-agnostic; it automatically indexes all the data without requiring you to deal with schema and index management. It’s also multi-model, natively supporting document, key-value, graph, and column-family data models. With Azure Cosmos DB, you can access your data using APIs of your choice, as DocumentDB SQL (document), MongoDB (document), Azure Table Storage (key-value), and Gremlin (graph) are all natively supported.
+Azure Cosmos DB is schema-agnostic; it automatically indexes all the data without requiring you to deal with schema and index management. It’s also multi-model, natively supporting document, key-value, graph, and column-family data models. With Azure Cosmos DB, you can access your data using APIs of your choice, as DocumentDB SQL (document), MongoDB (document), Azure Table Storage (key-value), and Gremlin (graph) are all natively supported.
 
 Cosmos DB features:
 
