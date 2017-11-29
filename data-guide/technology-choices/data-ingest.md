@@ -80,12 +80,7 @@ Each data ingest solution brings with it a unique set of capabilities, giving yo
 
 The following tables summarize the key differences in capabilities between each. For data ingest scenarios, choose the appropriate system for your needs by answering these questions:
 
-- Do you need to transfer very large amounts of data, where doing so over an internet connection would take too long or be too expensive?
-    - If yes, then narrow your options to those that deal with physical media.
-- Do you prefer to script your data transfer tasks with the added benefit of reusability and consistency?
-    - If so, select one of the command line options, or orchestration if you wish to transfer on a scheduled basis.
-- Do you need to transfer data to/from a relational database?
-    - If yes, narrow your options to those that support one or more relational databases, taking note of which options also require a Hadoop cluster, which may or may not fit your needs.
+
 
 ## <a name="matrix"></a> Capability Matrix
 
