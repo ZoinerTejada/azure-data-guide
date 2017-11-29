@@ -6,9 +6,9 @@
 [Machine Learning](#machinelearning)  
 [Deep Learning](#deeplearning)  
 [Artificial Intelligence](#ai)  
-[Model Deployment](#operationalization) 
+[Model Deployment](#operationalization)   
 [Where to go from here](#wheretogo)  
-  
+
 
 <a name="about"></a>
 Advanced analytics goes beyond the historical reporting and "slice and dice" data aggregation of traditional business intelligence (BI), and uses mathematical, probabilistic and statistical modeling techniques to enable predictive processing and automated decision making.
