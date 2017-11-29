@@ -35,12 +35,12 @@ Semantic modeling and analytical processing tends to have the following requirem
 
 | Requirement | Description |
 | --- | --- |
-| Normalization: | De-normalized |
+| Normalization: | Normalized |
 | Uses Transactions: | No |
-| Locking Strategy: | Pessimistic |
-| Updateable: | Yes |
-| Appendable: | Yes |
-| Workload: | Heavy reads, moderate writes |
+| Locking Strategy: | None |
+| Updateable: | No |
+| Appendable: | No |
+| Workload: | Heavy reads |
 | Indexing: | Multidimensional indexing |
 | Datum size: | Medium to large sized |
 | Model: | Multidimensional |
