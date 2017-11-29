@@ -94,7 +94,7 @@ What technologies should you use for your data needs?
 ### Graphical User Interface Tools
 ### Azure Data Box
 
-## Data Ingest
+## [Data Ingest](./technology-choices/data-ingest.md)
 ### Azure Storage Blob containers
 ### Azure Data Lake Store
 ### Cosmos DB
