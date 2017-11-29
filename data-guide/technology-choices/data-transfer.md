@@ -90,7 +90,7 @@ Sample syntax for copying files from WASB to a Data Lake Store account:
 
 #### Sqoop
 
-[Sqoop](https://docs.microsoft.com/azure/hdinsight/hadoop/hdinsight-use-sqoop) is an Apache project and part of the Hadoop ecosystem. It allows data transfer between an HDInsight cluster and relational databases such as SQL, Oracle, MySQL, etc. Sqoop is a collection of related tools, for example import, export, list-all-tables, and list-databases. To use Sqoop, you specify the tool you want to use and the arguments that control the tool. For more information on Sqoop, please refer to the [Sqoop User Guide](https://sqoop.apache.org/docs/1.4.4/SqoopUserGuide.html).
+[Sqoop](https://docs.microsoft.com/azure/hdinsight/hadoop/hdinsight-use-sqoop) is an Apache project and part of the Hadoop ecosystem. It comes pre-installed on all HDInsight clusters. It allows data transfer between an HDInsight cluster and relational databases such as SQL, Oracle, MySQL, etc. Sqoop is a collection of related tools, for example import, export, list-all-tables, and list-databases. To use Sqoop, you specify the tool you want to use and the arguments that control the tool. For more information on Sqoop, please refer to the [Sqoop User Guide](https://sqoop.apache.org/docs/1.4.4/SqoopUserGuide.html).
 
 You need to use Sqoop only when you are trying to import/export data between Hadoop and a relational database. It works with both Azure Storage blobs and Data Lake Store.
 
@@ -100,13 +100,11 @@ Sample syntax for copying data out of a SQL database table into Data Lake Store:
 
 #### PolyBase
 
-[PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/get-started-with-polybase) is a technology that accesses data outside of the database via the t-sql language. In SQL Server 2016, it allows you to run queries on external data in Hadoop or to import/export data from Azure Blob Storage. Queries are optimized to push computation to Hadoop. In Azure SQL Data Warehouse, you can import/export data from Azure Blob Storage and Azure Data Lake Store.
-
-PolyBase does require you to have an instance of SQL Server (64-bit), so keep that in mind when considering your options for transferring data between Hadoop/Blob storage and SQL or SQL Data Warehouse.
+[PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/get-started-with-polybase) is a technology that accesses data outside of the database via the T-SQL language. In SQL Server 2016, it allows you to run queries on external data in Hadoop or to import/export data from Azure Blob Storage. Queries are optimized to push computation to Hadoop. In Azure SQL Data Warehouse, you can import/export data from Azure Blob Storage and Azure Data Lake Store.
 
 #### Hadoop command line
 
-When you have data that resides on an HDInsight cluster head node, you can use the `hadoop -copyFromLocal` command to copy that data to your cluster's default storage, such as Azure Storage blob or Azure Data Lake Store.
+When you have data that resides on an HDInsight cluster head node, you can use the `hadoop -copyFromLocal` command to copy that data to your cluster's attached storage, such as Azure Storage blob or Azure Data Lake Store.
 
 In order to use the Hadoop command, you must first connect to the head node. Once connected, you can use the following syntax to upload a file to storage.
 
@@ -156,7 +154,7 @@ The following tables summarize the key differences in capabilities between each.
 
 | | Azure CLI | AzCopy | PowerShell | AdlCopy | Distcp | Sqoop | PolyBase | Hadoop command line |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Compatible platform(s) | Linux, OS X, Windows | Linux, Windows | Windows | Linux, OS X, Windows | Hadoop/HDInsight * | Hadoop/HDInsight * | Windows w/ SQL Server instance | Hadoop/HDInsight * |
+| Compatible platform(s) | Linux, OS X, Windows | Linux, Windows | Windows | Linux, OS X, Windows | Hadoop/HDInsight * | Hadoop/HDInsight * | Windows w/ SQL Server instance, Azure SQL Data Warehouse | Hadoop/HDInsight * |
 | Copy to/from relational database | No | No | No | No | No | Yes | Yes | No |
 | Copy to Blob storage | Yes | Yes | Yes | No | Yes | Yes | Yes | Yes |
 | Copy from Blob storage | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No |
@@ -183,14 +181,19 @@ The following tables summarize the key differences in capabilities between each.
 \* Azure Portal in this case means using the web-based exploration tools for Blob storage and Data Lake Store. This excludes using the portal for other services, such as Azure Data Factory.
 
 ## <a name="wheretogo"></a>Where to go from here
-Read Next:
-
-TODO: FIGURE OUT WHICH SOLUTION PATTERNS AND TECHNOLOGY CHOICES RELATE/SHOULD BE READ NEXT
+Read Next: [Data Pipeline Common Architecture](../common-architectures/data-pipeline.md)
 
 See Also:
 
 Related Solution Patterns
 - Working with transactional data
+    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
+    - [Data Warehousing](../solution-patterns/data-warehousing.md)
+- Handling text data
+    - [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
+    - [Processing free form text](../solution-patterns/processing-free-form-text.md)
+
 
 Related Technology Choices
-- Transactional data stores
+- [Pipeline Orchestration and Data Movement Technology Choices](../technology-choices/pipeline-orchestration-data-movement.md)
