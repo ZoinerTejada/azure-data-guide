@@ -43,7 +43,7 @@ Semantic modeling and analytical processing tends to have the following requirem
 | Appendable: | No (typically requires recomputing cube) |
 | Workload: | Heavy reads, read-only |
 | Indexing: | Multidimensional indexing |
-| Datum size: | Medium to large sized |
+| Datum size: | Small to medium sized |
 | Model: | Multidimensional |
 | Data shape: | Cube or Star/snowflake schema |
 | Query flexibility: | Highly flexible |
