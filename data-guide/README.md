@@ -18,6 +18,8 @@
 
 ## [Advanced Analytics](./common-architectures/advanced-analytics.md)
 
+## [Interactive Data Exploration](./common-architectures/interactive-data-exploration.md)
+
 # Solution Pipelines
 
 ## Working with transactional data
