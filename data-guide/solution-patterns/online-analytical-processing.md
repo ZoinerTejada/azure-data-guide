@@ -8,7 +8,7 @@
 [Where to go from here](#wheretogo)  
 
 <a name="about"></a>
-The databases that a business uses to store all its transactions and records are called [online transaction processing (OLTP)](online-transaction-processing.md) databases. These databases usually have records that are entered one at a time and that contain a wealth of information that can be used by strategists to make informed decisions about their business. The databases that are used to store the data, however, were not designed for analysis. Therefore, retrieving answers from these databases is costly in terms of time and effort. Online analytical processing (OLAP) systems were designed to help extract this business intelligence information from the data in a highly performant way. This is because OLAP databases are optimized for heavy read, low write operations.
+The databases that a business uses to store all its transactions and records are called [online transaction processing (OLTP)](online-transaction-processing.md) databases. These databases usually have records that are entered one at a time and that contain a wealth of information that can be used by strategists to make informed decisions about their business. The databases that are used to store the data, however, were not designed for analysis. Therefore, retrieving answers from these databases is costly in terms of time and effort. Online analytical processing (OLAP) systems were designed to help extract this business intelligence information from the data in a highly performant way. This is because OLAP databases are optimized for heavy read, low write workloads.
 
 ![OLAP in Azure](./images/olap-data-pipeline.png)
 
@@ -22,7 +22,7 @@ OLAP systems are optimized for read heavy scenarios, such as analytics and busin
 
 OLAP allows business users to slice and dice data as needed, regardless of whether the source data is partitioned across several data sources. This helps users to find trends, spot patterns, drill down, and 'wander' around the data without having to know the detailed ins and outs of traditional data analysis.
 
-The semantic models business users can use help abstract relationship complexities and make it easier to analyze the data much faster than they'd be able to otherwise, if at all.
+With [semantic models](../common-architectures/semantic-modeling.md) can help business users abstract relationship complexities and make it easier to analyze the data much faster than they'd be able to otherwise, if at all.
 
 ## <a name="challenges"></a>Challenges
 
@@ -33,13 +33,16 @@ For all the benefits OLAP systems provide, they do produce a few challenges:
 
 ## <a name="inazure"></a>OLAP in Azure
 
-In Azure, data held in OLTP systems (Azure SQL Database, and the like) and/or analytical data stores is copied into the OLAP system, such as [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview). Data exploration and visualization tools like [Power BI](https://powerbi.microsoft.com), Excel, and third-party options connect to Analysis Services servers and provide users with highly interactive and visually rich insights into your model data.
+In Azure, data held in OLTP systems such as Azure SQL Database is copied into the OLAP system, such as [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview). Data exploration and visualization tools like [Power BI](https://powerbi.microsoft.com), Excel, and third-party options connect to Analysis Services servers and provide users with highly interactive and visually rich insights into the modeled data. The flow of data from OLTP data to OLAP is typically orchestrated using SQL Server Integration Services, such as can be executed using [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
 [Online Analytical Processing (OLAP) data store technology choices](../technology-choices/olap-data-stores.md)
 
 See Also:
+
+Related Common Architecture
+- [Semantic Modeling Common Architecture](../common-architectures/semantic-modeling.md)
 
 Related Technology Choices
 - Transactional data stores
