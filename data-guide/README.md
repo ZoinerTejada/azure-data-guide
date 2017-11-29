@@ -22,8 +22,8 @@
 
 ## Working with transactional data
 ### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) 
-### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytical-processing.md)  
-### [Data Warehousing](./solution-patterns/data-warehousing.md)
+### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytical-processing.md)
+### [Data Warehousing & Data Marts](./solution-patterns/data-warehousing.md)
 
 ## Handling Unstructured Data
 ### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md) 
