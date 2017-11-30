@@ -53,7 +53,7 @@ Azure Data Lake Store can be accessed from Hadoop (available through HDInsight) 
 
 #### Cosmos DB
 
-[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/) is Microsoft’s globally distributed multi-model database. Azure Cosmos DB was built from the ground up with global distribution and horizontal scale at its core. It offers turnkey global distribution across any number of Azure regions by transparently scaling and replicating your data wherever your users are. Elastically scale throughput and storage worldwide, and pay only for the throughput and storage you need. Azure Cosmos DB guarantees single-digit-millisecond latencies at the 99th percentile anywhere in the world, offers multiple well-defined consistency models to fine-tune performance, and guarantees high availability with multi-homing capabilities—all backed by industry leading service level agreements (SLAs).
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/) is Microsoft’s globally distributed multi-model database. Azure Cosmos DB was built from the ground up with global distribution and horizontal scale at its core. It offers turnkey global distribution across any number of Azure regions by transparently scaling and replicating your data wherever your users are. Elastically scale throughput and storage worldwide, and pay only for the throughput and storage you need. Azure Cosmos DB guarantees single-digit-millisecond latencies at the 99th percentile anywhere in the world, offers multiple well-defined consistency models to fine-tune performance, and guarantees high availability with multi-homing capabilities.
 
 Azure Cosmos DB is schema-agnostic; it automatically indexes all the data without requiring you to deal with schema and index management. It’s also multi-model, natively supporting document, key-value, graph, and column-family data models. With Azure Cosmos DB, you can access your data using APIs of your choice, as DocumentDB SQL (document), MongoDB (document), Azure Table Storage (key-value), and Gremlin (graph) are all natively supported.
 
@@ -81,7 +81,7 @@ The [HDInsight implementation](https://docs.microsoft.com/azure/hdinsight/hbase/
 
 #### IoT Hub
 
-[Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/) is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a solution back end.
+[Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/) is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a cloud-based back end.
 
 Azure IoT Hub:
 
@@ -110,13 +110,24 @@ Some common use cases for Kafka are:
 * **Transformation**: Using stream processing, you can combine and enrich data from multiple input topics into one or more output topics.
 
 ## <a name="howtochoose"></a> How do you choose?
-Each data ingest solution brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements.
+Each data ingest service brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements.
 
 ## <a name="criteria"></a> Key Selection Criteria
 
 The following tables summarize the key differences in capabilities between each. For data ingest scenarios, choose the appropriate system for your needs by answering these questions:
 
-
+- Do you need managed, high speed, cloud-based storage for any type of text or binary data?
+    - If yes, then select one of the file storage options.
+- Do you need file storage that is optimized for parallel analytics workloads and high throughput/IOPS?
+    - If yes, then narrow your file storage options to those that are tuned to analytics workload performance.
+- Do you need to store your unstructured or semi-structured data in a schemaless database that provides high-speed read access and consistency to your data?
+    - If so, select one of the NoSQL options. Compare options for indexing, available database models, and regional availability. Depending on the type of data you need to store and how you want to work with it, the selection of primary database models may be the biggest determining factor.
+- Do you need to capture streaming data in real-time, from a number of sources (like cloud to cloud, on-prem to cloud, or intra-cloud), but only need high throughput ingestion capabilities without any sort of device management?
+    - If yes, narrow your streaming/real-time ingest capability options to those that only enable event ingress. This could potentially save you money when cloud-to-device communications are not needed.
+- Do you need two-way communication between your IoT devices and your cloud-based streaming platform?
+    - If so, narrow your streaming/real-time ingest capability options to those that provide cloud-to-device communication patterns.
+- Does your streaming solution require the ability to manage access for individual devices, and have the ability to revoke access to a specific device?
+    - If yes, select the service with a security capability that provides per-device identity and revocable access control.
 
 ## <a name="matrix"></a> Capability Matrix
 
@@ -131,14 +142,14 @@ The following tables summarize the key differences in capabilities between each.
 | API | REST API over HTTPS | REST API over HTTP/HTTPS |
 | Server-side API | [WebHDFS-compatible REST API](https://msdn.microsoft.com/library/azure/mt693424.aspx) | [Azure Blob Storage REST API](https://msdn.microsoft.com/library/azure/dd135733.aspx) |
 | Hadoop File System Client | Yes |Yes |
-| Data Operations - Authentication | Based on [Azure Active Directory Identities](https://docs.microsoft.com/azure/active-directory/active-directory-authentication-scenarios) | Based on shared secrets - [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account) and [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1). |
-| Data Operations - Authentication Protocol | OAuth 2.0. Calls must contain a valid JWT (JSON Web Token) issued by Azure Active Directory | Hash-based Message Authentication Code (HMAC) . Calls must contain a Base64-encoded SHA-256 hash over a part of the HTTP request. |
-| Data Operations - Authorization | POSIX Access Control Lists (ACLs). ACLs based on Azure Active Directory Identities can be set file and folder level. | For account-level authorization – Use [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account)<br>For account, container, or blob authorization -  Use [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
+| Data Operations - Authentication | Based on [Azure Active Directory Identities](https://docs.microsoft.com/azure/active-directory/active-directory-authentication-scenarios) | Based on shared secrets - [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account) and [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
+| Data Operations - Authentication Protocol | OAuth 2.0. Calls must contain a valid JWT (JSON Web Token) issued by Azure Active Directory | Hash-based Message Authentication Code (HMAC) . Calls must contain a Base64-encoded SHA-256 hash over a part of the HTTP request |
+| Data Operations - Authorization | POSIX Access Control Lists (ACLs). ACLs based on Azure Active Directory Identities can be set file and folder level | For account-level authorization – Use [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account)<br>For account, container, or blob authorization -  Use [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
 | Data Operations - Auditing | Available. See [here](data-lake-store-diagnostic-logs) for information. |Available |
 | Encryption data at rest | <ul><li>Transparent, Server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure KeyVault</li></ul></ul> | <ul><li>Transparent, Server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure KeyVault (coming soon)</li></ul><li>Client-side encryption</li></ul> |
 | Management operations (e.g. Account Create) | [Role-based access control](https://docs.microsoft.com/azure/active-directory/role-based-access-control-what-is) (RBAC) provided by Azure for account management | [Role-based access control](https://docs.microsoft.com/azure/active-directory/role-based-access-control-what-is) (RBAC) provided by Azure for account management |
 | Developer SDKs | .NET, Java, Python, Node.js | .Net, Java, Python, Node.js, C++, Ruby |
-| Analytics Workload Performance | Optimized performance for parallel analytics workloads. High Throughput and IOPS. | Not optimized for analytics workloads |
+| Analytics Workload Performance | Optimized performance for parallel analytics workloads. High Throughput and IOPS | Not optimized for analytics workloads |
 | Size limits | No limits on account sizes, file sizes or number of files | Specific limits documented [here](https://docs.microsoft.com/azure/azure-subscription-service-limits#storage-limits) |
 | Geo-redundancy | Locally-redundant (multiple copies of data in one Azure region) | Locally redundant (LRS), globally redundant (GRS), read-access globally redundant (RA-GRS). See [here](https://docs.microsoft.com/azure/storage/common/storage-redundancy) for more information |
 | Service state | Generally available | Generally available |
@@ -152,12 +163,13 @@ The following tables summarize the key differences in capabilities between each.
 | Primary database model | Document store, Graph DBMS, Key-value store, Wide column store | Wide column store |
 | Data types | Yes (JSON data types) | No |
 | Secondary indexes | Yes | No |
-| SQL language support | Yes | No |
+| SQL language support | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) |
 | Available APIs | [DocumentDB](https://docs.microsoft.com/azure/cosmos-db/documentdb-introduction), [MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction), [Graph](https://docs.microsoft.com/azure/cosmos-db/graph-introduction) (Gremlin), RESTful HTTP, [Table](https://docs.microsoft.com/azure/cosmos-db/table-introduction), [Cassandra](https://docs.microsoft.com/azure/cosmos-db/cassandra-introduction) | Java, RESTful HTTP, Thrift |
 | Consistency | Strong, Bounded-staleness, Session, Consistent Prefix, Eventual | Strong |
 | Native Azure Functions integration | [Yes](https://docs.microsoft.com/azure/cosmos-db/serverless-computing-database) | No |
 | Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |
-| Pricing model | Elastically scalable request units (RUs) charged per-second as needed; Elastically scalable storage | Per-hour pricing for HDInsight cluster (horizontal scaling of nodes); Storage |
+| Automatic global distribution | [Yes](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), while maintaining all 5 consistency models | No - [HBase cluster replication can be configured](https://docs.microsoft.com/azure/hdinsight/hbase/apache-hbase-replication) across regions with eventual consistency |
+| Pricing model | Elastically scalable request units (RUs) charged per-second as needed; Elastically scalable storage | Per-minute pricing for HDInsight cluster (horizontal scaling of nodes); Storage |
 
 ### Streaming/Real-time Ingest Capabilities
 
@@ -174,14 +186,19 @@ The following tables summarize the key differences in capabilities between each.
 | Route messages to multiple endpoints | Up to 10 custom endpoints are supported. Rules determine how messages are routed to custom endpoints. For more information, see [Send and receive messages with IoT Hub](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging). | Requires additional code to be written and hosted for message dispatching | Kafka partitions streams across the nodes in the HDInsight cluster. Consumer processes can be associated with individual partitions to provide load balancing when consuming records |
 
 ## <a name="wheretogo"></a>Where to go from here
-Read Next:
-
-TODO: FIGURE OUT WHICH SOLUTION PATTERNS AND TECHNOLOGY CHOICES RELATE/SHOULD BE READ NEXT
+Read Next: [Data Pipeline Common Architecture](../common-architectures/data-pipeline.md)
 
 See Also:
 
 Related Solution Patterns
 - Working with transactional data
+    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
+    - [Data Warehousing](../solution-patterns/data-warehousing.md)
+- Handling text data
+    - [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
+    - [Processing free form text](../solution-patterns/processing-free-form-text.md)
 
 Related Technology Choices
-- Transactional data stores
+- [Data Transfer Technology Choices](../technology-choices/data-transfer.md)
+- [Pipeline Orchestration and Data Movement Technology Choices](../technology-choices/pipeline-orchestration-data-movement.md)
