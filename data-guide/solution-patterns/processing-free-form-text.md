@@ -42,7 +42,7 @@ In most situations the source text documents are loaded into object storage such
 
 Once stored, the documents are processed in batch to create the index. All services have some mechanism that, provided a path to the collection of documents, they will populate a search index. Azure Search provides indexers that can automatically populate the index provided documents ranging from plain text, to Excel and PDF formats. On HDInsight, Apache Solr can index binary files of many types, including plain text, Word and PDF. Full Text Search in SQL Server populates the index from text, binary or XML data stored within the same database. 
 
-Once the index is constructed, services typically expose a search interface by means of a REST API. This is true for Azure Search and HDInsight with Solr. Documents indexed by SQL Server or Azure SQL Database are searched using T-SQL queries. 
+Once the index is constructed, services typically expose a search interface by means of a REST API. This is true for Azure Search, ElasticSearch and HDInsight with Solr. Documents indexed by SQL Server or Azure SQL Database are searched using T-SQL queries. 
 
 ![Processing free-form text in Azure](./images/free-form-text-pipeline.png)
 

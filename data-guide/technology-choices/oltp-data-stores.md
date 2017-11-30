@@ -22,7 +22,7 @@ Each data store brings with it a unique set of capabilities, giving you options 
 
 ## <a name="criteria"></a> Key Selection Criteria
 
-The following table summarize the key differences in capabilities between each. For OLTP scenarios, being choosing the appropriate database for your needs by answering these questions:
+The following table summarize the key differences in capabilities between each. For OLTP scenarios, begin choosing the appropriate database for your needs by answering these questions:
 - Do you want a managed service or do you prefer to manage the VM's running the database server?
     - If yes, then narrow your options to those that are managed services.
 - Do you need a single database that supports more than 4TB?
