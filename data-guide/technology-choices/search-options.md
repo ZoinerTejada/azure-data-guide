@@ -11,9 +11,10 @@
 
 ## <a name="options"></a> What are your options when choosing a search data store?
 In Azure, all of the following data stores will meet the core requirements for search against free-form text data by providing a search index:
-- Azure Search
-- HDInsight with Solr
-- SQL Server or Azure SQL Database with Full Text Search
+- [Azure Search](https://docs.microsoft.com/azure/search/search-what-is-azure-search)
+- [ElasticSearch](https://azuremarketplace.microsoft.com/marketplace/apps/elastic.elasticsearch?tab=Overview)
+- [HDInsight with Solr](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-solr-install-linux)
+- [SQL Server or Azure SQL Database with Full Text Search](https://docs.microsoft.com/sql/relational-databases/search/full-text-search)
 
 ## <a name="howtochoose"></a> How do you choose?
 Each data store brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements. 
