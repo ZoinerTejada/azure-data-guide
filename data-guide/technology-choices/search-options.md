@@ -69,18 +69,12 @@ The following table summarize the key differences in capabilities between each. 
 | Active Directory authentication (integrated authentication) | No | No | No | Yes | 
 
 ## <a name="wheretogo"></a>Where to go from here
-Read Next:
-Data Warehouse Solution Pattern
+Read Next: [Natural Language Processing Technology Choices](../technology-choices/natural-language-processing.md)
 
 See Also:
 
 Related Solution Patterns
-- Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - Online Analytical Processing (OLAP)
-    - Data Warehousing
+- Working with text data
+    - [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json.md)
+    - [Processing free-form text data](../solution-patterns/processing-free-form-text.md)
 
-Related Technology Choices
-- Transactional data stores
-    - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
-    - [Data Warehouses](../technology-choices/data-warehouses.md)
