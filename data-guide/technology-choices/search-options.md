@@ -40,7 +40,7 @@ The following table summarize the key differences in capabilities between each. 
 
 ### General Capabilities
 | | Azure Search | ElasticSearch | HDInsight with Solr | SQL Server or SQL DB with Full Text Search | 
-| --- | --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- | 
 | Is Managed Service | Yes | No | Yes | Yes (for SQL DB and SQL Server Managed Instances) |  
 | REST API | Yes | Yes | Yes | No |
 | Programmability | .NET | Java | Java | T-SQL | 
@@ -48,20 +48,20 @@ The following table summarize the key differences in capabilities between each. 
 
 ### Manageability Capabilities
 | | Azure Search | ElasticSearch | HDInsight with Solr | SQL Server or SQL DB with Full Text Search | 
-| --- | --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | Index Schema Definition | Schema fixed during creation | Updateable schema | Updateable schema | Updateable schema |
 | Supports Scale Out  | Yes | Yes | Yes | No |
 
 ### Analytic Workload Capabilities
 | | Azure Search | ElasticSearch | HDInsight with Solr | SQL Server or SQL DB with Full Text Search | 
-| --- | --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- | 
 | Supports analytics beyond full text search | No | Yes | Yes | Yes |
 | Part of a log analytics stack | No | Yes (ELK) |  No | No |
 | Supports semantic search | Yes (find similar documents only) | Yes | Yes | Yes | 
 
 ### Security Capabilities
 | | Azure Search | ElasticSearch | HDInsight with Solr | SQL Server or SQL DB with Full Text Search | 
-| --- | --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- | 
 | Row Level Security | Partial (requires application query to filter by group id) | Partial (requires application query to filter by group id) | Yes | Yes | 
 | Transparent Data Encryption | No | No | No | Yes |  
 | Restrict access to specific IP addresses | No | Yes | Yes | Yes |   
