@@ -196,4 +196,5 @@ Related Solution Patterns
 
 
 Related Technology Choices
+- [Data Ingest Technology Choices](../technology-choices/data-ingest.md)
 - [Pipeline Orchestration and Data Movement Technology Choices](../technology-choices/pipeline-orchestration-data-movement.md)

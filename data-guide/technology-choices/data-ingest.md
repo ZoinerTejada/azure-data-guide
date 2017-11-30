@@ -53,7 +53,7 @@ Azure Data Lake Store can be accessed from Hadoop (available through HDInsight) 
 
 #### Cosmos DB
 
-[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/) is Microsoft’s globally distributed multi-model database. Azure Cosmos DB was built from the ground up with global distribution and horizontal scale at its core. It offers turnkey global distribution across any number of Azure regions by transparently scaling and replicating your data wherever your users are. Elastically scale throughput and storage worldwide, and pay only for the throughput and storage you need. Azure Cosmos DB guarantees single-digit-millisecond latencies at the 99th percentile anywhere in the world, offers multiple well-defined consistency models to fine-tune performance, and guarantees high availability with multi-homing capabilities—all backed by industry leading service level agreements (SLAs).
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/) is Microsoft’s globally distributed multi-model database. Azure Cosmos DB was built from the ground up with global distribution and horizontal scale at its core. It offers turnkey global distribution across any number of Azure regions by transparently scaling and replicating your data wherever your users are. Elastically scale throughput and storage worldwide, and pay only for the throughput and storage you need. Azure Cosmos DB guarantees single-digit-millisecond latencies at the 99th percentile anywhere in the world, offers multiple well-defined consistency models to fine-tune performance, and guarantees high availability with multi-homing capabilities.
 
 Azure Cosmos DB is schema-agnostic; it automatically indexes all the data without requiring you to deal with schema and index management. It’s also multi-model, natively supporting document, key-value, graph, and column-family data models. With Azure Cosmos DB, you can access your data using APIs of your choice, as DocumentDB SQL (document), MongoDB (document), Azure Table Storage (key-value), and Gremlin (graph) are all natively supported.
 
@@ -77,24 +77,57 @@ The [HDInsight implementation](https://docs.microsoft.com/azure/hdinsight/hbase/
 
 #### Event Hubs
 
-Blah
+[Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs/) is a highly scalable data streaming platform and event ingestion service, capable of receiving and processing millions of events per second. Event Hubs can process and store events, data, or telemetry produced by distributed software and devices. Data sent to an event hub can be transformed and stored using any real-time analytics provider or batching/storage adapters. With the ability to provide publish-subscribe capabilities with low latency and at massive scale, Event Hubs serves as the "on ramp" for Big Data.
 
 #### IoT Hub
 
-Blah
+[Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/) is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a cloud-based back end.
+
+Azure IoT Hub:
+
+* Provides multiple device-to-cloud and cloud-to-device communication options. These options include one-way messaging, file transfer, and request-reply methods.
+* Provides built-in declarative message routing to other Azure services.
+* Provides a queryable store for device metadata and synchronized state information.
+* Enables secure communications and access control using per-device security keys or X.509 certificates.
+* Provides extensive monitoring for device connectivity and device identity management events.
+* Includes device libraries for the most popular languages and platforms.
+
+IoT Hub is oftentimes compared to Event Hubs, and some confusion is common when deciding between the two, due to their similarity. When you are managing an IoT infrastructure, even if the only use case is device-to-cloud telemetry ingress, IoT Hub provides a service that is designed for IoT device connectivity. It continues to expand the value propositions for these scenarios with IoT-specific features. Event Hubs is designed for event ingress at a massive scale, both in the context of inter-datacenter and intra-datacenter scenarios.
+
+It is not uncommon to use a combination of IoT Hub and Event Hubs or [Kafka](https://github.com/Azure/toketi-kafka-connect-iothub) in the same solution. IoT Hub handles the device-to-cloud communication, and Event Hubs or Kafka handles later-stage event ingress into real-time processing engines.
 
 #### Kafka on HDInsight
 
-Blah
+[Apache Kafka](https://kafka.apache.org/) is an open-source distributed streaming platform that can be used to build real-time data pipelines and streaming applications. Kafka also provides message broker functionality similar to a message queue, where you can publish and subscribe to named data streams. It is horizontally scalable, fault-tolerant, and extremely fast.
+
+[Kafka on HDInsight](https://docs.microsoft.com/azure/hdinsight/kafka/apache-kafka-get-started) provides you with a managed, highly scalable, and highly available service in the Microsoft Azure cloud.
+
+Some common use cases for Kafka are:
+
+* **Messaging**: Since it supports the publish-subscribe message pattern, Kafka is often used as a message broker.
+* **Activity tracking**: Since Kafka provides in-order logging of records, it can be used to track and re-create activities. For example, user actions on a web site or within an application.
+* **Aggregation**: Using stream processing, you can aggregate information from different streams to combine and centralize the information into operational data.
+* **Transformation**: Using stream processing, you can combine and enrich data from multiple input topics into one or more output topics.
 
 ## <a name="howtochoose"></a> How do you choose?
-Each data ingest solution brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements.
+Each data ingest service brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements.
 
 ## <a name="criteria"></a> Key Selection Criteria
 
 The following tables summarize the key differences in capabilities between each. For data ingest scenarios, choose the appropriate system for your needs by answering these questions:
 
-
+- Do you need managed, high speed, cloud-based storage for any type of text or binary data?
+    - If yes, then select one of the file storage options.
+- Do you need file storage that is optimized for parallel analytics workloads and high throughput/IOPS?
+    - If yes, then narrow your file storage options to those that are tuned to analytics workload performance.
+- Do you need to store your unstructured or semi-structured data in a schemaless database that provides high-speed read access and consistency to your data?
+    - If so, select one of the NoSQL options. Compare options for indexing, available database models, and regional availability. Depending on the type of data you need to store and how you want to work with it, the selection of primary database models may be the biggest determining factor.
+- Do you need to capture streaming data in real-time, from a number of sources (like cloud to cloud, on-prem to cloud, or intra-cloud), but only need high throughput ingestion capabilities without any sort of device management?
+    - If yes, narrow your streaming/real-time ingest capability options to those that only enable event ingress. This could potentially save you money when cloud-to-device communications are not needed.
+- Do you need two-way communication between your IoT devices and your cloud-based streaming platform?
+    - If so, narrow your streaming/real-time ingest capability options to those that provide cloud-to-device communication patterns.
+- Does your streaming solution require the ability to manage access for individual devices, and have the ability to revoke access to a specific device?
+    - If yes, select the service with a security capability that provides per-device identity and revocable access control.
 
 ## <a name="matrix"></a> Capability Matrix
 
@@ -109,14 +142,14 @@ The following tables summarize the key differences in capabilities between each.
 | API | REST API over HTTPS | REST API over HTTP/HTTPS |
 | Server-side API | [WebHDFS-compatible REST API](https://msdn.microsoft.com/library/azure/mt693424.aspx) | [Azure Blob Storage REST API](https://msdn.microsoft.com/library/azure/dd135733.aspx) |
 | Hadoop File System Client | Yes |Yes |
-| Data Operations - Authentication | Based on [Azure Active Directory Identities](https://docs.microsoft.com/azure/active-directory/active-directory-authentication-scenarios) | Based on shared secrets - [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account) and [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1). |
-| Data Operations - Authentication Protocol | OAuth 2.0. Calls must contain a valid JWT (JSON Web Token) issued by Azure Active Directory | Hash-based Message Authentication Code (HMAC) . Calls must contain a Base64-encoded SHA-256 hash over a part of the HTTP request. |
-| Data Operations - Authorization | POSIX Access Control Lists (ACLs). ACLs based on Azure Active Directory Identities can be set file and folder level. | For account-level authorization – Use [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account)<br>For account, container, or blob authorization -  Use [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
+| Data Operations - Authentication | Based on [Azure Active Directory Identities](https://docs.microsoft.com/azure/active-directory/active-directory-authentication-scenarios) | Based on shared secrets - [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account) and [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
+| Data Operations - Authentication Protocol | OAuth 2.0. Calls must contain a valid JWT (JSON Web Token) issued by Azure Active Directory | Hash-based Message Authentication Code (HMAC) . Calls must contain a Base64-encoded SHA-256 hash over a part of the HTTP request |
+| Data Operations - Authorization | POSIX Access Control Lists (ACLs). ACLs based on Azure Active Directory Identities can be set file and folder level | For account-level authorization – Use [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account)<br>For account, container, or blob authorization -  Use [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
 | Data Operations - Auditing | Available. See [here](data-lake-store-diagnostic-logs) for information. |Available |
 | Encryption data at rest | <ul><li>Transparent, Server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure KeyVault</li></ul></ul> | <ul><li>Transparent, Server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure KeyVault (coming soon)</li></ul><li>Client-side encryption</li></ul> |
 | Management operations (e.g. Account Create) | [Role-based access control](https://docs.microsoft.com/azure/active-directory/role-based-access-control-what-is) (RBAC) provided by Azure for account management | [Role-based access control](https://docs.microsoft.com/azure/active-directory/role-based-access-control-what-is) (RBAC) provided by Azure for account management |
 | Developer SDKs | .NET, Java, Python, Node.js | .Net, Java, Python, Node.js, C++, Ruby |
-| Analytics Workload Performance | Optimized performance for parallel analytics workloads. High Throughput and IOPS. | Not optimized for analytics workloads |
+| Analytics Workload Performance | Optimized performance for parallel analytics workloads. High Throughput and IOPS | Not optimized for analytics workloads |
 | Size limits | No limits on account sizes, file sizes or number of files | Specific limits documented [here](https://docs.microsoft.com/azure/azure-subscription-service-limits#storage-limits) |
 | Geo-redundancy | Locally-redundant (multiple copies of data in one Azure region) | Locally redundant (LRS), globally redundant (GRS), read-access globally redundant (RA-GRS). See [here](https://docs.microsoft.com/azure/storage/common/storage-redundancy) for more information |
 | Service state | Generally available | Generally available |
@@ -130,27 +163,42 @@ The following tables summarize the key differences in capabilities between each.
 | Primary database model | Document store, Graph DBMS, Key-value store, Wide column store | Wide column store |
 | Data types | Yes (JSON data types) | No |
 | Secondary indexes | Yes | No |
-| SQL language support | Yes | No |
+| SQL language support | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) |
 | Available APIs | [DocumentDB](https://docs.microsoft.com/azure/cosmos-db/documentdb-introduction), [MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction), [Graph](https://docs.microsoft.com/azure/cosmos-db/graph-introduction) (Gremlin), RESTful HTTP, [Table](https://docs.microsoft.com/azure/cosmos-db/table-introduction), [Cassandra](https://docs.microsoft.com/azure/cosmos-db/cassandra-introduction) | Java, RESTful HTTP, Thrift |
 | Consistency | Strong, Bounded-staleness, Session, Consistent Prefix, Eventual | Strong |
 | Native Azure Functions integration | [Yes](https://docs.microsoft.com/azure/cosmos-db/serverless-computing-database) | No |
 | Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |
-| Pricing model | Elastically scalable request units (RUs) charged per-second as needed; Elastically scalable storage | Per-hour pricing for HDInsight cluster (horizontal scaling of nodes); Storage |
+| Automatic global distribution | [Yes](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), while maintaining all 5 consistency models | No - [HBase cluster replication can be configured](https://docs.microsoft.com/azure/hdinsight/hbase/apache-hbase-replication) across regions with eventual consistency |
+| Pricing model | Elastically scalable request units (RUs) charged per-second as needed; Elastically scalable storage | Per-minute pricing for HDInsight cluster (horizontal scaling of nodes); Storage |
 
 ### Streaming/Real-time Ingest Capabilities
 
-| | Event Hubs | IoT Hub | Kafka on HDInsight |
+| | IoT Hub | Event Hubs | Kafka on HDInsight |
 | --- | --- | --- | --- |
+| Communication patterns | Enables [device-to-cloud communications](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-d2c-guidance) (messaging, file uploads, and reported properties) and [cloud-to-device communications](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-c2d-guidance) (direct methods, desired properties, messaging) | Only enables event ingress (usually considered for device-to-cloud scenarios) | Only enables event ingress (usually considered for device-to-cloud scenarios) |
+| Device state information | [Device twins](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-device-twins) can store and query device state information | No device state information can be stored | No device state information can be stored |
+| Device protocol support |Supports MQTT, MQTT over WebSockets, AMQP, AMQP over WebSockets, and HTTPS. Additionally, IoT Hub works with the [Azure IoT protocol gateway](https://docs.microsoft.com/azure/iot-hub/iot-hub-protocol-gateway), a customizable protocol gateway implementation to support custom protocols |Supports AMQP, AMQP over WebSockets, and HTTPS | [Kafka](https://cwiki.apache.org/confluence/display/KAFKA/A+Guide+To+The+Kafka+Protocol) (proprietary binary protocol over TCP) |
+| Security |Provides per-device identity and revocable access control. See the [Security section of the IoT Hub developer guide](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-security) | Provides Event Hubs-wide [shared access policies](https://docs.microsoft.com/azure/event-hubs/event-hubs-authentication-and-security-model-overview), with limited revocation support through [publisher's policies](https://docs.microsoft.com/azure/event-hubs/event-hubs-features#event-publishers). IoT solutions are often required to implement a custom solution to support per-device credentials and anti-spoofing measures | Use SSL or SASL to authenticate connections to brokers from clients. Optional encryption of data transferred between brokers and clients via SSL. Authorization is pluggable; integration with external auth services supported. Read [security documentation](https://kafka.apache.org/documentation/#security) |
+| Operations monitoring | Enables IoT solutions to subscribe to a rich set of device identity management and connectivity events such as individual device authentication errors, throttling, and bad format exceptions. These events enable you to quickly identify connectivity problems at the individual device level | Exposes only aggregate metrics | [Use Log Analytics](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-oms-log-analytics-tutorial) (part of OMS) to monitor HDInsight clusters. Kafka has a [cluster-specific management solution](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-oms-log-analytics-management-solutions) for Log Analytics. [Additional tools](https://docs.microsoft.com/azure/hdinsight/hdinsight-key-scenarios-to-monitor) can be used to monitor the cluster |
+| Scale | Is optimized to support millions of simultaneously connected devices | Meters the connections as per [Azure Event Hubs quotas](https://docs.microsoft.com/azure/event-hubs/event-hubs-quotas). On the other hand, Event Hubs enables you to specify the partition for each message sent | Use [Azure Managed Disks](https://docs.microsoft.com/azure/hdinsight/kafka/apache-kafka-scalability) to increase throughput and scalability. Increase number of cluster nodes to scale horizontally |
+| Device SDKs | Provides [device SDKs](https://github.com/Azure/azure-iot-sdks) for a large variety of platforms and languages, in addition to direct MQTT, AMQP, and HTTPS APIs | Is supported on .NET, Java, and C, in addition to AMQP and HTTPS send interfaces | Java, HTTP REST, [other non-Java clients](https://cwiki.apache.org/confluence/display/KAFKA/Clients) |
+| File upload | Enables IoT solutions to upload files from devices to the cloud. Includes a file notification endpoint for workflow integration and an operations monitoring category for debugging support | Not supported | Not supported |
+| Route messages to multiple endpoints | Up to 10 custom endpoints are supported. Rules determine how messages are routed to custom endpoints. For more information, see [Send and receive messages with IoT Hub](https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging). | Requires additional code to be written and hosted for message dispatching | Kafka partitions streams across the nodes in the HDInsight cluster. Consumer processes can be associated with individual partitions to provide load balancing when consuming records |
 
 ## <a name="wheretogo"></a>Where to go from here
-Read Next:
-
-TODO: FIGURE OUT WHICH SOLUTION PATTERNS AND TECHNOLOGY CHOICES RELATE/SHOULD BE READ NEXT
+Read Next: [Data Pipeline Common Architecture](../common-architectures/data-pipeline.md)
 
 See Also:
 
 Related Solution Patterns
 - Working with transactional data
+    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
+    - [Data Warehousing](../solution-patterns/data-warehousing.md)
+- Handling text data
+    - [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
+    - [Processing free form text](../solution-patterns/processing-free-form-text.md)
 
 Related Technology Choices
-- Transactional data stores
+- [Data Transfer Technology Choices](../technology-choices/data-transfer.md)
+- [Pipeline Orchestration and Data Movement Technology Choices](../technology-choices/pipeline-orchestration-data-movement.md)
