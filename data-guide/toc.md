@@ -48,7 +48,7 @@ What solution patterns can you use to handle that data?
 ### [Internet of Things]()
 ### [Real-time Analytics]()
 
-## [Hybrid On-Premises and Cloud Solutions]()
+## [Hybrid On-Premises and Cloud Solutions](./solution-patterns/hybrid-on-premises-and-cloud.md)
 ### [Network Shares]()
 ### [On-premise Data Stores]()
 ### [Extending Data Stores to the Cloud]()

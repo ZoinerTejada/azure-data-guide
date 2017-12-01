@@ -30,7 +30,7 @@
 
 ## [Time Series Solutions](./solution-patterns/time-series.md)
 
-## Hybrid On-Premises and Cloud Solutions
+## [Hybrid On-Premises and Cloud Solutions](./solution-patterns/hybrid-on-premises-and-cloud.md)
 
 ## Secure Solutions
 
