@@ -44,7 +44,7 @@ What solution patterns can you use to handle that data?
 ### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md)
 ### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
 
-## [Time Series Solutions]()
+## [Time Series Solutions](./solution-patterns/time-series.md)
 ### [Internet of Things]()
 ### [Real-time Analytics]()
 
