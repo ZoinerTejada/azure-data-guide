@@ -8,11 +8,9 @@
 ### [Transactional Data](./common-architectures/transactional-data.md) 
 ### [Semantic Modeling](./common-architectures/semantic-modeling.md)
 
-
 ## [Non-Relational & No-SQL Data](./common-architectures/non-relational-data.md)
 
 ## [Big Data](./common-architectures/big-data.md)
-
 
 ## [Data Pipeline](./common-architectures/data-pipeline.md)
 
@@ -21,7 +19,6 @@
 ## [Interactive Data Exploration](./common-architectures/interactive-data-exploration.md)
 
 # Solution Pipelines
-
 ## Working with transactional data
 ### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) 
 ### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytical-processing.md)
@@ -34,23 +31,12 @@
 ## [Time Series Solutions](./solution-patterns/time-series.md)
 
 ## Hybrid On-Premises and Cloud Solutions
-### Network Shares
-### On-premise Data Stores
-### Extending Data Stores to the Cloud
 
 ## Secure Solutions
-### Data Protection
-### Access Control
-### Auditing
 
 ## Machine Learning at Scale
-### Predictive Solutions
-### Online Learning Solutions
 
 ## Monitoring Data Solutions
-### Performance Monitoring
-### Alerting
-### Troubleshooting & Diagnostics
 
 # Technology Choices
 ## Transactional data stores
@@ -65,31 +51,15 @@
 ## [Data Ingest](./technology-choices/data-ingest.md)
 
 ## Batch Processing
-### Azure Data Lake Analytics
-### Azure Batch
-### SQL Data Warehouse
-### Spark on HDInsight
-### Hive on HDInsight
-### Pig on HDInsight
-### Microsoft Machine Learning Server
 
 ## Real-time Processing
-### Azure Stream Analytics
-### Spark Streaming on HDInsight
-### Storm on HDInsight
-### Azure Functions
-### Event Processor Host
 
 ## [Data Serving Storage](./technology-choices/data-serving-storage.md) - Stub Only
-### SQL Data Warehouse
-### SQL Database
-### HBase/Phoenix on HDInsight
-### Hive LLAP on HDInsight
-### Azure Analysis Services
-### Cosmos DB
 
-## Applied Artificial Intelligence
-### Cognitive Services (computer vision, sentiment, etc.)
+## Applied Artificial Intelligence & Cognitive Services
+### [Cognitive Services](./technology-choices/cognitive-services.md)
+### [Text Search](./technology-choices/search-options.md)
+### [Natural Language Processing](./technology-choices/natural-language-processing.md)
 
 ## [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
 
