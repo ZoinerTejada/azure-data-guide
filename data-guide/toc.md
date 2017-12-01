@@ -68,7 +68,7 @@ What solution patterns can you use to handle that data?
 ### [Predictive Solutions]()
 ### [Online Learning Solutions]()
 
-## [Monitoring Data Solutions]()
+## [Monitoring Data Solutions](./solution-patterns/monitoring-data-solutions.md)
 ### [Performance Monitoring]()
 ### [Alerting]()
 ### [Troubleshooting & Diagnostics]()

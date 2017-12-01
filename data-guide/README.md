@@ -36,7 +36,7 @@
 
 ## Machine Learning at Scale
 
-## Monitoring Data Solutions
+## [Monitoring Data Solutions](./solution-patterns/monitoring-data-solutions.md)
 
 # Technology Choices
 ## Transactional data stores
