@@ -31,9 +31,7 @@
 ### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md) 
 ### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
 
-## Time Series Solutions
-### Internet of Things
-### Real-time Analytics
+## [Time Series Solutions](./solution-patterns/time-series.md)
 
 ## Hybrid On-Premises and Cloud Solutions
 ### Network Shares
