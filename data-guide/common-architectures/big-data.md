@@ -85,7 +85,7 @@ The kappa architecture is another type of pipeline with the same basic goals as 
 
 ![Kappa architecture diagram](./images/kappa.png)
 
-There are some similarities to the lambda architecture's cold path, in that the event data is immutable and all of it is collected, instead of a subset. The data, or events, are ingested into a distributed and fault tolerant unified log, of which there is a single deployment. These events are ordered, and the current state of an event is changed only by a new event being appended. Similar to a lambda architecture's hot path, all processing of events is performed on the input streams and persisted as a real-time view. This data can be recomputed at any point, as it is persisted to sclable, fault-tolerant storage.
+There are some similarities to the lambda architecture's cold path, in that the event data is immutable and all of it is collected, instead of a subset. The data, or events, are ingested into a distributed and fault tolerant unified log, of which there is a single deployment. These events are ordered, and the current state of an event is changed only by a new event being appended. Similar to a lambda architecture's hot path, all processing of events is performed on the input streams and persisted as a real-time view. This data can be recomputed at any point, as it is persisted to scalable, fault-tolerant storage.
 
 ### <a name="internetofthings"></a> Internet of Things (IoT)
 
@@ -135,15 +135,10 @@ See Also:
 Related Solution Pipelines
 - Handling unstructured data
     - [Processing free-form text files](../solution-patterns/processing-free-form-text.md)
-- Time-series solutions
-    - Internet of Things
-    - Real-Time Analytics
+- [Time-series solutions](../solution-patterns/time-series.md)
 
 Related Technology Choices
 - Handling unstructured data
     - [Options for processing CSV and JSON files](../technology-choices/csv-json-options.md)
     - [Enabling full text search on free-form text files](../technology-choices/search-options.md)
     - [Processing free-form text files with natural language processing](../technology-choices/natural-language-processing.md)
-- Time-series solutions
-    - Internet of Things
-    - Real-Time Analytics
