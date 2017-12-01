@@ -15,6 +15,10 @@ When dealing with data, the range of things you need to monitor is both deep and
 
 ### Performance Monitoring
 
+A good performance monitoring solution implements proper data collection so you do not have visibility gaps. This includes [time series](../solution-patterns/time-series.md) data so you can look monitor performance trends, raw data retention offering high data granularity, and high frequency polling. A long polling cycle can cause you to completely miss traffic spikes that only last a few seconds, for instance. When working with [big data](../common-architectures/big-data.md), the ability to capture your data at massive scale is very important. You don't want to start making decisions on what you will and will not monitor, because you can't handle the increased capacity of your data logs.
+
+You need to establish a baseline for your performance, so you know what levels are outside the expected range at a given time. This means having regular snapshots of your baseline so you know when to expect more load on your system, based on historical data. This is crucial information when it comes to your scaling strategy, whether manual or automatic.
+
 ### Alerting
 
 ### Troubleshooting & Diagnostics
@@ -48,7 +52,7 @@ Establishing monitoring can have some of the following challenges:
 
 
 
-![Time Series Insights](./images/monitoring.png)
+![Monitoring data solutions in Azure](./images/monitoring.png)
 
 
 ## <a name="wheretogo"></a>Where to go from here
