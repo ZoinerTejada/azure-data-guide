@@ -39,7 +39,7 @@ Related Common Architectures
 - [Semantic Modeling](./semantic-modeling.md)
 
 Alternative Common Architectures
-- Non-relational and No-SQL common architectures
+- [Non-relational and No-SQL common architectures](./non-relational-data.md)
 
 Related Solution Patterns
 - Working with transactional data
