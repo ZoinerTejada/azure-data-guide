@@ -19,7 +19,7 @@ Relevant Azure Service:
 When an organization requires advanced analytics and predictive modeling, the initial preparation work is usually undertaken by specialists data scientists who need to explore the data and apply statistical analytical techniques to determine relationships between data *features* and the desired predicted *labels*. Such data exploration is typically conducted using programming languages such as Python or R that inherently support statistical modeling and visualization. Typically, the scripts used to explore the data are hosted in specialized environments such as Jupyter Notebooks to enable data scientists to explore the data programmatically while documenting and sharing the insights they find.
 
 Relevant Azure Service:  
-- Azure Notebooks
+- [Azure Notebooks](https://notebooks.azure.com/)
 - [Azure Machine Learning Studio](https://docs.microsoft.com/azure/machine-learning/studio/what-is-ml-studio)
 - [Azure Machine Learning Experimentation Services](https://docs.microsoft.com/azure/machine-learning/preview/experimentation-service-configuration)
 - [The Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)
