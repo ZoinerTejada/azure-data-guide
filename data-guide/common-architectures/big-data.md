@@ -61,7 +61,7 @@ Data lake stores are often used in event streaming or IoT scenarios, given their
 Another term commonly used in data scenarios, is _datamart_. Typically, a datamart is a store of data that is cleansed, packaged, and structured for easy consumption. Where a data lake store differs is in its handling, or non-handling, of data. It is built for ingesting raw data, leaving it in its original or least-processed form to allow questions to be asked of it in various ways, and at various times. If this data is cleansed and structured in a specific way, like in a datamart, then it is difficult to adapt how the data is processed and analyzed when new questions or tools come about in the future. This is why a data lake is composed of both storage and processing as separate entities.
 
 Relevant Azure service:
-[Data Lake](https://azure.microsoft.com/solutions/data-lake/)
+- [Data Lake](https://azure.microsoft.com/solutions/data-lake/)
 
 ### <a name="lambdaarchitecture"></a> Lambda Architecture
 
@@ -120,9 +120,9 @@ The boxes that are shaded gray show components of an IoT system that are not dir
 - Some IoT solutions allow **command and control messages** to be sent to devices.
 
 Relevant Azure Service:  
-[IoT Hub](https://azure.microsoft.com/services/iot-hub/)  
-[Event Hubs](https://azure.microsoft.com/services/event-hubs/)  
-[Stream Analytics](https://azure.microsoft.com/services/stream-analytics/)  
+- [IoT Hub](https://azure.microsoft.com/services/iot-hub/)  
+- [Event Hubs](https://azure.microsoft.com/services/event-hubs/)  
+- [Stream Analytics](https://azure.microsoft.com/services/stream-analytics/)  
 
 Learn more about IoT on Azure by reading the [Azure IoT reference architecture](https://azure.microsoft.com/updates/microsoft-azure-iot-reference-architecture-available/).
 
