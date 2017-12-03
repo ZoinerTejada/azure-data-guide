@@ -19,7 +19,7 @@ Non-relational data is not represented in the tabular schema of rows and columns
 No-SQL refers to data stores that do not use SQL for performing their querying, and instead use other programming languages and constructs to query the data. In practice, when the term No-SQL is used, what is really meant is non-relational. This is because overtime, many non-relational data stores have added in SQL compatible query support; and while they have remained non-relational, they are no longer strictly No-SQL.  
 
 ## <a name="common"></a> Common Data Architectures
-There are various non-relational data stores that take their own unique approach to data storage, data representation, data processing, and querying; and by extension have their own data architecutre. The following introduces each.
+There are various non-relational data stores that take their own unique approach to data storage, data representation, data processing, and querying; and by extension have their own data architecture. The following introduces each.
 
 ### <a name="documentdata"></a> Document Data Stores
 A document data store manages a set of named string fields and object data values in an entity referred to as a document. The term "document" refers to the fact that these data stores typcially store their data in the form of JSON documents. Each field value could be simple scalar item or a compound element, such as a list or a parent-child collection. The data in the fields of a document can be encoded in a variety of ways, including XML, YAML, JSON, BSON,or even stored as plain text. The fields within documents are exposed to the storage management system, enabling an application to query and filter data by using the values in these fields.  
