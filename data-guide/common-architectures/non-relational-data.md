@@ -102,7 +102,7 @@ Object data stores are optimized for storing and retrieving large binary objects
 
 ![Example of object data](./images/object.png)
 
-Some object data stores replicate a given blob across multiple server nodes enabling fast parallel reads of the data contained by the blob This in turn enables the scale-out querying of data contained in large files because multiple processes, typically running on different servers, can each query the large data file simultaneously.  
+Some object data stores replicate a given blob across multiple server nodes enabling fast parallel reads of the data contained by the blob. This in turn enables the scale-out querying of data contained in large files because multiple processes, typically running on different servers, can each query the large data file simultaneously.  
 
 One special case of object data stores is the network file share. Using file shares enables files to be accessed across a network using standard networking protocols like SMB. Given appropriate security and concurrent access control mechanisms, sharing data in this way can enable distributed services to provide highly scalable data access for performing basic, low-level operations such as simple read and write requests.
 
