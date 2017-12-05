@@ -129,3 +129,6 @@ Considerations:
 * Only available for models built using Azure Machine Learning Studio.
 * Web-based access only
 
+### Azure Batch AI
+Azure Batch AI enables you to run your machine learning experiments in parallel, using any framework and perform model training at scale across a cluster of Virtual Machines with GPUs. Batch AI training enables you to scale out deep learning jobs across clustered GPUs, using frameworks such as Cognitive Toolkit, Caffe, Chainer and TensorFlow.
+Azure Machine Learning Model Management can be used to take models from Batch AI training to deploy, manage, and monitor them.  
