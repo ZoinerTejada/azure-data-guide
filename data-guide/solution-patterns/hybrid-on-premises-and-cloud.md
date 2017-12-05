@@ -11,7 +11,9 @@
 There has been an upward trend for the past several years of business moving to the cloud. The reasons are numerous, given the benefits cloud architectures bring, such as eliminating the need to procure and maintain physical servers, taking advantage of the latest innovations unique to the cloud, and virtually endless scalability of your solutions. But on-premises datacenters also have an important role to play, both today and in the future. For many
 organizations, integrating these two to create a hybrid cloud is essential.
 
-To achieve a hybrid cloud, you need a way to connect your on-premises datacenters with the cloud. But basic connectivity isn’t enough; a hybrid cloud should go beyond this, providing a complete set of consistent services. You need access to a broad range of cloud and on-premises technologies that work together in a coherent way.
+Hybrid cloud uses compute or storage resources on your on-premises network and in the cloud. You can use hybrid cloud as a path to migrate your business and its IT needs to the cloud or integrate cloud platforms and services with your existing on-premises infrastructure as part of your overall IT strategy.
+
+To achieve a hybrid cloud, you need a way to connect your on-premises datacenters with the cloud. But basic connectivity isn't enough; a hybrid cloud should go beyond this, providing a complete set of consistent services. You need access to a broad range of cloud and on-premises technologies that work together in a coherent way.
 
 There are four components of a true hybrid cloud, each of which brings significant benefits. They are the following:
 
@@ -22,66 +24,147 @@ There are four components of a true hybrid cloud, each of which brings significa
 
 Taken together, these four requirements provide consistent experiences for data professionals, developers, IT managers, and users. Because you'll have information both in the cloud and on-premises, it makes sense to have a common approach to working with data in both places. This consistency lets your  use the same tools and skills throughout your environment.
 
-![The four consistent components of a hybrid cloud, provided by Azure](./images/hybrid-cloud.png)
-
 In this guide, we will focus on the consistent data platform for your datacenter and the cloud.
 
 ### Network Shares
 
-TODO
+In a hybrid cloud architecture, it is common for business to keep newer files on-premises while archiving older files to the cloud. The benefits of doing this are two-fold. On one hand, it keeps the newest or most commonly accessed files within your network to reduce bandwidth usage and reduce file access times. On the other hand, this approach helps you manage unexpected local storage growth. This is sometimes called file tiering, where there is a seamless listing of and access to both on-premises and cloud-hosted files.
 
-### On-premise Data Stores
+Other times, organizations may wish to "lift and shift" their network shares to the cloud, which would be desirable, for instance, if your applications that access them are also located on the cloud. This procedure can be done using some level of [data orchestration](../technology-choices/pipeline-orchestration-data-movement.md).
 
-TODO
+### On-premises Data Stores
+
+On-premises data stores include databases, lists, and files. There may be several reasons to keep these local. You may choose to leverage your existing on-premises investments as you migrate workloads and applications to the cloud. Or there may be regulations or policies that do not permit moving specific data or workloads to the cloud.
+
+Some of the biggest factors influencing the placement of applications, or components of applications, between on-premises datacenters or public cloud, are those surrounding the application data. Data sovereignty, privacy, and/or security concerns will in some countries favor on-premises placement, either of the full application or the key application components storing application data. Often these concerns can be more perception than actual, and undermine the opportunity to take advantage of the real benefits of cloud hosting, so due diligence is required.
+
+Some of the important considerations in placing application data in a public cloud include:
+
+* **Cost advantages**: The cost of storage in public clouds such as Azure can be significantly lower than the cost of maintaining storage with similar characteristics in an on-premises datacenter. Of course, many companies will have existing investments in high-end SANs, so these cost advantages may not reach full fruition until existing hardware ages out.
+* **Scale agility**: Planning for and managing data capacity growth in an on-premises environment can be challenging, particularly for applications where data growth is difficult to predict. For these applications, cloud-based placement can take advantage of the capacity-on-demand and virtually unlimited storage available. In contrast, applications which consist of relatively static sized datasets are equally suitable for placement on-premises or in public cloud (on this dimension).
+* **Data assurance**: When placing applications in public clouds such as Azure, protection of data through redundancy is provided automatically with multiple copies of data placed across disks, racks, and even geographic regions. Similar levels of protection can be provided in on-premises infrastructures through data replication technologies where multiple datacenters are available. In hybrid environments, these same technologies can be used to replicate between on-premises and cloud based data stores.
+
+
+Without ExpressRoute
+connections, access to the on-premises data
+stores must be allowed through a reverse proxy
+or by making the server or data accessible on
+your DMZ or extranet.
 
 ### Extending Data Stores to the Cloud
 
-TODO
+On-premises data stores can be extended to the cloud in a number of ways within a hybrid cloud architecture. One option is to have on-premises and cloud replicas. This can help you achieve a high level of data assurance and fault tolerance, and may require making some changes to your applications to connect to the appropriate data store in the event of a failover.
+
+Another option is to move a portion of the data to cloud storage, while keeping the more current or more highly accessed data on-premises. This method can provide a more cost-effective option for long-term storage, as well as improve data access response times by reducing your operational data set.
+
+In situations where you desire to keep all of your data on-premises, yet harness the compute power and accessibility of the cloud, you could consider using a hybrid application. To do this, you would host your application (compute, web/mobile, data, analytics, IoT, media, etc.) in the cloud and connect it to your on-premises data store over a secure connection.
 
 ## <a name="whentouse"></a>When to use this architecture
 
-TODO
+There are several strong cases for hybrid cloud, such as meeting industry regulations for how and where data can be stored. When connectivity and latency issues have a performance impact on your ability to transfer data between your on-premises data stores and the cloud, you may opt to maintain select data to work with locally. A hybrid approach to cloud could make sense for using existing on-premises technology as an asset in digital transformation as opposed to treating them as purely legacy investments. Once you realize that cloud doesn't have to be an all or nothing prospect, there are many ways to harness the power of the cloud while maximizing your current investments.
 
 ## <a name="benefits"></a>Benefits
 
 Using a hybrid on-premises and cloud solution offers the following benefits:
 
-* TODO
+* Use hybrid cloud as a transition from locally hosted assets to the benefits gained from hosting your data and applications in the cloud.
+* Keep data on-premises when regulations or policies do not permit moving specific data or workloads to the cloud.
+* Keep data that is sensitive to connectivity and latency issues, on-premises for improved performance.
+* Continue to use existing on-premises technology and procedures, while capitalizing on the strength and flexibility of the cloud as appropriate for other tasks.
+* Improve disaster recovery and fault tolerance by replicating data and services between on-premises and cloud environments.
+* Reduce latency between your on-premises data center and remote locations by hosting part of your architecture in geographic regions within the cloud.
+* Minimizing cost by leveraging low cost public cloud storage, and capacity on demand.
+* Reducing operational risk by cloud-based backup and/or disaster recovery strategies.
+* Leveraging public cloud-based services to extend management capabilities.
 
 ## <a name="challenges"></a>Challenges
 
 Establishing a hybrid architecture can surface some of the following challenges:
 
-* TODO
+* Making security, management, your data platform, and development consistent between on-premises and cloud, avoiding duplication of work and wasting valuable resources. Synchronizing differences between environments can be painful and costly.
+* Creating a strong, secure data connection between your on-premises and cloud environments.
+* Replicating your data and modifying your applications and tools to use the correct data stores within each environment.
 
 ## <a name="inazure"></a>Hybrid in Azure
 
-TODO
+Azure has been hybrid by design from the beginning, lending to our decades of enterprise experience. This is what enables a consistent hybrid cloud experience across on-premises and the cloud. As the diagram below shows, Azure provides consistent solutions to the four areas covered at the beginning of this topic: identity, management and security, data platform, and development/DevOps.
 
-New hybrid data integration capabilities in Azure Data Factory including the ability to run SSIS packages within the service. This means you can run your SSIS data integration workloads in Azure, without changing the packages – for true hybrid data integration across on-premises and cloud. And our SSIS partner technologies like Biml can now work to automate and enhance data integration across on-premises and cloud.
+![The four consistent components of a hybrid cloud, provided by Azure](./images/hybrid-cloud.png)
 
-![Hybrid on-premises and Azure cloud solution](./images/hybrid-on-premises-cloud.png)
+Examples of these four areas include the following:
 
-[Azure Stack](https://docs.microsoft.com/azure/azure-stack/)
+* Azure Active Directory works with your on-premises Active Directory to provide common identity for your users.
+* Azure provides integrated management and security services for both cloud and on-premises infrastructure.
+* Azure data services combine with SQL Server to create a consistent data platform.
+* Microsoft Azure services in the cloud combined with Microsoft [Azure Stack](https://docs.microsoft.com/azure/azure-stack/) on-premises provide unified development and DevOps.
 
-Some organizations plan to remain hybrid indefinitely. Others, though, view hybrid as a waystation on their journey to the cloud. In other words, they think of a hybrid cloud as part of their migration strategy.
+### Azure Stack
 
-If you're in this second category, a consistent hybrid cloud can make migration significantly easier. For example, Azure Site Recovery can help with migration as well as disaster recovery because it can create new instances of on-premises applications on Azure. Rather than manually moving applications to the cloud, you can rely on Azure Site Recovery to do this and to help you cut over to the new cloud instances. The Microsoft hybrid cloud provides other tools as well, such as the migration wizard built into SQL Server Management Studio to help move on-premises
-SQL Server applications to Azure IaaS virtual machines.
+For the most complete hybrid cloud solution option available today, consider using [Azure Stack](https://docs.microsoft.com/azure/azure-stack/). In essence, it is an extension of Azure that runs on-premises. This helps maintain consistency between on-premises and Azure by using identical tools and requiring no code changes. The goal is for most applications and services that are certified for Azure will work on Azure Stack.
 
-Microsoft also helps lower the cost of migration by enabling you to bring your on-premises licenses to Azure. You can use your existing Windows Server licenses with Software Assurance to enable up to 40 percent savings on Windows Server virtual machines in Azure by using the Azure Hybrid Use Benefit. Similarly, license mobility provides the flexibility to deploy existing SQL Server licenses with Software Assurance in the cloud without additional fees. These benefits used alone or together can unlock significant savings as you look to extend into cloud or lift and
-shift to cloud. You can also rely on Microsoft’s extensive partner ecosystem, including firms such as Cloudamize and Movere, to provide both migration knowledge and tools.
+The following are some use cases for Azure and Azure Stack:
 
-Whatever options you choose, Microsoft’s consistent approach to hybrid cloud can make migration to a full cloud environment simpler, faster, and less expensive.
+* **Edge and disconnected solutions**: Customers can address latency and connectivity requirements by processing data locally in Azure Stack and then aggregating in Azure for further analytics, with common application logic across both. There’s lots of customer interest in this edge scenario across different contexts, including factory floors, cruise ships, and mine shafts.
+* **Cloud applications that meet varied regulations**: Customers can develop and deploy applications in Azure, with full flexibility to deploy on-premises on Azure Stack to meet regulatory or policy requirements, with no code changes needed. Illustrative application examples include global audit, financial reporting, foreign exchange trading, online gaming, and expense reporting. Many customers are looking to deploy different instances of the same application to Azure or Azure Stack, based on business and technical requirements. While Azure meets most requirements, Azure Stack complements the deployment approach where needed.
+* **Cloud application model on-premises**: Customers can use Azure web services, containers, serverless, and microservice architectures to update and extend existing applications or build new ones. You can use consistent DevOps processes across Azure in the cloud and Azure Stack on-premises. We’re seeing broad interest in application modernization, including for core mission-critical applications.
 
+### SQL Server data stores
+
+Hybrid cloud can be used as part of your migration strategy. In this case, a consistent hybrid cloud can make migration significantly easier. For example, [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/) can help with migration as well as disaster recovery because it can create new instances of on-premises applications on Azure. Rather than manually moving applications to the cloud, you can rely on Azure Site Recovery to do this and to help you cut over to the new cloud instances. The Microsoft hybrid cloud provides other tools as well, such as the migration wizard built into SQL Server Management Studio to help move on-premises SQL Server applications to Azure IaaS virtual machines. You can possibly lower the cost of migration by bringing your on-premises licenses to Azure through the [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing). Similarly, license mobility provides the flexibility to deploy existing SQL Server licenses with Software Assurance in the cloud without additional fees.
+
+If you plan on maintaining your data stores both on-premises and in the cloud, on the other hand, there are a few options available to you when using SQL Server. One option is to run SQL Server in an Azure IaaS virtual machine. You might do this as part of moving an entire application to the cloud to lower your costs, for example, or perhaps to create a development environment for applications that are deployed on-premises. Whatever the reason, you can use the same database technology throughout your hybrid cloud. This makes it easier to move your data and
+applications as needed to respond to changing business requirements.
+
+Another possibility is to take advantage of the cloud to provide business continuity with SQL Server [AlwaysOn Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). An availability group has two (or more) instances of SQL Server running on two different systems. The AlwaysOn technology automatically replicates changes to data across these systems. If the primary fails, the secondary can automatically take over, letting applications that use this database continue running. This kind of replication is essential for mission-critical workloads, and AlwaysOn supports scenarios with a low recovery time objective (RTO). Running the secondary server in the cloud can save you money and time. This secondary can also be
+made readable to help you scale access to data. For example, a readable secondary could be located in an Azure datacenter that's closer to salespeople using a mobile business intelligence app.
+
+Using [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/), a PaaS data service, brings more possibilities. Because Azure SQL Database is based on SQL Server, applications can access data in the same way with both technologies. Azure SQL Database can also be combined with SQL Server in useful ways. For example, the [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database) feature lets an application access what looks like a single table in a SQL Server database. Some or all rows of that table might be stored in Azure SQL Database. This technology automatically moves data that's not accessed for a defined period of time to the cloud. Applications reading this data are unaware that any of it has been moved to the cloud.
+
+### Network shares and file-based data stores
+
+The simplest way use on-premises network shares alongside cloud-based file storage is to use [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction). Azure Files offers fully managed file shares that you can access with the standard [Server Message Block](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx?f=255&MSPPError=-2147217396) (SMB) protocol (sometimes referred to as CIFS). This means that you can mount Azure Files as a file share on your local machine (Windows, macOS, or Linux), allowing you to use familiar operation system tools like Storage Explorer to access the files in your file share from anywhere in the world. This also makes accessing these files seamless from existing applications that access files on your local system or network shares, likely without requiring code changes.
+
+Keep your Azure File shares in-sync with your on-premises Windows Servers with [Azure File Sync](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning). One major benefit of Azure File Sync is the ability to tier files between your on-premises file server and Azure Files. This enables you to keep only the newest and most recently accessed files locally without sacrificing the ability to see and access the entire namespace through seamless cloud recall. With Azure File Sync, you can effectively transform your Windows File Server into an on-premises tier of Azure Files. Since cloud tiering moves old and infrequently accessed files to Azure, it effectively helps you make unpredictable storage growth predictable. When disasters strike, Azure File Sync can help. Simply set up a new Windows Server, install Azure File Sync, and the namespace is nearly instantly synced down as your cache is rebuilt.
+
+Another option is to use [Azure Managed Disks](https://docs.microsoft.com/azure/virtual-machines/windows/managed-disks-overview), but you would also need to attach the disk to a virtual machine that's running in Azure, adding an additional cost to your storage solution. You could also use Azure Blob storage, but it does not provide the SMB protocol that would make it more like working with a network share. For a more in-depth description of the differences between Azure Files, Azure Disks, and Blob storage, see [Deciding when to use Azure Blob storage, Azure Files, or Azure Disks](https://docs.microsoft.com/en-us/azure/storage/common/storage-decide-blobs-files-disks).
+
+### Network connectivity
+
+Designing the communication channels between traditional on-premises infrastructure and public clouds is fundamental to being able to successfully enable hybrid cloud scenarios. There are several approaches to extend an on-premises network to public clouds (such as Microsoft Azure), each with different strengths and weaknesses. The more seamless the interconnectivity in hybrid cloud environments, the better the ability for hybrid applications and workloads to take advantage of the respective strengths of different clouds.
+
+Key considerations when choosing between the different connectivity options described in this section include understanding bandwidth and latency needs, security implications, reliability goals, and ensuring that you have the operational agility to quickly adapt network configurations to meet changing needs.
+
+There are several choices to evaluate when designing connectivity from your on-premises environments to public clouds such as Azure. [How do I choose?](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/considerations)
+
+#### Virtual Private Networks (VPN) using Internet Gateways
+
+The key benefits of using VPN connections to public clouds include the familiarity of the technology and the relatively low cost compared to more dedicated connections.
+
+There are two key VPN variations to consider:
+
+* Point-to-site connection: This is an individually configured connection between an on-premises client and a virtual network in a public cloud. It imposes no requirement on the client side for a dedicated VPN device. Connection is established manually over the public Internet. When connecting from an on-premises client to Azure, the connection is secured using Secure Sockets Tunneling Protocol (SSTP).
+* Site-to-site connection: This is a secure connection between an on-premises site and a virtual network in a public cloud. It requires a VPN device to be configured at your on-premises site, which creates a connection to a VPN gateway running in the cloud, secured using Internet Protocol Security (IPsec). Once the connection is established, resources in both the on-premises site and the cloud virtual network are able to communicate seamlessly with each other.
+
+#### Dedicated connections using ExpressRoute
+
+[Azure ExpressRoute](https://docs.microsoft.com/azure/expressroute/) enables a dedicated Layer 3 connection between an on-premises environment and the Azure public cloud. The key benefits of dedicated connections include the improved traffic isolation and increased predictability of performance of a private connection. Network traffic is not as exposed to the potential risks of flowing over the public Internet, or to the potential performance impact of noisy neighbors. ExpressRoute connections provide built-in redundancy to help ensure high availability, and they include a number of controls to manage quality-of-service (QoS) for different traffic types. Microsoft uses an industry standard BGP routing protocol to exchange routes between your network, your private VNETs in Azure, and Microsoft public cloud addresses.
+
+There are three key dedicated connection topologies to consider:
+
+* Colocation at a cloud exchange: If your on-premises infrastructure is located in an ExpressRoute provider’s edge (typically referred to as an Exchange Provider), then they can provide a Layer 2 or managed Layer 3 connection between your on-premises network edge and the Microsoft Azure cloud.
+* Point-to-point Ethernet connection: This is a Layer 2 or Layer 3 connection provided by your service provider, directly from your on-premises edge to the Microsoft Azure cloud.
+* Any-to-any connection: This is a dedicated IPVPN (MPLS VPN), providing site-to-site connection between on-premises datacenters and the Microsoft Azure cloud. In this configuration, the Microsoft Azure cloud is like any other WAN connection between your on-premises environment and a remote site.
+
+Compare your options with a set of [Hybrid network reference architectures](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/index).
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-[Data ingest technology choices](../technology-choices/data-ingest.md)
+[Pipeline Orchestration, Control Flow, and Data Movement technology choices](../technology-choices/pipeline-orchestration-data-movement.md)
 
 See Also:
 
 Related Technology Choices
-- [Analysis, Visualizations, & Reporting](../technology-choices/analysis-visualizations-reporting.md)
+- [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
 - [Data Serving Storage](../technology-choices/data-serving-storage.md)
-- Real-time Processing
+- [Data Transfer](../technology-choices/data-transfer.md)
+- [Data Ingest](../technology-choices/data-ingest.md)
