@@ -44,13 +44,6 @@ Some of the important considerations in placing application data in a public clo
 * **Scale agility**: Planning for and managing data capacity growth in an on-premises environment can be challenging, particularly for applications where data growth is difficult to predict. For these applications, cloud-based placement can take advantage of the capacity-on-demand and virtually unlimited storage available. In contrast, applications which consist of relatively static sized datasets are equally suitable for placement on-premises or in public cloud (on this dimension).
 * **Data assurance**: When placing applications in public clouds such as Azure, protection of data through redundancy is provided automatically with multiple copies of data placed across disks, racks, and even geographic regions. Similar levels of protection can be provided in on-premises infrastructures through data replication technologies where multiple datacenters are available. In hybrid environments, these same technologies can be used to replicate between on-premises and cloud based data stores.
 
-
-Without ExpressRoute
-connections, access to the on-premises data
-stores must be allowed through a reverse proxy
-or by making the server or data accessible on
-your DMZ or extranet.
-
 ### Extending Data Stores to the Cloud
 
 On-premises data stores can be extended to the cloud in a number of ways within a hybrid cloud architecture. One option is to have on-premises and cloud replicas. This can help you achieve a high level of data assurance and fault tolerance, and may require making some changes to your applications to connect to the appropriate data store in the event of a failover.
