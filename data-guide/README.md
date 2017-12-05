@@ -32,7 +32,7 @@
 
 ## [Hybrid On-Premises and Cloud Solutions](./solution-patterns/hybrid-on-premises-and-cloud.md)
 
-## Secure Solutions
+## [Secure Solutions](./solution-patterns/secure-solutions.md)
 
 ## Machine Learning at Scale
 
