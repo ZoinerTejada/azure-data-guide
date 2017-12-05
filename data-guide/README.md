@@ -34,7 +34,7 @@
 
 ## [Secure Solutions](./solution-patterns/secure-solutions.md)
 
-## Machine Learning at Scale
+## [Machine Learning at Scale](./solution-patterns/machine-learning-at-scale.md)
 
 ## [Monitoring Data Solutions](./solution-patterns/monitoring-data-solutions.md)
 
@@ -57,9 +57,11 @@
 ## [Data Serving Storage](./technology-choices/data-serving-storage.md) - Stub Only
 
 ## Applied Artificial Intelligence & Cognitive Services
+### [Data Science and Machine Learning](./technology-choices/data-science-and-machine-learning.md)
 ### [Cognitive Services](./technology-choices/cognitive-services.md)
 ### [Text Search](./technology-choices/search-options.md)
 ### [Natural Language Processing](./technology-choices/natural-language-processing.md)
+
 
 ## [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
 
