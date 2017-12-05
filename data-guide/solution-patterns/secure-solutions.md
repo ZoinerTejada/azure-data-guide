@@ -80,27 +80,30 @@ Establishing a secure solution can surface some of the following challenges:
 
 ## <a name="inazure"></a>Secure solutions in Azure
 
-TODO
+Starting with data protection, how you secure your data at rest in Azure depends on where you are keeping it. When using Azure to host your virtual machines, you can leverage [Azure Disk Encryption](https://docs.microsoft.com/azure/security/azure-security-disk-encryption) on your Linux or Windows VMs to help protect and safeguard your data stored by encrypting the attached disks. This solution integrates with [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/) to help you safely control and manage the disk-encryption keys and secrets in your key vault subscription. If you are using Azure SQL Database or Azure SQL Data Warehouse, use the [Transparent Data Encryption](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql) (TDE) feature to perform real-time encryption and decryption of your databases, associated backups, and transaction log files without requiring any changes to your applications. You can protect other types of files that you use with [Azure Rights Management](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms) (Azure RMS), the protection technology used by [Azure Information Protection](https://docs.microsoft.com/information-protection/understand-explore/what-is-information-protection). This cloud-based service uses encryption, identity, and authorization policies to help secure your files and email, and it works across multiple devices—phones, tablets, and PCs. Information can be protected both within your organization and outside your organization because that protection remains with the data, even when it leaves your organization's boundaries.
 
-OMS Security and Auditing (Security Threat Analysis)
-[Azure Rights Management](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms) (RMS)
-[Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro)
-Security Development Lifecycle (SDL)
-Azure Key Vault
-Azure Active Directory and Multi-Factor Authentication
-Third-party SaaS identity management
+To protect your data in transit, start out by always using SSL/TLS protocols when exchanging data across different locations. Sometimes you need to isolate your entire communication channel between your on-premises and cloud infrastructure by using either a virtual private network (VPN) or [ExpressRoute](https://docs.microsoft.com/azure/expressroute/). More information on using VPNs and ExpressRoute can be found in the [Hybrid On-Premises and Cloud Solutions](../solution-patterns/hybrid-on-premises-and-cloud.md) article.
+
+If you are interacting with Azure Storage through the Azure Portal, all transactions occur via HTTPS. [Storage REST API](https://docs.microsoft.com/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference) over HTTPS can also be used to interact with Azure Storage and Azure SQL Database. Organizations that fail to protect data in transit are more susceptible for man-in-the-middle attacks, eavesdropping and session hijacking. These attacks can be the first step in gaining access to confidential data.
+
+When it comes to identity and access control, Microsoft offers comprehensive solutions you can use across Azure and other services such as Office 365, to help simplify the management of multiple environments and control user access across applications. For instance, [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/) (Azure AD) can help you manage access to numerous Azure services as well as your custom-built applications, while providing active monitoring for suspicious activities. Azure AD can also help you implement [Role-Based Access Control](https://docs.microsoft.com/azure/active-directory/role-based-access-control-what-is) (RBAC) to restrict your users to the exact permissions they need. If you are using Active Directory on-premises, it is possible to [synchronize with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements) to provide your users with a cloud identity based on their on-premises identity. Use [Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/), a two-step verification solution that delivers strong authentication via a range of verification methods, including phone call, text message, or mobile app verification. You may also opt to integrate a number of third-party SaaS applications, such as Salesforce, with Azure AD for single sign-on, making it easier for your users to gain access to your products and services. Finally, [Azure AD Privileged Identity Management](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-privileged-identity-management-configure) can help you manage, control, and monitor your users and what sorts of tasks they are performing with their admin privileges. This is an important step to limiting who in your organization can carry out privileged operations in Azure AD, Azure, Office 365, or SaaS apps, as well as monitor their activities.
+
+Security monitoring and auditing can be centralized with the help of [Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro). This service automatically collects, analyzes, and integrates log data from your Azure resources, the network, and connected partner solutions, like firewall and endpoint protection solutions, to detect real threats and reduce false positives. A list of prioritized security alerts is shown in Security Center along with the information you need to quickly investigate the problem and recommendations for how to remediate an attack. [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview), part of the [Operations Management Suite](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview) (OMS), also provides centralized access to your logs and helps you analyze that data and create custom alerts based on key factors that you define.
+
+For security monitoring on your managed Azure SQL Database instances, you can take advantage of [Azure SQL Database Threat Detection](https://docs.microsoft.com/azure/sql-database/sql-database-threat-detection), a security intelligence feature built into the Azure SQL Database service. Working around the clock to learn, profile and detect anomalous database activities, Azure SQL Database Threat Detection identifies potential threats to the database. Security officers or other designated administrators can receive an immediate notification about suspicious database activities as they occur. Each notification provides details of the suspicious activity and recommends how to further investigate and mitigate the threat.
+
+For information on securing your own application code that runs in the cloud, refer to the [cloud design security patterns](https://docs.microsoft.com/azure/architecture/patterns/category/security) article, and consider following the code security best practices found in the Microsoft [Security Development Lifecycle](https://www.microsoft.com/sdl) (SDL) to minimize
+vulnerabilities and their security impact.
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-[Pipeline Orchestration, Control Flow, and Data Movement technology choices](../technology-choices/pipeline-orchestration-data-movement.md)
+- [Monitoring Data Solutions](../solution-patterns/monitoring-data-solutions.md)
 
 See Also:
 
-Related Solution Patterns
-- [Monitoring Data Solutions](../solution-patterns/monitoring-data-solutions.md)
-
 Related Technology Choices
 - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
+- [Pipeline Orchestration, Control Flow, and Data Movement](../technology-choices/pipeline-orchestration-data-movement.md)
 - [Data Serving Storage](../technology-choices/data-serving-storage.md)
 - [Data Transfer](../technology-choices/data-transfer.md)
 - [Data Ingest](../technology-choices/data-ingest.md)
