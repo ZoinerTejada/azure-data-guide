@@ -56,6 +56,10 @@ Key Benefits:
 Considerations:
 * Requires some familiarization with the model management model and Workbench tool environment.
 
+### Azure Batch AI
+Azure Batch AI enables you to run your machine learning experiments in parallel, using any framework and perform model training at scale across a cluster of Virtual Machines with GPUs. Batch AI training enables you to scale out deep learning jobs across clustered GPUs, using frameworks such as Cognitive Toolkit, Caffe, Chainer and TensorFlow.
+Azure Machine Learning Model Management can be used to take models from Batch AI training to deploy, manage, and monitor them.  
+
 ### Azure Machine Learning Studio
 Azure Machine Learning Studio is a cloud-based, visual development environment for creating data experiments, training machine learning models, and publishing them as web services in Azure.
 It's visual "drag and drop" nature makes it possible for data scientists and power users to create effective machine learning solutions quickly and easily, while supporting custom R and Python logic, a wide range of established statistical algorithms and techniques for machine learning modeling tasks, and built-in support for Jupyter Notebooks.
@@ -129,6 +133,4 @@ Considerations:
 * Only available for models built using Azure Machine Learning Studio.
 * Web-based access only
 
-### Azure Batch AI
-Azure Batch AI enables you to run your machine learning experiments in parallel, using any framework and perform model training at scale across a cluster of Virtual Machines with GPUs. Batch AI training enables you to scale out deep learning jobs across clustered GPUs, using frameworks such as Cognitive Toolkit, Caffe, Chainer and TensorFlow.
-Azure Machine Learning Model Management can be used to take models from Batch AI training to deploy, manage, and monitor them.  
+
