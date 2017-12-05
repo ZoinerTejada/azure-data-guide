@@ -52,7 +52,7 @@
 
 ## Batch Processing
 
-## Real-time Processing
+## [Real-time Processing](./technology-choices/real-time-processing.md)
 
 ## [Data Serving Storage](./technology-choices/data-serving-storage.md) - Stub Only
 
