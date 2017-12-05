@@ -48,23 +48,35 @@ Learn more about [Azure Identity Management and access control security best pra
 
 ### Auditing
 
-TODO
+Beyond the identity and access monitoring previously mentioned, the services and applications that you use in the cloud should be generating security-related events that you can monitor. A combination of [monitoring these events and creating alerts](../solution-patterns/monitoring-data-solutions.md) for them are important components in an effective data protection strategy.
+
+The primary challenge to monitoring these events is in handling the vast quantities of logs one must evaluate and analyze to stave off potential problems or troubleshoot past ones. Cloud-based applications tend to contain many moving parts, most of which generate some level of logging and telemetry. Your best bet is to use centralized monitoring and analysis to help you manage and make sense of the large amount of information.
+
+Get to know the various types of logs provided by your cloud platform, as well as the monitoring solutions it provides. This can make the difference between proactively dealing with security threats and scrambling trying to put out fires.
+
+Learn more about [logging and auditing in Azure](https://docs.microsoft.com/azure/security/azure-log-audit).
 
 ## <a name="whentouse"></a>When to use this architecture
 
-TODO
+Security should be part of your plan from the beginning of your project lifecycle. For many, the security capabilities a cloud provider offers is the first indicator of its viability for their solution.
 
 ## <a name="benefits"></a>Benefits
 
 Using a secure solution offers the following benefits:
 
-* TODO
+* Protect your data from both external and internal threats.
+* Gain insight on how your data is being accessed and used.
+* Adhere to security and auditing regulations to maintain compliancy within your industry.
+* Protect your users' important information; gain and maintain their trust.
+* Proper security monitoring and auditing goes beyond simply keeping your data safe - those practices also help ensure the health and stability of your applications in the cloud.
 
 ## <a name="challenges"></a>Challenges
 
 Establishing a secure solution can surface some of the following challenges:
 
-* TODO
+* Centralized monitoring and analysis of security events stored in numerous logs.
+* Extra effort involved in implementing encryption and authorization management across your applications and services.
+* Centralized identity management that works across all of your solution components, whether on-premises or in the cloud.
 
 ## <a name="inazure"></a>Secure solutions in Azure
 
@@ -72,6 +84,7 @@ TODO
 
 OMS Security and Auditing (Security Threat Analysis)
 [Azure Rights Management](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms) (RMS)
+[Azure Security Center](https://docs.microsoft.com/azure/security-center/security-center-intro)
 Security Development Lifecycle (SDL)
 Azure Key Vault
 Azure Active Directory and Multi-Factor Authentication
