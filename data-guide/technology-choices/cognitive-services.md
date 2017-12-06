@@ -24,7 +24,7 @@ Key Benefits:
 * Built-in support for consuming cognitive services in Azure Data Lake Analytics
 
 Considerations:
-* Only available over the Web - Internet connectivity is required.
+* Only available over the Web - Internet connectivity is generally required. The primary exception to this is the Custom Vision Service, whose trained model you can export for prediction on devices and at the IoT edge.
 * Although considerable customization is supported, the available services may not suit all predictive analytics requirements.
 
 ## <a name="options"></a> What are your options when choosing amongst the Cognitive Services?
