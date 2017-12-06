@@ -104,3 +104,4 @@ Related Technology Choices
 - Transactional data stores
     - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
     - [Data Warehouses](../technology-choices/data-warehouses.md)
+    - [Data serving storage](../technology-choices/data-serving-storage.md)

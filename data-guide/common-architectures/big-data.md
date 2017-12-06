@@ -138,6 +138,7 @@ Related Solution Pipelines
 - [Time-series solutions](../solution-patterns/time-series.md)
 
 Related Technology Choices
+- [Data serving storage](../technology-choices/data-serving-storage.md)
 - Handling unstructured data
     - [Options for processing CSV and JSON files](../technology-choices/csv-json-options.md)
     - [Enabling full text search on free-form text files](../technology-choices/search-options.md)

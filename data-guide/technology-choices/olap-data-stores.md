@@ -75,3 +75,4 @@ Related Technology Choices
 - Transactional data stores
     - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
     - [Data Warehouses](../technology-choices/data-warehouses.md)
+    - [Data serving storage](../technology-choices/data-serving-storage.md)
