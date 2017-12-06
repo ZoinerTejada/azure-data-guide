@@ -54,7 +54,7 @@
 
 ## [Real-time Processing](./technology-choices/real-time-processing.md)
 
-## [Data Serving Storage](./technology-choices/data-serving-storage.md) - Stub Only
+## [Data Serving Storage](./technology-choices/data-serving-storage.md)
 
 ## Applied Artificial Intelligence & Cognitive Services
 ### [Data Science and Machine Learning](./technology-choices/data-science-and-machine-learning.md)
