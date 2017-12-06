@@ -53,7 +53,7 @@ What solution patterns can you use to handle that data?
 ### [On-premise Data Stores]()
 ### [Extending Data Stores to the Cloud]()
 
-## [Secure Solutions]()
+## [Secure Solutions](./solution-patterns/secure-solutions.md)
 ### [Data Protection]()
 ### [Access Control]()
 ### [Auditing]()
