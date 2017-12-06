@@ -84,7 +84,7 @@ The following tables summarize the key differences in capabilities between each 
 | Custom Vision Service | Images (or frames from video) | Easily customize your own state-of-the-art computer vision models for your unique use case |
 | Custom Speech Service | Speech | Overcome speech recognition barriers like speaking style, background noise, and vocabulary | 
 | Custom Decision Service | Web Content (e.g., RSS feed) | Use machine learning to automatically select the appropriate content for your home page |
-| Bing Custom Search API | Text (web search query) |
+| Bing Custom Search API | Text (web search query) | An easy-to-use, ad-free, commercial-grade search tool that lets you deliver the results you want |
 
 
 ## <a name="wheretogo"></a>Where to go from here
