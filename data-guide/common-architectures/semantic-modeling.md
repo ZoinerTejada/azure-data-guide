@@ -19,7 +19,8 @@ There are two primary types of semantic models:
 * Tabular: Uses relational modeling constructs (model, tables, columns). Internally, metadata is inherited from OLAP modeling constructs (cubes, dimensions, measures). Code and script use OLAP metadata.
 * Multidimensional: Leverages traditional OLAP modeling constructs (cubes, dimensions, measures).
 
-Relevant Azure Service: [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/)
+Relevant Azure Service:
+- [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/)
 
 <a name="usecase"></a>
 ### Example use case

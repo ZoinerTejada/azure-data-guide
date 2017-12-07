@@ -44,10 +44,10 @@ Read Next: [Online Transaction Processing (OLTP) Solution Pattern](../pipeline-p
 See Also:
 
 Related Common Architectures
-- [Relational data stores](./relational-data-stores.md)
+- [Relational data stores](./relational-data.md)
 
 Alternative Common Architectures
-- [Non-relational and No-SQL data stores](./non-relational-data-stores.md)
+- [Non-relational and No-SQL data stores](./non-relational-data.md)
 
 Related Pipeline Patterns
 - Working with transactional data

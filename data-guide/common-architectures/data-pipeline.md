@@ -25,10 +25,10 @@ The data transformation that takes place usually involves various operations, su
 Oftentimes, the three ETL phases are run in parallel to save time. For example, while data is being extracted, a transformation process could be working on data already received and prepare it for loading, and a loading process can begin working on the prepared data, rather than waiting for the entire extraction process to complete.
 
 Relevant Azure service:
-[Azure Data Factory v2](https://azure.microsoft.com/services/data-factory/)
+- [Azure Data Factory v2](https://azure.microsoft.com/services/data-factory/)
 
 Other tools:
-[SQL Server Integration Services (SSIS)](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
+- [SQL Server Integration Services (SSIS)](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
 
 ## <a name="elt"></a> Extract, Load, and Transform
 
@@ -43,13 +43,13 @@ In practice the data store is a data warehouse using either a Hadoop cluster (us
 The final phase of the ELT pipeline is typically to transform the source data into a final format that is more performant with respect to the types of queries that will need to be supported. Examples of this include partitioning the data and using optimized storage formats like Parquet that store row oriented data in a columnar fashion and provides indexing that optimizes reading from only those files that contain the data requested by the query. 
 
 Relevant Azure service:
-[Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
-[HDInsight with Hive](https://docs.microsoft.com/azure/hdinsight/hadoop/hdinsight-use-hive)
-[Azure Data Factory v2](https://azure.microsoft.com/services/data-factory/)
-[Oozie on HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-use-oozie-linux-mac)
+- [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
+- [HDInsight with Hive](https://docs.microsoft.com/azure/hdinsight/hadoop/hdinsight-use-hive)
+- [Azure Data Factory v2](https://azure.microsoft.com/services/data-factory/)
+- [Oozie on HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-use-oozie-linux-mac)
 
 Other tools:
-[SQL Server Integration Services (SSIS)](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
+- [SQL Server Integration Services (SSIS)](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
 
 ### <a name="dataflowcontrolflow"></a> Data Flow & Control Flow
 
@@ -62,10 +62,10 @@ Data flows differ from control flows, in that tasks, or components within a data
 In the diagram above, there are several tasks within the control flow, one of which is a data flow task. One of the tasks is nested within a container. Containers can be used to provide structure to tasks, providing a unit of work. One such example is for repeating elements within a collection, such as files in a folder or database statements.
 
 Relevant Azure service:
-[Azure Data Factory v2](https://azure.microsoft.com/services/data-factory/)
+- [Azure Data Factory v2](https://azure.microsoft.com/services/data-factory/)
 
 Other tools:
-[SQL Server Integration Services (SSIS)](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
+- [SQL Server Integration Services (SSIS)](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
 
 ## <a name="wheretogo"></a>Where to go from here
 
