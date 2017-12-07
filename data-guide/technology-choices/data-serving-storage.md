@@ -18,12 +18,12 @@ There is no single best data management choice for all data storage tasks; diffe
 ## <a name="options"></a> What are your options when choosing data serving storage?
 There are several options for data serving storage in Azure, depending on your needs:
 
-- SQL Data Warehouse
-- SQL Database
-- HBase/Phoenix on HDInsight
-- Hive LLAP on HDInsight
-- Azure Analysis Services
-- Cosmos DB
+- [SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
+- [SQL Database](https://docs.microsoft.com/azure/sql-database/)
+- [HBase/Phoenix on HDInsight](https://docs.microsoft.com/azure/hdinsight/hbase/apache-hbase-overview)
+- [Hive LLAP on HDInsight](https://docs.microsoft.com/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
+- [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
+- [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/)
 
 These options provide various database models that are optimized for different types of tasks:
 
