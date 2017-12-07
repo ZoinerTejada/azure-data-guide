@@ -50,7 +50,7 @@
 
 ## [Data Ingest](./technology-choices/data-ingest.md)
 
-## Batch Processing
+## [Batch Processing](./technology-choices/batch-processing.md)
 
 ## [Real-time Processing](./technology-choices/real-time-processing.md)
 
