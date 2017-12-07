@@ -31,5 +31,5 @@ Alternative Common Architectures
 Related Common Architectures
 - [Relational Data](./common-architectures/relational-data.md)
 - [Advanced Analytics](./common-architectures/advanced-analytics.md)
-- [Data Pipelines](./common-architectures/data-pipelines.md)
+- [Data Pipeline](./common-architectures/data-pipeline.md)
 - [Semantic Modeling](./common-architectures/semantic-modeling.md)
