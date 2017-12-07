@@ -38,9 +38,9 @@ Related Common Architectures
 - [Semantic Modeling](./semantic-modeling.md)
 
 Related Solution Pipelines
-- [Online Analytical Processing](../solution-patterns/online-analytical-processing.md)
-- [Online Transaction Processing](../solution-patterns/online-transaction-processing.md)
-- [Data Warehousing](../solution-patterns/data-warehousing.md)
+- [Online Analytical Processing](../pipeline-patterns/online-analytical-processing.md)
+- [Online Transaction Processing](../pipeline-patterns/online-transaction-processing.md)
+- [Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
 Related Technology Choices:
 - [Analysis, Visualizations and Reporting](../technology-choices/analysis-visualizations-reporting.md)

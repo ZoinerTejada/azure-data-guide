@@ -50,7 +50,7 @@ Semantic modeling and analytical processing tends to have the following requirem
 | Scale: | Large (10's-100's GBs) |
 
 ## <a name="wheretogo"></a>Where to go from here
-Read Next: [Online Analytical Processing (OLAP) Solution Pattern](../solution-patterns/online-analytical-processing.md)
+Read Next: [Online Analytical Processing (OLAP) Solution Pattern](../pipeline-patterns/online-analytical-processing.md)
 
 See Also:
 
@@ -60,11 +60,11 @@ Related Common Architectures
 Alternative Common Architectures
 - [Non-relational and No-SQL data stores](./non-relational-data.md)
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../solution-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
+    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
 Related Technology Choices
 - Transactional data stores

@@ -94,9 +94,9 @@ Data Warehouse Solution Pattern
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
+    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
     - Online Analytical Processing (OLAP)
     - Data Warehousing
 

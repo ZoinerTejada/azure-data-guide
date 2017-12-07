@@ -33,7 +33,7 @@ Learn more about how to protect your data at-rest or in-transit by reading [Azur
 
 ### Access Control
 
-Central to protecting your data in the cloud is a combination of identity management and access control. Given the variety and type of cloud services (SaaS, PaaS, and IaaS), as well as the rising popularity of [hybrid cloud](../solution-patterns/hybrid-on-premises-and-cloud.md), there are several key practices you should follow when it comes to identity and access control:
+Central to protecting your data in the cloud is a combination of identity management and access control. Given the variety and type of cloud services (SaaS, PaaS, and IaaS), as well as the rising popularity of [hybrid cloud](../pipeline-patterns/hybrid-on-premises-and-cloud.md), there are several key practices you should follow when it comes to identity and access control:
 
 * Centralize your identity management
 * Enable Single Sign-On (SSO)
@@ -48,7 +48,7 @@ Learn more about [Azure Identity Management and access control security best pra
 
 ### Auditing
 
-Beyond the identity and access monitoring previously mentioned, the services and applications that you use in the cloud should be generating security-related events that you can monitor. A combination of [monitoring these events and creating alerts](../solution-patterns/monitoring-data-solutions.md) for them are important components in an effective data protection strategy.
+Beyond the identity and access monitoring previously mentioned, the services and applications that you use in the cloud should be generating security-related events that you can monitor. A combination of [monitoring these events and creating alerts](../pipeline-patterns/monitoring-data-solutions.md) for them are important components in an effective data protection strategy.
 
 The primary challenge to monitoring these events is in handling the vast quantities of logs one must evaluate and analyze to stave off potential problems or troubleshoot past ones. Cloud-based applications tend to contain many moving parts, most of which generate some level of logging and telemetry. Your best bet is to use centralized monitoring and analysis to help you manage and make sense of the large amount of information.
 
@@ -82,7 +82,7 @@ Establishing a secure solution can surface some of the following challenges:
 
 Starting with data protection, how you secure your data at rest in Azure depends on where you are keeping it. When using Azure to host your virtual machines, you can leverage [Azure Disk Encryption](https://docs.microsoft.com/azure/security/azure-security-disk-encryption) on your Linux or Windows VMs to help protect and safeguard your data stored by encrypting the attached disks. This solution integrates with [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/) to help you safely control and manage the disk-encryption keys and secrets in your key vault subscription. If you are using Azure SQL Database or Azure SQL Data Warehouse, use the [Transparent Data Encryption](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql) (TDE) feature to perform real-time encryption and decryption of your databases, associated backups, and transaction log files without requiring any changes to your applications. You can protect other types of files that you use with [Azure Rights Management](https://docs.microsoft.com/information-protection/understand-explore/what-is-azure-rms) (Azure RMS), the protection technology used by [Azure Information Protection](https://docs.microsoft.com/information-protection/understand-explore/what-is-information-protection). This cloud-based service uses encryption, identity, and authorization policies to help secure your files and email, and it works across multiple devices—phones, tablets, and PCs. Information can be protected both within your organization and outside your organization because that protection remains with the data, even when it leaves your organization's boundaries.
 
-To protect your data in transit, start out by always using SSL/TLS protocols when exchanging data across different locations. Sometimes you need to isolate your entire communication channel between your on-premises and cloud infrastructure by using either a virtual private network (VPN) or [ExpressRoute](https://docs.microsoft.com/azure/expressroute/). More information on using VPNs and ExpressRoute can be found in the [Hybrid On-Premises and Cloud Solutions](../solution-patterns/hybrid-on-premises-and-cloud.md) article.
+To protect your data in transit, start out by always using SSL/TLS protocols when exchanging data across different locations. Sometimes you need to isolate your entire communication channel between your on-premises and cloud infrastructure by using either a virtual private network (VPN) or [ExpressRoute](https://docs.microsoft.com/azure/expressroute/). More information on using VPNs and ExpressRoute can be found in the [Hybrid On-Premises and Cloud Solutions](../pipeline-patterns/hybrid-on-premises-and-cloud.md) article.
 
 If you are interacting with Azure Storage through the Azure Portal, all transactions occur via HTTPS. [Storage REST API](https://docs.microsoft.com/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference) over HTTPS can also be used to interact with Azure Storage and Azure SQL Database. Organizations that fail to protect data in transit are more susceptible for man-in-the-middle attacks, eavesdropping and session hijacking. These attacks can be the first step in gaining access to confidential data.
 
@@ -97,7 +97,7 @@ vulnerabilities and their security impact.
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-- [Monitoring Data Solutions](../solution-patterns/monitoring-data-solutions.md)
+- [Monitoring Data Solutions](../pipeline-patterns/monitoring-data-solutions.md)
 
 See Also:
 

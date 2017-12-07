@@ -128,14 +128,14 @@ Learn more about IoT on Azure by reading the [Azure IoT reference architecture](
 
 ## <a name="wheretogo"></a>Where to go from here
 
-Read Next: [Processing CSV and JSON Files Solution Pipeline](../solution-patterns/processing-csv-and-json-files.md)
+Read Next: [Processing CSV and JSON Files Solution Pipeline](../pipeline-patterns/processing-csv-and-json-files.md)
 
 See Also:
 
 Related Solution Pipelines
 - Handling unstructured data
-    - [Processing free-form text files](../solution-patterns/processing-free-form-text.md)
-- [Time-series solutions](../solution-patterns/time-series.md)
+    - [Processing free-form text files](../pipeline-patterns/processing-free-form-text.md)
+- [Time-series solutions](../pipeline-patterns/time-series.md)
 
 Related Technology Choices
 - [Data serving storage](../technology-choices/data-serving-storage.md)

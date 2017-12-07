@@ -40,11 +40,11 @@ Related Common Architectures
 Alternative Common Architectures
 - Non-relational and No-SQL common architectures
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../solution-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
+    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
 Related Technology Choices
 - Transactional data stores

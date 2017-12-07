@@ -82,9 +82,9 @@ The following table summarize the key differences in capabilities between each. 
 ## <a name="wheretogo"></a>Where to go from here
 See Also:
 
-Related Solution Patterns
-- [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
-- [Processing free-form text](../solution-patterns/processing-free-form-text.md)
+Related Pipeline Patterns
+- [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
+- [Processing free-form text](../pipeline-patterns/processing-free-form-text.md)
 
 Related Technology Choices
 - [Data Ingest](./data-ingest.md)

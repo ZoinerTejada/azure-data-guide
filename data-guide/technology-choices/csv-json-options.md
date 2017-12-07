@@ -114,14 +114,14 @@ When it comes to orchestration, Azure Data Factory and SQL Server Integration Se
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-[Data Warehousing](../solution-patterns/data-warehousing.md)
+[Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
+    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
 
 Related Technology Choices
 - Transactional data stores

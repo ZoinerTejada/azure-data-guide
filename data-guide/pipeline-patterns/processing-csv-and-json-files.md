@@ -63,6 +63,6 @@ Read Next:
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Handling Unstructured Data
     - [Processing Free-form Text](./processing-free-form-text.md)

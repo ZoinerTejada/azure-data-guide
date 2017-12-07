@@ -156,7 +156,7 @@ Read Next: Handling Unstructured Data Solution Pattern
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Handling unstructured data
     - Processing CSV and JSON files
     - Free-form text files

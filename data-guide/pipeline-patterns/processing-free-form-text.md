@@ -60,7 +60,7 @@ Read Next:
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Handling Unstructured Data
     - [Processing CSV and JSON files](./processing-csv-and-json-files.md)
 

@@ -89,14 +89,14 @@ Relevant Azure services:
 
 ## <a name="wheretogo"></a>Where to go from here
 
-Read Next: [Machine Learning solution pattern](../solution-patterns/machine-learning.md)
+Read Next: [Machine Learning solution pattern](../pipeline-patterns/machine-learning.md)
 
 See Also:
 
-Related Solution Patterns
-- [Interactive Data Exploration](../solution-patterns/interactive-data-exploration.md)
-- [Machine Learning](../solution-patterns/machine-learning.md)
-- [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
+Related Pipeline Patterns
+- [Interactive Data Exploration](../pipeline-patterns/interactive-data-exploration.md)
+- [Machine Learning](../pipeline-patterns/machine-learning.md)
+- [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
 
 Related Technology Choices
 - [Data Science and Machine Learning](../technology-choices/data-science-and-machine-learning.md)

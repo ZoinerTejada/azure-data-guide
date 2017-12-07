@@ -20,23 +20,23 @@
 
 # Pipeline Patterns
 ## Working with transactional data
-### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) 
-### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytical-processing.md)
-### [Data Warehousing & Data Marts](./solution-patterns/data-warehousing.md)
+### [Online Transaction Processing (OLTP)](./pipeline-patterns/online-transaction-processing.md) 
+### [Online Analytical Processing (OLAP)](./pipeline-patterns/online-analytical-processing.md)
+### [Data Warehousing & Data Marts](./pipeline-patterns/data-warehousing.md)
 
 ## Handling Unstructured Data
-### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md) 
-### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
+### [Processing CSV and JSON files](./pipeline-patterns/processing-csv-and-json-files.md) 
+### [Processing Free-form Text](./pipeline-patterns/processing-free-form-text.md)
 
-## [Time Series Solutions](./solution-patterns/time-series.md)
+## [Time Series Solutions](./pipeline-patterns/time-series.md)
 
-## [Hybrid On-Premises and Cloud Solutions](./solution-patterns/hybrid-on-premises-and-cloud.md)
+## [Hybrid On-Premises and Cloud Solutions](./pipeline-patterns/hybrid-on-premises-and-cloud.md)
 
-## [Secure Solutions](./solution-patterns/secure-solutions.md)
+## [Secure Solutions](./pipeline-patterns/secure-solutions.md)
 
-## [Machine Learning at Scale](./solution-patterns/machine-learning-at-scale.md)
+## [Machine Learning at Scale](./pipeline-patterns/machine-learning-at-scale.md)
 
-## [Monitoring Data Solutions](./solution-patterns/monitoring-data-solutions.md)
+## [Monitoring Data Solutions](./pipeline-patterns/monitoring-data-solutions.md)
 
 # Technology Choices
 ## Transactional data stores
