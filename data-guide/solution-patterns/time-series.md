@@ -74,4 +74,4 @@ See Also:
 Related Technology Choices
 - [Analysis, Visualizations, & Reporting](../technology-choices/analysis-visualizations-reporting.md)
 - [Data Serving Storage](../technology-choices/data-serving-storage.md)
-- Real-time Processing
+- [Real-time Processing](../technology-choices/real-time-processing.md)

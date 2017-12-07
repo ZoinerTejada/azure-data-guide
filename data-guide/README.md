@@ -18,7 +18,7 @@
 
 ## [Interactive Data Exploration](./common-architectures/interactive-data-exploration.md)
 
-# Solution Pipelines
+# Pipeline Patterns
 ## Working with transactional data
 ### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md) 
 ### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytical-processing.md)
@@ -54,7 +54,7 @@
 
 ## [Real-time Processing](./technology-choices/real-time-processing.md)
 
-## [Data Serving Storage](./technology-choices/data-serving-storage.md) - Stub Only
+## [Data Serving Storage](./technology-choices/data-serving-storage.md)
 
 ## Applied Artificial Intelligence & Cognitive Services
 ### [Data Science and Machine Learning](./technology-choices/data-science-and-machine-learning.md)
