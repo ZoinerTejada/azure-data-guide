@@ -8,7 +8,7 @@
 [Where to go from here](#wheretogo)  
 
 <a name="about"></a>
-Real-time processing components consume events or messages from either queue or file based storage, with the goal of inspecting, querying, filtering and aggregating events and then forwarding the outcome to another message queue, file store, or database. In some cases, they may invoke REST methods that trigger an application function like sending out an alert or updating a real-time visualization. The key requirement of such processing engines is that they are capable of appliying their computation to endless streams of data and produce results with minimal latency, in a near real-time fashion.
+Real-time processing components consume events or messages from either queue or file based storage, with the goal of inspecting, querying, filtering and aggregating events and then forwarding the outcome to another message queue, file store, or database. In some cases, they may invoke REST methods that trigger an application function like sending out an alert or updating a real-time visualization. The key requirement of such processing engines is that they are capable of applying their computation to endless streams of data and produce results with minimal latency, in a near real-time fashion.
 
 ## <a name="options"></a> What are your options when choosing a technology for real-time processing?
 In Azure, all of the following data stores will meet the core requirements supporting real-time processing:
