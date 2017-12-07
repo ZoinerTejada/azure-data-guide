@@ -69,7 +69,7 @@ The following tables summarize the key differences in capabilities between each.
 ### Security Capabilities
 
 | | SQL Database | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- |
 | Authentication  | SQL / Azure Active Directory | SQL / Azure Active Directory | local / Azure Active Directory * | local / Azure Active Directory * | Azure Active Directory | database users / Azure Active Directory via Access control (IAM) |
 | Authorization  | Yes | Yes | Yes * | Yes * | Yes | [Yes](https://docs.microsoft.com/azure/cosmos-db/secure-access-to-data) (hash-based message authentication code (HMAC))
 | Auditing  | Yes | Yes | Yes * | Yes * | Yes (when integrated with [Azure Monitor Resource Diagnostic Logs](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs)) | Yes (through [audit logging/activity logs](https://docs.microsoft.com/azure/cosmos-db/logging))
