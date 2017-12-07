@@ -35,7 +35,7 @@ Related Common Architectures
 - [Non-Relational & NoSQL Data](./non-relational-data.md)
 - [Semantic Modeling](./semantic-modeling.md)
 
-Related Solution Pipelines
+Related Pipeline Patterns
 - [Online Analytical Processing](../pipeline-patterns/online-analytical-processing.md)
 - [Online Transaction Processing](../pipeline-patterns/online-transaction-processing.md)
 - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
