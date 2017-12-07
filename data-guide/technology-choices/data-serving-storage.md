@@ -65,6 +65,7 @@ The following tables summarize the key differences in capabilities between each.
 | Redundant regional servers for high availability  | Yes (Azure SQL Database) | Yes | Yes | No | No | Yes | Yes |
 | Supports query scale out  | No | Yes | Yes | Yes | Yes | Yes |
 | Dynamic scalability (scale up)  | Yes (Azure SQL Database) | Yes | No | No | Yes | Yes |
+| Supports in-memory caching of data | Yes | Yes | No | Yes | Yes | No |
 
 ### Security Capabilities
 
