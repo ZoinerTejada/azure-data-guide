@@ -10,10 +10,10 @@ We provide common data architectures to represent the "big concepts" that deal w
 ## <a name="use"></a> How do you approach using them?
 To understand how to apply a common data architecture to your scenario, start with the phrase "I need to work with..." and then complete the phrase with one of the following:
 - [Relational data](./relational-data.md)
-- Non-relational data
-- Big data
-- Data pipelines
-- Advanced analytics
+- [Non-relational data](./non-relational-data.md)
+- [Big data](./big-data.md)
+- [Data pipelines](./data-pipeline.md)
+- [Advanced analytics](./advanced-analytics.md)
 
 The common data architectures will guide you down a path of concepts that get more granular from the concept down to the generic form of technologies used in the architecture, and ultimately to help you make a choice amongst the various Azure options that exist. 
 

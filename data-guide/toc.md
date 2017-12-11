@@ -32,28 +32,28 @@ I need to work with ...
 ### [Deep Learning]()
 ### [Artificial Intelligence]()
 
-What solution patterns can you use to handle that data?
-# [Solution Pipelines]()
+What pipeline patterns can you use to handle that data?
+# [Pipeline Patterns]()
 ## [Working with transactional data]()
-### [Online Transaction Processing (OLTP)](./solution-patterns/online-transaction-processing.md)
-### [Online Analytical Processing (OLAP)](./solution-patterns/online-analytics-processing.md)
-### [Data Warehousing](./solution-patterns/data-warehousing.md)
+### [Online Transaction Processing (OLTP)](./pipeline-patterns/online-transaction-processing.md)
+### [Online Analytical Processing (OLAP)](./pipeline-patterns/online-analytics-processing.md)
+### [Data Warehousing](./pipeline-patterns/data-warehousing.md)
 - Massively Parallel Processing
 
-## [Handling Unstructured Data](./solution-patterns/handling-unstructured-data.md)
-### [Processing CSV and JSON files](./solution-patterns/processing-csv-and-json-files.md)
-### [Processing Free-form Text](./solution-patterns/processing-free-form-text.md)
+## [Handling Unstructured Data](./pipeline-patterns/handling-unstructured-data.md)
+### [Processing CSV and JSON files](./pipeline-patterns/processing-csv-and-json-files.md)
+### [Processing Free-form Text](./pipeline-patterns/processing-free-form-text.md)
 
-## [Time Series Solutions](./solution-patterns/time-series.md)
+## [Time Series Solutions](./pipeline-patterns/time-series.md)
 ### [Internet of Things]()
 ### [Real-time Analytics]()
 
-## [Hybrid On-Premises and Cloud Solutions](./solution-patterns/hybrid-on-premises-and-cloud.md)
+## [Hybrid On-Premises and Cloud Solutions](./pipeline-patterns/hybrid-on-premises-and-cloud.md)
 ### [Network Shares]()
 ### [On-premise Data Stores]()
 ### [Extending Data Stores to the Cloud]()
 
-## [Secure Solutions](./solution-patterns/secure-solutions.md)
+## [Secure Solutions](./pipeline-patterns/secure-solutions.md)
 ### [Data Protection]()
 ### [Access Control]()
 ### [Auditing]()
@@ -68,7 +68,7 @@ What solution patterns can you use to handle that data?
 ### [Predictive Solutions]()
 ### [Online Learning Solutions]()
 
-## [Monitoring Data Solutions](./solution-patterns/monitoring-data-solutions.md)
+## [Monitoring Data Solutions](./pipeline-patterns/monitoring-data-solutions.md)
 ### [Performance Monitoring]()
 ### [Alerting]()
 ### [Troubleshooting & Diagnostics]()

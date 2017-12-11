@@ -1,4 +1,4 @@
-# Advanced Analytics
+ Advanced Analytics
 
 **In this article**
 
@@ -19,7 +19,7 @@ Advanced analytics solutions typically involve the following workloads:
 * Machine Learning model training
 * Real-time or batch predictive processing
 
-Consider an advanced analytics architectures when you need to:
+Consider an advanced analytics architecture when you need to:
 
 * Empower data scientists to experiment with large volumes of data
 * Train (or retrain) machine learning models
@@ -56,7 +56,7 @@ There are two broad categories of machine learning:
 
 When the model has been trained, it can be deployed into production and used with new datasets for which the label values are unknown, and apply the algorithm to predict the unknown values. Supervised learning models include *classification* (in which the label represents a specific *class* or category) and *regression* (in which the label is a quantitative numeric value). Supervised learning is the most common approach taken by machine learning. 
 
-* **Unsupervised Learning**: In an unsupervised learning model, the training data does not include known label values. Instead, the algorithm makes its predictions based on its first exposure to the data. The most common form of unsupervised learning is *clustering*, where the alogorithm determines the best way to split the data into into a specified number of clusters based on statistical similarities in the features. In clustering, the predicted outcome is the cluster number to which the input features belong. While they can sometimes be used directly to generate useful predictions, such as using clustering to identify groups of users in a database of customers, unsupervised learning approaches are most commonly used during data wrangling to identify the most useful data to provide to a supervised learning algorithm in training a model.  
+* **Unsupervised Learning**: In an unsupervised learning model, the training data does not include known label values. Instead, the algorithm makes its predictions based on its first exposure to the data. The most common form of unsupervised learning is *clustering*, where the algorithm determines the best way to split the data into into a specified number of clusters based on statistical similarities in the features. In clustering, the predicted outcome is the cluster number to which the input features belong. While they can sometimes be used directly to generate useful predictions, such as using clustering to identify groups of users in a database of customers, unsupervised learning approaches are most commonly used during data wrangling to identify the most useful data to provide to a supervised learning algorithm in training a model.  
 
 Relevant Azure services:
 
@@ -89,14 +89,16 @@ Relevant Azure services:
 
 ## <a name="wheretogo"></a>Where to go from here
 
-Read Next: [Machine Learning solution pattern](../solution-patterns/machine-learning.md)
+Read Next: [Machine Learning pipeline pattern](../pipeline-patterns/machine-learning-at-scale.md)
 
 See Also:
 
-Related Solution Patterns
-- [Interactive Data Exploration](../solution-patterns/interactive-data-exploration.md)
-- [Machine Learning](../solution-patterns/machine-learning.md)
-- [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
+Related Common Architecture
+- [Interactive Data Exploration](../common-architectures/interactive-data-exploration.md)
+
+Related Pipeline Patterns
+- [Machine Learning](../pipeline-patterns/machine-learning-at-scale.md)
+- [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
 
 Related Technology Choices
 - [Data Science and Machine Learning](../technology-choices/data-science-and-machine-learning.md)

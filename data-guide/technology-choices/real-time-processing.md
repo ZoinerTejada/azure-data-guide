@@ -64,8 +64,8 @@ The following table summarize the key differences in capabilities between each. 
 ## <a name="wheretogo"></a>Where to go from here
 See Also:
 
-Related Solution Patterns
-- [Handling Time Series Data](../solution-patterns/time-series.md)
+Related Pipeline Patterns
+- [Handling Time Series Data](../pipeline-patterns/time-series.md)
 
 Related Technology Choices
 - [Data Ingest](./data-ingest.md)

@@ -1,6 +1,6 @@
 # Azure Data Architecture Guide
 
-This guide presents a structured approach for designing data-centric solutions on Azure. It is based on proven practices that we have learned from customer engagements and is intended as an entry point for all data related topics in Azure. The guide covers the big picture concepts in common data architectures, which lead you to the solution pipelines used by that architecture. The solution pipelines are used to describe how the various processing and storage components fit together in handling the data. Finally, the technology choices will help you narrow the list of candidate Azure services appropriate to your solution pipeline down to those services that are most appropriate to your specific requirements. 
+This guide presents a structured approach for designing data-centric solutions on Azure. It is based on proven practices that we have learned from customer engagements and is intended as an entry point for all data related topics in Azure. The guide covers the big picture concepts in common data architectures, which lead you to the pipeline patterns used by that architecture. The pipeline patterns are used to describe how the various processing and storage components fit together in handling the data. Finally, the technology choices will help you narrow the list of candidate Azure services appropriate to your pipeline pattern down to those services that are most appropriate to your specific requirements. 
 
 ![Overview of the structure of the guide](./images/overview-flowchart.png)
 
@@ -13,7 +13,7 @@ Owing to the fundamental importance of the data pipeline throughout modern data 
 ![Overview Data Pipeline](./images/overall-data-pipeline.png)
 
 # How this guide is structured
-This guide is structured so that your entry point to the content can be at the level of the common architecture, the solution pipeline or the technology choices for a particular pipeline scenario. 
+This guide is structured so that your entry point to the content can be at the level of the common architecture, the pipeline pattern or the technology choices for a particular pipeline scenario. 
 
 At the end of each article is provided a Read Next link which you can follow to take a linear path thru the content. In addition, links to alternate and related content are provided to guide you to related content that provides you a perspective on the options, as well as provides links back up to the related parent topics and links to drill down into further detail.
 
@@ -31,5 +31,5 @@ Alternative Common Architectures
 Related Common Architectures
 - [Relational Data](./common-architectures/relational-data.md)
 - [Advanced Analytics](./common-architectures/advanced-analytics.md)
-- [Data Pipelines](./common-architectures/data-pipelines.md)
+- [Data Pipeline](./common-architectures/data-pipeline.md)
 - [Semantic Modeling](./common-architectures/semantic-modeling.md)

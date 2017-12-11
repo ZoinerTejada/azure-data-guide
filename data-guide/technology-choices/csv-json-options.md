@@ -11,18 +11,19 @@
 
 ## <a name="options"></a> What are your options for processing CSV and JSON files?
 In Azure, the following services will help you process CSV and JSON files:
-- Azure Data Factory
-- Azure Logic Apps
-- Azure Functions
-- App Service
-- Azure Data Lake Analytics
+
+- [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/)
+- [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps/)
+- [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)
+- [App Service](https://docs.microsoft.com/azure/app-service/)
+- [Azure Data Lake Analytics](https://docs.microsoft.com/azure/data-lake-analytics/)
 - Azure HDInsight
-    - Spark SQL
-    - HBase
-    - Hive
-- SQL Data Warehouse
-- Azure Machine Learning Workbench
-- SQL SSIS
+    - [Spark SQL](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview)
+    - [HBase](https://docs.microsoft.com/azure/hdinsight/hbase/apache-hbase-overview)
+    - [Hive](https://docs.microsoft.com/azure/hdinsight/hadoop/hdinsight-use-hive)
+- [SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
+- [Azure Machine Learning Workbench](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation)
+- [SQL SSIS](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
 
 Whether you are importing your CSV and JSON files into Azure Storage/Azure Data Lake Store, or processing and loading the data into a database such as Azure SQL, SQL Data Warehouse, or Cosmos DB, [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/copy-activity-overview) provides a great option to automate the process for either one-time or recurring operations. Use the copy activity to copy your on-premises or cloud-based files into a number of [supported data stores](https://docs.microsoft.com/azure/data-factory/copy-activity-overview#supported-data-stores-and-formats).
 
@@ -113,14 +114,14 @@ When it comes to orchestration, Azure Data Factory and SQL Server Integration Se
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-[Data Warehousing](../solution-patterns/data-warehousing.md)
+[Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
+    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
 
 Related Technology Choices
 - Transactional data stores

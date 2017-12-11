@@ -103,14 +103,14 @@ Read Next: [Big Data Common Architecture](../common-architectures/big-data.md)
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../solution-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
+    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
 - Handling text data
-    - [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
-    - [Processing free form text](../solution-patterns/processing-free-form-text.md)
+    - [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
+    - [Processing free form text](../pipeline-patterns/processing-free-form-text.md)
 
 Related Technology Choices
 - [Online Transaction Processing (OLTP) Data Stores Technology Choices](../technology-choices/oltp-data-stores.md)

@@ -70,8 +70,8 @@ The following table summarize the key differences in capabilities between each. 
 ## <a name="wheretogo"></a>Where to go from here
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with text data
-    - [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json.md)
-    - [Processing free-form text data](../solution-patterns/processing-free-form-text.md)
-- [Machine Learning](../solution-patterns/machine-learning.md)
+    - [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json.md)
+    - [Processing free-form text data](../pipeline-patterns/processing-free-form-text.md)
+- [Machine Learning](../pipeline-patterns/machine-learning.md)

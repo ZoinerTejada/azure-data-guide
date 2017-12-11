@@ -108,15 +108,15 @@ Read more about securing your data warehouse:
 
 ## <a name="wheretogo"></a>Where to go from here
 Read Next:
-[Online Transaction Processing (OLTP) Solution Pattern](../solution-patterns/online-transaction-processing.md)
+[Online Transaction Processing (OLTP) Solution Pattern](../pipeline-patterns/online-transaction-processing.md)
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../solution-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
+    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
 Related Technology Choices
 - Transactional data stores

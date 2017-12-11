@@ -74,8 +74,8 @@ Read Next: [Natural Language Processing Technology Choices](../technology-choice
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with text data
-    - [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json.md)
-    - [Processing free-form text data](../solution-patterns/processing-free-form-text.md)
+    - [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json.md)
+    - [Processing free-form text data](../pipeline-patterns/processing-free-form-text.md)
 

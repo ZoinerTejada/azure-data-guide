@@ -92,7 +92,7 @@ Read Next: [Data Science and Machine Learning](../technology-choices/data-scienc
 
 See Also:
 
-Related Solution Patterns
-- [Machine learning at scale](../solution-patterns/machine-learning-at-scale.md)
-- [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json.md)
-- [Processing free-form text data](../solution-patterns/processing-free-form-text.md)
+Related Pipeline Patterns
+- [Machine learning at scale](../pipeline-patterns/machine-learning-at-scale.md)
+- [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json.md)
+- [Processing free-form text data](../pipeline-patterns/processing-free-form-text.md)

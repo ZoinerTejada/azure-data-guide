@@ -14,11 +14,11 @@ The key requirement of such batch processing engines is that they are capable of
 
 ## <a name="options"></a> What are your options when choosing a technology for batch processing?
 In Azure, all of the following data stores will meet the core requirements supporting batch processing:
-- [Azure Data Lake Analytics](https://docs.microsoft.com/en-us/azure/data-lake-analytics/)
-- [Azure SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/data-lake-analytics/)
-- [HDInsight with Spark](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview)
-- [HDInsight with Hive](https://docs.microsoft.com/en-us/azure/hdinsight/hadoop/hdinsight-use-hive)
-- [HDInsight with Hive LLAP](https://docs.microsoft.com/en-us/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
+- [Azure Data Lake Analytics](https://docs.microsoft.com/azure/data-lake-analytics/)
+- [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
+- [HDInsight with Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview)
+- [HDInsight with Hive](https://docs.microsoft.com/azure/hdinsight/hadoop/hdinsight-use-hive)
+- [HDInsight with Hive LLAP](https://docs.microsoft.com/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
 
 ## <a name="howtochoose"></a> How do you choose?
 Each service brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements. 
@@ -82,9 +82,9 @@ The following table summarize the key differences in capabilities between each. 
 ## <a name="wheretogo"></a>Where to go from here
 See Also:
 
-Related Solution Patterns
-- [Processing CSV and JSON files](../solution-patterns/processing-csv-and-json-files.md)
-- [Processing free-form text](../solution-patterns/processing-free-form-text.md)
+Related Pipeline Patterns
+- [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
+- [Processing free-form text](../pipeline-patterns/processing-free-form-text.md)
 
 Related Technology Choices
 - [Data Ingest](./data-ingest.md)

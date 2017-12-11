@@ -19,7 +19,7 @@ Non-relational data is not represented in the tabular schema of rows and columns
 No-SQL refers to data stores that do not use SQL for performing their querying, and instead use other programming languages and constructs to query the data. In practice, when the term No-SQL is used, what is really meant is non-relational. This is because overtime, many non-relational data stores have added in SQL compatible query support; and while they have remained non-relational, they are no longer strictly No-SQL.  
 
 ## <a name="common"></a> Common Data Architectures
-There are various non-relational data stores that take their own unique approach to data storage, data representation, data processing, and querying; and by extension have their own data architecutre. The following introduces each.
+There are various non-relational data stores that take their own unique approach to data storage, data representation, data processing, and querying; and by extension have their own data architecture. The following introduces each.
 
 ### <a name="documentdata"></a> Document Data Stores
 A document data store manages a set of named string fields and object data values in an entity referred to as a document. The term "document" refers to the fact that these data stores typcially store their data in the form of JSON documents. Each field value could be simple scalar item or a compound element, such as a list or a parent-child collection. The data in the fields of a document can be encoded in a variety of ways, including XML, YAML, JSON, BSON,or even stored as plain text. The fields within documents are exposed to the storage management system, enabling an application to query and filter data by using the values in these fields.  
@@ -34,7 +34,7 @@ The application can retrieve documents by using the document key. This is a uniq
 Many document databases support in-place updates, enabling an application to modify the values of specific fields in a document without rewriting the entire document. Read and write operations over multiple fields in a single document are usually atomic.
 
 Relevant Azure service:  
-[Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)
+- [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)
 
 ### <a name="columnardata"></a> Columnar Data Stores
 A columnar or column-family data store organizes data into columns and rows. In its simplest form, a column-family data store can appear very similar to a relational database, at least conceptually. The real power of a column-family database lies in its denormalized approach to structuring sparse data, which stems from the column oriented approach to the storage of data taken.  
@@ -52,7 +52,7 @@ Unlike a key/value store or a document database, most column-family databases ph
 Read and write operations for a row are usually atomic within a single column-family, although some implementations provide atomicity across the entire row, spanning multiple column-families.
 
 Relevant Azure service:  
-[HBase in HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-hbase-overview)
+- [HBase in HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-hbase-overview)
 
 ### <a name="keyvaluedata"></a> Key/value data stores
 A key/value store is essentially a large hash table. You associate each data value with a unique key, and the key/value store uses this key to store the data by using an appropriate hashing function. The hashing function is selected to provide an even distribution of hashed keys across the data storage.
@@ -70,9 +70,9 @@ Key/value stores are also not optimized for scenarios where querying or filterin
 A single key/value store can be extremely scalable, as the data store can easily distribute data across multiple nodes on separate machines.
 
 Relevant Azure services:  
-[Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)  
-[Azure Redis Cache](https://azure.microsoft.com/services/cache/)  
-[Azure Storage tables](https://azure.microsoft.com/services/storage/tables/)
+- [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)  
+- [Azure Redis Cache](https://azure.microsoft.com/services/cache/)  
+- [Azure Table Storage](https://azure.microsoft.com/services/storage/tables/)
 
 ### <a name="graphdata"></a> Graph data stores
 A graph data store manages two types of information, nodes and edges. Nodes represent entities, and edges specify the relationships between these entities. Both nodes and edges can have properties that provide information about that node or edge, similar to columns in a table. Edges can also have a direction indicating the nature of the relationship.  
@@ -84,7 +84,7 @@ The purpose of a graph data store is to allow an application to efficiently perf
 This structure makes it straightforward to perform queries such as "Find all employees who report directly or indirectly to Sarah" or "Who works in the same department as John?" For large graphs with lots of entities and relationships, you can perform very complex analyses very quickly. Many graph databases provide a query language that you can use to traverse a network of relationships efficiently.  
 
 Relevant Azure service:  
-[Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)  
+- [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)  
 
 ### <a name="timeseriesdata"></a> Time Series data stores
 Time series data is a set of values organized by time, and a time series data store is optimized for this type of data. Time series data stores must support a very high number of writes, as they typically collect large amounts of data in real time from a large number of sources. Time series data stores are optimized for storing telemetry data. Scenarios include IoT sensors or application/system counters.   
@@ -94,22 +94,22 @@ Time series data is a set of values organized by time, and a time series data st
 Updates are rare, and deletes are often done as bulk operations. Although the records written to a time-series database are generally small, there are often a large number of records, and total data size can grow rapidly. Time series data stores also handle out of order and late-arriving data, automatic indexing of data points and optimized querying for queries described in terms of windows of time. This  last feature enables queries to run across millions of data points and multiple data streams quickly in order to support drill across and drill down behavior in time series visualizations, which is one common way time series data is consumed. 
 
 Relevant Azure service:  
-[Time Series Insights](https://azure.microsoft.com/services/time-series-insights/)  
-[OpenTSDB with HBase on HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-hbase-overview)
+- [Azure Time Series Insights](https://azure.microsoft.com/services/time-series-insights/)  
+- [OpenTSDB with HBase on HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-hbase-overview)
 
 ### <a name="objectdata"></a> Object data stores
 Object data stores are optimized for storing and retrieving large binary objects or blobs such as images, text files, video and audio streams, large application data objects and documents and virtual machine disk images. Objects  are composed of the stored data, some metadata, and a unique ID for accessing the object. Object stores are designed to support files that are individual very large, as well provide large amounts of total storage to manage all files.  
 
 ![Example of object data](./images/object.png)
 
-Some object data stores replicate a given blob across multiple server nodes enabling fast parallel reads of the data contained by the blob This in turn enables the scale-out querying of data contained in large files because multiple processes, typically running on different servers, can each query the large data file simultaneously.  
+Some object data stores replicate a given blob across multiple server nodes enabling fast parallel reads of the data contained by the blob. This in turn enables the scale-out querying of data contained in large files because multiple processes, typically running on different servers, can each query the large data file simultaneously.  
 
 One special case of object data stores is the network file share. Using file shares enables files to be accessed across a network using standard networking protocols like SMB. Given appropriate security and concurrent access control mechanisms, sharing data in this way can enable distributed services to provide highly scalable data access for performing basic, low-level operations such as simple read and write requests.
 
 Relevant Azure service:   
-[Blob Storage](https://azure.microsoft.com/services/storage/blobs/)  
-[Data Lake Store](https://azure.microsoft.com/services/data-lake-store/)  
-[File Storage](https://azure.microsoft.com/services/storage/files/)  
+- [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)  
+- [Azure Data Lake Store](https://azure.microsoft.com/services/data-lake-store/)  
+- [Azure File Storage](https://azure.microsoft.com/services/storage/files/)  
 
 
 ### <a name="externalindexdata"></a> External Index data stores
@@ -122,7 +122,7 @@ The key characteristics of a search engine database are the ability to store and
 External index data stores are often used to support full text and web based search. In these cases, searching can be exact or fuzzy. A fuzzy search finds documents that match a set of terms and calculates how closely they match. Some external indexes also support linguistic analysis that can return matches based on synonyms, genre expansions (for example, matching dogs to pets), and stemming (for example searching for run also matches ran and running). 
 
 Relevant Azure service:  
-[Azure Search](https://azure.microsoft.com/services/search/)
+- [Azure Search](https://azure.microsoft.com/services/search/)
 
 
 <a name="requirements"></a>
@@ -156,7 +156,7 @@ Read Next: Handling Unstructured Data Solution Pattern
 
 See Also:
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Handling unstructured data
     - Processing CSV and JSON files
     - Free-form text files

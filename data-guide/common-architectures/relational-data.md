@@ -16,7 +16,8 @@ Most relational databases use the Structured Query Language (SQL) language that 
 Relational databases support varying forms of constraints, including:
 - Primary key fields that are used to uniquely identify rows within a table.
 - Foreign key fields that are used in one table to refer to a row in another table by referencing the primary key of other table. Foreign keys are used in maintaining referential integrity, ensuring that the referenced rows are not altered or deleted while the referencing row depends on them.
-- Primary and secondary indexes. Primary indexes, which are used by the primary key, define the order of the data as it sits on disk. Secondary indexes provide an alternative combination of fields by which to quickly locate the desired rows, without having to re-sort the entire data on disk. The index structure used by relational databases typically includes B+ trees, R-trees and bitmaps. 
+- Primary indexes are being used by the primary key to define the order of the data as it sits on disk.
+- Secondary indexes provide an alternative combination of fields by which to quickly locate the desired rows, without having to re-sort the entire data on disk. The index structure used by relational databases typically includes B+ trees, R-trees and bitmaps. 
 - Entity integrity contraints that use expressions to define constraints that limit the values that can be stored within a single column, or in relationship to values in other columns of the same row.
 
 Additionally, relational databases allow for the storage of executable code routines in the form of stored procedures and functions, which enable a mixture of declarative and procedural approaches. 
@@ -38,13 +39,13 @@ Related Common Architectures
 - [Semantic Modeling](./semantic-modeling.md)
 
 Alternative Common Architectures
-- Non-relational and No-SQL common architectures
+- [Non-relational and No-SQL common architectures](./non-relational-data.md)
 
-Related Solution Patterns
+Related Pipeline Patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solution-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solution-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../solution-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
+    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
 Related Technology Choices
 - Transactional data stores
