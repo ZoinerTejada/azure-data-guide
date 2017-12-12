@@ -53,7 +53,7 @@ The following tables summarize the key differences in capabilities between each.
 
 | | Azure SQL Database | SQL Server in Azure VM | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Is managed service | Yes | | No | Yes | Yes - with manual configuration/scaling | Yes - with manual configuration/scaling | Yes | Yes |
+| Is managed service | Yes | No | No | Yes | Yes - with manual configuration/scaling | Yes - with manual configuration/scaling | Yes | Yes |
 | Primary database model | Relational (columnar format when using columnstore indexes) | Relational (columnar format when using columnstore indexes) | Relational tables with columnar storage | Wide column store | Hive/In-Memory | Tabular/MOLAP semantic models | Document store, Graph DBMS, Key-value store, Wide column store |
 | SQL syntax support | Yes | Yes | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) | Yes | No | Yes |
 | Optimized for speed serving layer | Yes, using memory-optimized tables and hash or nonclustered indexes | Yes, using memory-optimized tables and hash or nonclustered indexes | No | Yes | Yes | No | Yes |
@@ -71,7 +71,7 @@ The following tables summarize the key differences in capabilities between each.
 ### Security Capabilities
 
 | | Azure SQL Database | SQL Server in Azure VM | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- |
 | Authentication  | SQL / Azure Active Directory | SQL / Azure Active Directory | SQL / Azure Active Directory | local / Azure Active Directory * | local / Azure Active Directory * | Azure Active Directory | database users / Azure Active Directory via Access control (IAM) |
 | Authorization  | Yes | Yes | Yes | Yes * | Yes * | Yes | [Yes](https://docs.microsoft.com/azure/cosmos-db/secure-access-to-data) (hash-based message authentication code (HMAC))
 | Auditing  | Yes | Yes | Yes | Yes * | Yes * | Yes (when integrated with [Azure Monitor Resource Diagnostic Logs](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs)) | Yes (through [audit logging/activity logs](https://docs.microsoft.com/azure/cosmos-db/logging))
