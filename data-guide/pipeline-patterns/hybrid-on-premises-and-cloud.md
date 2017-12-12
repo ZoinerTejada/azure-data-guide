@@ -17,22 +17,22 @@ To achieve a hybrid cloud, you need a way to connect your on-premises datacenter
 
 There are four components of a true hybrid cloud, each of which brings significant benefits. They are the following:
 
-* Common identity for on-premises and cloud applications. This improves user productivity by giving your users single sign-on to all of their applications.
-* Integrated management and security across your hybrid cloud. This enables a cohesive way to monitor, manage, and help secure your environment, giving you increased visibility and control.
-* A consistent data platform for your datacenter and the cloud. This gives you data portability, combined with seamless access to on-premises and cloud data services for deep insight into your data.
-* Unified development and DevOps across the cloud and your on-premises datacenters. This lets you move applications between the two environments as needed, and it also improves developer productivity, since both places now have the same development environment.
+* **Common identity for on-premises and cloud applications**: This improves user productivity by giving your users single sign-on to all of their applications.
+* **Integrated management and security across your hybrid cloud**: This enables a cohesive way to monitor, manage, and help secure your environment, giving you increased visibility and control.
+* **A consistent data platform for your datacenter and the cloud**: This gives you data portability, combined with seamless access to on-premises and cloud data services for deep insight into your data.
+* **Unified development and DevOps across the cloud and your on-premises datacenters**: This lets you move applications between the two environments as needed, and it also improves developer productivity, since both places now have the same development environment.
 
 Taken together, these four requirements provide consistent experiences for data professionals, developers, IT managers, and users. Because you'll have information both in the cloud and on-premises, it makes sense to have a common approach to working with data in both places. This consistency lets your  use the same tools and skills throughout your environment.
 
-In this guide, we will focus on the consistent data platform for your datacenter and the cloud.
+In this article, we will focus on the consistent data platform for your datacenter and the cloud.
 
-### Network Shares
+### Network shares
 
 In a hybrid cloud architecture, it is common for business to keep newer files on-premises while archiving older files to the cloud. The benefits of doing this are two-fold. On one hand, it keeps the newest or most commonly accessed files within your network to reduce bandwidth usage and reduce file access times. On the other hand, this approach helps you manage unexpected local storage growth. This is sometimes called file tiering, where there is a seamless listing of and access to both on-premises and cloud-hosted files.
 
 Other times, organizations may wish to "lift and shift" their network shares to the cloud, which would be desirable, for instance, if your applications that access them are also located on the cloud. This procedure can be done using some level of [data orchestration](../technology-choices/pipeline-orchestration-data-movement.md).
 
-### On-premises Data Stores
+### On-premises data stores
 
 On-premises data stores include databases, lists, and files. There may be several reasons to keep these local. You may choose to leverage your existing on-premises investments as you migrate workloads and applications to the cloud. Or there may be regulations or policies that do not permit moving specific data or workloads to the cloud.
 
@@ -44,7 +44,7 @@ Some of the important considerations in placing application data in a public clo
 * **Scale agility**: Planning for and managing data capacity growth in an on-premises environment can be challenging, particularly for applications where data growth is difficult to predict. For these applications, cloud-based placement can take advantage of the capacity-on-demand and virtually unlimited storage available. In contrast, applications which consist of relatively static sized datasets are equally suitable for placement on-premises or in public cloud (on this dimension).
 * **Data assurance**: When placing applications in public clouds such as Azure, protection of data through redundancy is provided automatically with multiple copies of data placed across disks, racks, and even geographic regions. Similar levels of protection can be provided in on-premises infrastructures through data replication technologies where multiple datacenters are available. In hybrid environments, these same technologies can be used to replicate between on-premises and cloud based data stores.
 
-### Extending Data Stores to the Cloud
+### Extending data stores to the Cloud
 
 On-premises data stores can be extended to the cloud in a number of ways within a hybrid cloud architecture. One option is to have on-premises and cloud replicas. This can help you achieve a high level of data assurance and fault tolerance, and may require making some changes to your applications to connect to the appropriate data store in the event of a failover.
 
@@ -75,12 +75,12 @@ Using a hybrid on-premises and cloud solution offers the following benefits:
 Establishing a hybrid architecture can surface some of the following challenges:
 
 * Making security, management, your data platform, and development consistent between on-premises and cloud, avoiding duplication of work and wasting valuable resources. Synchronizing differences between environments can be painful and costly.
-* Creating a strong, secure data connection between your on-premises and cloud environments.
+* Creating a reliable, low latency and secure data connection between your on-premises and cloud environments.
 * Replicating your data and modifying your applications and tools to use the correct data stores within each environment.
 
 ## <a name="inazure"></a>Hybrid in Azure
 
-Azure has been hybrid by design from the beginning, lending to our decades of enterprise experience. This is what enables a consistent hybrid cloud experience across on-premises and the cloud. As the diagram below shows, Azure provides consistent solutions to the four areas covered at the beginning of this topic: identity, management and security, data platform, and development/DevOps.
+Enabling a consistent hybrid cloud experience across on-premises and the cloud has long been a goal of Azure. As the diagram below shows, Azure provides consistent solutions to the four areas covered at the beginning of this topic: identity, management and security, data platform, and development/DevOps.
 
 ![The four consistent components of a hybrid cloud, provided by Azure](./images/hybrid-cloud.png)
 
@@ -119,7 +119,7 @@ The simplest way use on-premises network shares alongside cloud-based file stora
 
 Keep your Azure File shares in-sync with your on-premises Windows Servers with [Azure File Sync](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning). One major benefit of Azure File Sync is the ability to tier files between your on-premises file server and Azure Files. This enables you to keep only the newest and most recently accessed files locally without sacrificing the ability to see and access the entire namespace through seamless cloud recall. With Azure File Sync, you can effectively transform your Windows File Server into an on-premises tier of Azure Files. Since cloud tiering moves old and infrequently accessed files to Azure, it effectively helps you make unpredictable storage growth predictable. When disasters strike, Azure File Sync can help. Simply set up a new Windows Server, install Azure File Sync, and the namespace is nearly instantly synced down as your cache is rebuilt.
 
-Another option is to use [Azure Managed Disks](https://docs.microsoft.com/azure/virtual-machines/windows/managed-disks-overview), but you would also need to attach the disk to a virtual machine that's running in Azure, adding an additional cost to your storage solution. You could also use Azure Blob storage, but it does not provide the SMB protocol that would make it more like working with a network share. For a more in-depth description of the differences between Azure Files, Azure Disks, and Blob storage, see [Deciding when to use Azure Blob storage, Azure Files, or Azure Disks](https://docs.microsoft.com/en-us/azure/storage/common/storage-decide-blobs-files-disks).
+Another option is to use [Azure Managed Disks](https://docs.microsoft.com/azure/virtual-machines/windows/managed-disks-overview), but you would also need to attach the disk to a virtual machine that's running in Azure, adding an additional cost to your storage solution. Additionally, this disk could only be attached to one VM at a time. You could also use Azure Blob storage, but it does not provide the SMB protocol that would make it more like working with a network share and thus may require application changes in order to support file operations. For a more in-depth description of the differences between Azure Files, Azure Disks, and Blob storage, see [Deciding when to use Azure Blob storage, Azure Files, or Azure Disks](https://docs.microsoft.com/en-us/azure/storage/common/storage-decide-blobs-files-disks).
 
 ### Network connectivity
 
@@ -135,8 +135,8 @@ The key benefits of using VPN connections to public clouds include the familiari
 
 There are two key VPN variations to consider:
 
-* Point-to-site connection: This is an individually configured connection between an on-premises client and a virtual network in a public cloud. It imposes no requirement on the client side for a dedicated VPN device. Connection is established manually over the public Internet. When connecting from an on-premises client to Azure, the connection is secured using Secure Sockets Tunneling Protocol (SSTP).
-* Site-to-site connection: This is a secure connection between an on-premises site and a virtual network in a public cloud. It requires a VPN device to be configured at your on-premises site, which creates a connection to a VPN gateway running in the cloud, secured using Internet Protocol Security (IPsec). Once the connection is established, resources in both the on-premises site and the cloud virtual network are able to communicate seamlessly with each other.
+* **Point-to-site connection**: This is an individually configured connection between an on-premises client and a virtual network in a public cloud. It imposes no requirement on the client side for a dedicated VPN device. Connection is established manually over the public Internet. When connecting from an on-premises client to Azure, the connection is secured using Secure Sockets Tunneling Protocol (SSTP).
+* **Site-to-site connection**: This is a secure connection between an on-premises site and a virtual network in a public cloud. It requires a VPN device to be configured at your on-premises site, which creates a connection to a VPN gateway running in the cloud, secured using Internet Protocol Security (IPsec). Once the connection is established, resources in both the on-premises site and the cloud virtual network are able to communicate seamlessly with each other.
 
 #### Dedicated connections using ExpressRoute
 
@@ -144,9 +144,9 @@ There are two key VPN variations to consider:
 
 There are three key dedicated connection topologies to consider:
 
-* Colocation at a cloud exchange: If your on-premises infrastructure is located in an ExpressRoute provider’s edge (typically referred to as an Exchange Provider), then they can provide a Layer 2 or managed Layer 3 connection between your on-premises network edge and the Microsoft Azure cloud.
-* Point-to-point Ethernet connection: This is a Layer 2 or Layer 3 connection provided by your service provider, directly from your on-premises edge to the Microsoft Azure cloud.
-* Any-to-any connection: This is a dedicated IPVPN (MPLS VPN), providing site-to-site connection between on-premises datacenters and the Microsoft Azure cloud. In this configuration, the Microsoft Azure cloud is like any other WAN connection between your on-premises environment and a remote site.
+* **Co-location at a cloud exchange**: If your on-premises infrastructure is located in an ExpressRoute provider’s edge (typically referred to as an Exchange Provider), then they can provide a Layer 2 or managed Layer 3 connection between your on-premises network edge and the Microsoft Azure cloud.
+* **Point-to-point Ethernet connection**: This is a Layer 2 or Layer 3 connection provided by your service provider, directly from your on-premises edge to the Microsoft Azure cloud.
+* **Any-to-any connection**: This is a dedicated IPVPN (MPLS VPN), providing site-to-site connection between on-premises datacenters and the Microsoft Azure cloud. In this configuration, the Microsoft Azure cloud is like any other WAN connection between your on-premises environment and a remote site.
 
 Compare your options with a set of [Hybrid network reference architectures](https://docs.microsoft.com/azure/architecture/reference-architectures/hybrid-networking/index).
 
