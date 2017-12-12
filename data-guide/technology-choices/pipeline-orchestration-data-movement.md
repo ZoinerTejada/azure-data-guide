@@ -49,7 +49,7 @@ Answer the following questions to help you narrow down your choices, then use th
 | | Azure Data Factory (ADF) | SQL Server Integration Services (SSIS) | Oozie on HDInsight
 | --- | --- | --- | --- |
 | Copy Data | Yes | Yes | Yes |
-| Custom Transformations (C#) | Yes | Yes | Yes (MapReduce, Pig, and Hive jobs) |
+| Custom Transformations | Yes | Yes | Yes (MapReduce, Pig, and Hive jobs) |
 | Azure ML Scoring | Yes | Yes (with scripting) | No |
 | HDInsight On-Demand | Yes | No | No |
 | Azure Batch | Yes | No | No |
