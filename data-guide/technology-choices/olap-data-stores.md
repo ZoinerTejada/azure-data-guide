@@ -51,7 +51,7 @@ The following tables summarize the key differences in capabilities between each.
 | Requires process to copy data from source(s) | Yes | Yes | No | No |
 | Azure Active Directory (AAD) integration | Yes | No | No \** | Yes |
 
-\* Though additional work is required to integrate external data sources, it is possible to use a tool like [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) or linked servers with SQL Server hosted in an Azure VM, or [SSIS](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services) or [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/) to load data from many sources into Azure SQL Database. See [Options for Pipeline Orchestration, Control Flow, and Data Movement](../technology-choices/pipeline-orchestration-data-movement.md) for more information.
+\* While SQL Server or Azure SQL Database cannot be used to query from and integrate multiple external data sources, you can still build a pipeline that does this for you using [SSIS](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services) or [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/). SQL Server hosted in an Azure VM has additional options, such as linked servers (other SQL Servers, Oracle, etc.) and [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide). See [Options for Pipeline Orchestration, Control Flow, and Data Movement](../technology-choices/pipeline-orchestration-data-movement.md) for more information.
 
 \** Connecting to SQL Server running on an Azure VM is not supported using an Azure Active Directory account. Use a domain Active Directory account instead.
 
