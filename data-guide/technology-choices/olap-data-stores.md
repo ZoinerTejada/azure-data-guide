@@ -49,7 +49,7 @@ The following tables summarize the key differences in capabilities between each.
 | Easily integrate multiple data sources | Yes | Yes | No \* | No \* |
 | Supports real-time analytics | No | No | Yes | Yes |
 | Requires process to copy data from source(s) | Yes | Yes | No | No |
-| Azure Active Directory (AAD) integration | Yes | No | Yes | No \** | Yes |
+| Azure Active Directory (AAD) integration | Yes | No | No \** | Yes |
 
 \* Though additional work is required to integrate external data sources, it is possible to use a tool like [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) or linked servers with SQL Server hosted in an Azure VM, or [SSIS](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services) or [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/) to load data from many sources into Azure SQL Database. See [Options for Pipeline Orchestration, Control Flow, and Data Movement](../technology-choices/pipeline-orchestration-data-movement.md) for more information.
 
