@@ -78,7 +78,7 @@ Considerations:
 After a data scientist has created a machine learning model, you will typically need to deploy it and consume it from applications or in other data flows. There are a number of potential deployment targets for machine learning models.
 
 ### Spark on Azure HDInsight
-Apache Spark includes *Spark MLlib*, a framework and library for machine learning models. Additionally, the Microsoft Machine Learning library for Spark (*MMLSpark*) provides deep learning algorithms support for predictive models in Spark.
+Apache Spark includes *SparkML*, a framework and library for machine learning models. Additionally, the Microsoft Machine Learning library for Spark (*MMLSpark*) provides deep learning algorithms support for predictive models in Spark.
 
 Key Benefits:
 * Spark is a distributed platform that offers high scalability for  high-volume machine learning processes.
