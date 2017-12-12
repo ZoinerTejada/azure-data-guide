@@ -33,7 +33,7 @@ These options provide various database models that are optimized for different t
 - [Graph](https://msdn.microsoft.com/en-us/library/dn313285.aspx#sec10) store information as a collection of objects and relationships. The purpose of a graph database is to enable an application to efficiently perform queries that traverse the network of objects and the relationships between them. For example, the objects might be employees in a human resources database, and you might want to facilitate queries such as "find all employees who directly or indirectly work for Scott."
 
 ## <a name="howtochoose"></a> How do you choose?
-Each data transfer solution brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements.
+Each data serving solution brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements.
 
 ## <a name="criteria"></a> Key Selection Criteria
 
@@ -54,7 +54,7 @@ The following tables summarize the key differences in capabilities between each.
 | --- | --- | --- | --- | --- | --- | --- |
 | Is managed service | Yes (Azure SQL Database) | Yes | Yes - with manual configuration/scaling | Yes - with manual configuration/scaling | Yes | Yes |
 | Primary database model | Relational (columnar format when using columnstore indexes) | Relational tables with columnar storage | Wide column store | Hive/In-Memory | Tabular/MOLAP semantic models | Document store, Graph DBMS, Key-value store, Wide column store |
-| SQL language support | Yes | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) | Yes | No | Yes |
+| SQL syntax support | Yes | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) | Yes | No | Yes |
 | Optimized for speed serving layer | Yes, using memory-optimized tables and hash or nonclustered indexes | No | Yes | Yes | No | Yes |
 | Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |
 
