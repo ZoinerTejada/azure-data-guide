@@ -19,7 +19,8 @@ There is no single best data management choice for all data storage tasks; diffe
 There are several options for data serving storage in Azure, depending on your needs:
 
 - [SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
-- [SQL Database](https://docs.microsoft.com/azure/sql-database/)
+- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
+- [SQL Server in Azure VM](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)
 - [HBase/Phoenix on HDInsight](https://docs.microsoft.com/azure/hdinsight/hbase/apache-hbase-overview)
 - [Hive LLAP on HDInsight](https://docs.microsoft.com/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
 - [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
@@ -50,34 +51,34 @@ The following tables summarize the key differences in capabilities between each.
 
 ### General Capabilities
 
-| | SQL Database | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
-| --- | --- | --- | --- | --- | --- | --- |
-| Is managed service | Yes (Azure SQL Database) | Yes | Yes - with manual configuration/scaling | Yes - with manual configuration/scaling | Yes | Yes |
-| Primary database model | Relational (columnar format when using columnstore indexes) | Relational tables with columnar storage | Wide column store | Hive/In-Memory | Tabular/MOLAP semantic models | Document store, Graph DBMS, Key-value store, Wide column store |
-| SQL syntax support | Yes | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) | Yes | No | Yes |
-| Optimized for speed serving layer | Yes, using memory-optimized tables and hash or nonclustered indexes | No | Yes | Yes | No | Yes |
-| Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |
+| | Azure SQL Database | SQL Server in Azure VM | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Is managed service | Yes | | No | Yes | Yes - with manual configuration/scaling | Yes - with manual configuration/scaling | Yes | Yes |
+| Primary database model | Relational (columnar format when using columnstore indexes) | Relational (columnar format when using columnstore indexes) | Relational tables with columnar storage | Wide column store | Hive/In-Memory | Tabular/MOLAP semantic models | Document store, Graph DBMS, Key-value store, Wide column store |
+| SQL syntax support | Yes | Yes | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) | Yes | No | Yes |
+| Optimized for speed serving layer | Yes, using memory-optimized tables and hash or nonclustered indexes | Yes, using memory-optimized tables and hash or nonclustered indexes | No | Yes | Yes | No | Yes |
+| Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |
 
 ### Scalability Capabilities
 
-| | SQL Database | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
-| --- | --- | --- | --- | --- | --- | --- |
-| Redundant regional servers for high availability  | Yes (Azure SQL Database) | Yes | Yes | No | No | Yes | Yes |
-| Supports query scale out  | No | Yes | Yes | Yes | Yes | Yes |
-| Dynamic scalability (scale up)  | Yes (Azure SQL Database) | Yes | No | No | Yes | Yes |
-| Supports in-memory caching of data | Yes | Yes | No | Yes | Yes | No |
+| | Azure SQL Database | SQL Server in Azure VM | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Redundant regional servers for high availability  | Yes | Yes | Yes | Yes | No | No | Yes | Yes |
+| Supports query scale out  | No | No | Yes | Yes | Yes | Yes | Yes |
+| Dynamic scalability (scale up)  | Yes | No | Yes | No | No | Yes | Yes |
+| Supports in-memory caching of data | Yes | Yes | Yes | No | Yes | Yes | No |
 
 ### Security Capabilities
 
-| | SQL Database | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
-| --- | --- | --- | --- | --- | --- | --- |
-| Authentication  | SQL / Azure Active Directory | SQL / Azure Active Directory | local / Azure Active Directory * | local / Azure Active Directory * | Azure Active Directory | database users / Azure Active Directory via Access control (IAM) |
-| Authorization  | Yes | Yes | Yes * | Yes * | Yes | [Yes](https://docs.microsoft.com/azure/cosmos-db/secure-access-to-data) (hash-based message authentication code (HMAC))
-| Auditing  | Yes | Yes | Yes * | Yes * | Yes (when integrated with [Azure Monitor Resource Diagnostic Logs](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs)) | Yes (through [audit logging/activity logs](https://docs.microsoft.com/azure/cosmos-db/logging))
-| Data encryption at rest | Yes ** | Yes ** | Yes * | Yes * | Yes | Yes |
-| Row-level security | Yes | No | Yes * | Yes * | Yes (through object-level security in model) | No |
-| Supports firewalls | Yes | Yes | Yes \*** | Yes \*** | Yes | Yes |
-| Dynamic data masking | Yes | No | Yes * | Yes * | No | No |
+| | Azure SQL Database | SQL Server in Azure VM | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Authentication  | SQL / Azure Active Directory | SQL / Azure Active Directory | SQL / Azure Active Directory | local / Azure Active Directory * | local / Azure Active Directory * | Azure Active Directory | database users / Azure Active Directory via Access control (IAM) |
+| Authorization  | Yes | Yes | Yes | Yes * | Yes * | Yes | [Yes](https://docs.microsoft.com/azure/cosmos-db/secure-access-to-data) (hash-based message authentication code (HMAC))
+| Auditing  | Yes | Yes | Yes | Yes * | Yes * | Yes (when integrated with [Azure Monitor Resource Diagnostic Logs](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs)) | Yes (through [audit logging/activity logs](https://docs.microsoft.com/azure/cosmos-db/logging))
+| Data encryption at rest | Yes ** | Yes ** | Yes ** | Yes * | Yes * | Yes | Yes |
+| Row-level security | Yes | Yes | No | Yes * | Yes * | Yes (through object-level security in model) | No |
+| Supports firewalls | Yes | Yes | Yes | Yes \*** | Yes \*** | Yes | Yes |
+| Dynamic data masking | Yes | Yes | No | Yes * | Yes * | No | No |
 
 \* Requires using a [domain-joined HDInsight cluster](https://docs.microsoft.com/azure/hdinsight/domain-joined/apache-domain-joined-introduction).
 
