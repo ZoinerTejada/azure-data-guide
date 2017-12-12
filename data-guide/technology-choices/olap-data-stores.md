@@ -33,7 +33,7 @@ The following tables summarize the key differences in capabilities between each.
     - If yes, then you will need one of the options that AAD integration.
 - Do you want to conduct real-time analytics?
     - If so, narrow your options to those that support real-time analytics. Real-time operational analytics targets the scenario of a single data source such as an enterprise resource planning (ERP) application on which you can run both the operational and the analytics workload. This does not replace the need for a separate data warehouse when you need to integrate data from multiple sources before running the analytics workload or when you require extreme analytics performance using pre-aggregated data such as cubes.
-- Do you need the ability to use OLAP cubes?
+- Do you need the ability to use OLAP cubes, such as to provide semantic models that make analytics more business user friendly?
     - If yes, then you will want an option that provides support for pre-aggregated data. This is typically preferred when providing aggregates helps business users consistently calculate data aggregates in a way that makes sense for your data. Pre-aggregated data can also provide a large performance boost when dealing with several columns across many rows.
 - Do you need the ability to integrate data from several sources, beyond your OLTP data store?
     - If so, consider options that easily integrate multiple data sources.
