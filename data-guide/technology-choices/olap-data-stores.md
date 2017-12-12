@@ -57,8 +57,8 @@ The following tables summarize the key differences in capabilities between each.
 
 ### Scalability Capabilities
 
-| | Azure Analysis Services | SQL Server Analysis Services | SQL Server in Azure VM + Columnstore Indexes |
-| --- | --- | --- | --- |
+| | Azure Analysis Services | SQL Server Analysis Services | SQL Server in Azure VM + Columnstore Indexes | Azure SQL Database + Columnstore Indexes |
+| --- | --- | --- | --- | --- |
 | Redundant regional servers for high availability  | [Yes](https://docs.microsoft.com/azure/analysis-services/analysis-services-bcdr) | No | Yes | Yes |
 | Supports query scale out  | Yes | No | No | No |
 | Dynamic scalability (scale up)  | Yes | No | Yes | No |
