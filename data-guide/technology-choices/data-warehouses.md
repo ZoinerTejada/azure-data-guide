@@ -34,7 +34,7 @@ Each data warehouse solution brings with it a unique set of capabilities, giving
 
 ## <a name="criteria"></a> Key Selection Criteria
 
-The following tables summarize the key differences in capabilities between each. For OLAP scenarios, choose the appropriate system for your needs by answering these questions:
+The following tables summarize the key differences in capabilities between each. Choose the appropriate system for your needs by answering these questions:
 
 - Do you want a managed service or do you prefer to manage your own physical or virtual servers?
     - If yes, then narrow your options to those that are managed services.
