@@ -3,7 +3,7 @@
 **In this article**
 
 [About]()  
-[Typical Requirements](#requirements)  
+[Typical Traits](#traits)  
 [Example use case](#usecase)  
 [Where to go from here](#wheretogo)  
 
@@ -16,8 +16,8 @@ Semantic modeling is predominately used for read heavy scenarios, such as analyt
 
 There are two primary types of semantic models:
 
-* Tabular: Uses relational modeling constructs (model, tables, columns). Internally, metadata is inherited from OLAP modeling constructs (cubes, dimensions, measures). Code and script use OLAP metadata.
-* Multidimensional: Leverages traditional OLAP modeling constructs (cubes, dimensions, measures).
+* **Tabular**: Uses relational modeling constructs (model, tables, columns). Internally, metadata is inherited from OLAP modeling constructs (cubes, dimensions, measures). Code and script use OLAP metadata.
+* **Multidimensional**: Leverages traditional OLAP modeling constructs (cubes, dimensions, measures).
 
 Relevant Azure Service:
 - [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/)
@@ -29,10 +29,10 @@ Your organization has data stored in a large database that you want to make avai
 
 Another option is to encapsulate all the information needed into a semantic model which can be more easily queried by those users with a reporting tool of their choice. The data provided by the semantic model is pulled from a data warehouse, ensuring all users will see a single version of the truth. The semantic model will also provide friendly table and column names, relationships between tables, descriptions, calculations, and row level security.
 
-<a name="requirements"></a>
-### Typical Requirements
+<a name="traits"></a>
+### Typical Traits
 
-Semantic modeling and analytical processing tends to have the following requirements:
+Semantic modeling and analytical processing tends to have the following traits:
 
 | Requirement | Description |
 | --- | --- |
@@ -51,7 +51,7 @@ Semantic modeling and analytical processing tends to have the following requirem
 | Scale: | Large (10's-100's GBs) |
 
 ## <a name="wheretogo"></a>Where to go from here
-Read Next: [Online Analytical Processing (OLAP) Solution Pattern](../pipeline-patterns/online-analytical-processing.md)
+Read Next: [Online Analytical Processing (OLAP) Pipeline Pattern](../pipeline-patterns/online-analytical-processing.md)
 
 See Also:
 
