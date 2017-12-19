@@ -144,9 +144,10 @@ Source (web/mobile) --> Event Hubs or Apache Kafka --> Apache Spark on HDInsight
 Azure offers a rich data and analytics platform so you can build scalable BI and reporting solutions. Create rich, interactive reports with Power BI by having it connect to Azure Analysis Services, which uses a highly optimized in-memory engine to provide responses to queries against user-friendly semantic models within a fraction of a second. The underlying data is provided by Azure SQL Data Warehouse, acting as a central repository of integrated data from one or more disparate sources.
 
 Source data --> SQL Data Warehouse --> Azure Analysis Services --> Power BI
--------------------------------------
-Azure Data Factory drives the process
--------------------------------------
+
+-----------------------------------------
+    Azure Data Factory drives the process
+-----------------------------------------
 
 4-8 service icons
 
@@ -172,14 +173,14 @@ Azure Data Factory drives the process
 
 Quickly add intelligence to your applications with Cognitive Services, and coordinate automated interactions using Azure Bot Service. This can save you months of creating and refining sophisticated algorithms to naturally interact with your users through speech, text, vision, knowledge, and search capabilities.
 
-Azure Active Directory B2C   Cognitive Services
-   ^                              ^
-   |                              |
-Web/mobile app <--> Azure Bot Service --> Azure SQL Database
-   ^
-   |
-   v
-Custom Speech Service
+Azure Active Directory B2C   Cognitive Services 
+   ^                              ^ 
+   |                              | 
+Web/mobile app <--> Azure Bot Service --> Azure SQL Database 
+   ^ 
+   | 
+   v 
+Custom Speech Service 
 
 4-8 service icons
 
@@ -206,10 +207,10 @@ Custom Speech Service
 
 Store data coming in from multiple sources into Azure Data Lake in their native format. SQL Data Warehouse can directly query against the data with a combination of external tables and schema on read capabilities through PolyBase. Use Azure Data Factory to store the data you need within your warehouse, and quickly analyze and visualize the combined data with Power BI.
 
-Multiple data sources (IoT, logs, internal sources, social media) --> Azure Data Lake Store --> SQL Data Warehouse --> Power BI
-                                                                      ---------------------------
-                                                                      Orchestration: PolyBase/ADF
-                                                                      ---------------------------
+Multiple data sources (IoT, logs, internal sources, social media) --> Azure Data Lake Store --> SQL Data Warehouse --> Power BI 
+                                                                      ----------------------------- 
+                                                                        Orchestration: PolyBase/ADF 
+                                                                      ----------------------------- 
 
 4-8 service icons
 
