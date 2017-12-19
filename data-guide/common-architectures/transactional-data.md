@@ -1,4 +1,4 @@
-# Transactional Data 
+# Transactional data 
 
 **In this article**
 

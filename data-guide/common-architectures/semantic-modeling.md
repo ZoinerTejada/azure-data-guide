@@ -1,4 +1,4 @@
-# Semantic Modeling
+# Semantic modeling
 
 **In this article**
 
