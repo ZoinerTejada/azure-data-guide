@@ -54,9 +54,9 @@ HOT PATH: Source data (web, mobile) --> Event Hubs --> Azure Stream Analytics (w
 
 Go beyond historical reporting and exploratory analysis of your data by enabling predictive processing and automated decision making with Azure services like [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/preview/overview-what-is-azure-ml) and [Apache Spark on HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql). When you need to harness the power of multiple GPUs to build sophisticated deep neural architectures and train them on a large data set, get a jump start on the task with [Deep Learning Virtual Machines](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview) and [CNTK](https://github.com/Microsoft/CNTK/wiki), the unified deep-learning toolkit by Microsoft.
 
-ADVANCED ANALYTICS: Apache Spark on HDInsight (or Databricks?) to train and run model --> Azure Machine Learning services (containerized Docker-based web services to expose trained ML model through REST API) --> Web/mobile application that consumes the model
+ADVANCED ANALYTICS: Apache Spark on HDInsight (or Databricks?) to train the model --> Azure Machine Learning services (containerized Docker-based web services to expose trained ML model through a predictive web service) --> Web/mobile application that consumes the model
 
-DEEP LEARNING: Images (Azure Blob storage) / Metadata (Cosmos DB) --> Deep Learning Virtual Machine (train model) --> Azure Machine Learning services (containerized Docker-based web services to expose trained ML model through REST API) --> Azure App Services (host web app that consumes web services and displays scored images)
+DEEP LEARNING: Images (Azure Blob storage) / Metadata (Cosmos DB) --> Deep Learning Virtual Machine (train model) --> Azure Machine Learning services (containerized Docker-based web services to expose trained ML model through a predictive web service) --> Azure App Services (host web app that consumes web services and displays scored images)
 
 Deep learning sample arch: https://github.com/Azure/cortana-intelligence-product-detection-from-images/tree/master/technical_deployment
 
