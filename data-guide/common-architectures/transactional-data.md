@@ -3,22 +3,22 @@
 **In this article**
 
 [About]()  
-[Typical Requirements](#requirements)  
+[Typical Traits](#traits)  
 [Best practices](#bestpractices)  
 [Where to go from here](#wheretogo)  
 
 <a name="about"></a>
-Transactional data refers to data describing an event, always having a time dimension, some numerical values and references to other data. Transactional data is information an organization collects that tracks the interactions related to what the organization does. These interactions are typically business transactions such as payments received from customers or payments made to suppliers, products moving thru inventory, orders taken or services delivered.
+Transactional data is information an organization collects that tracks the interactions related to what the organization does. These interactions are typically business transactions such as payments received from customers or payments made to suppliers, products moving through inventory, orders taken or services delivered. Transactional events, which represent the transactions themselves, not reference tables, typically contain a time dimension, some numerical values, and references to other data.
 
- Transactional data has very strong consistency requirements and the transactional data stores that support it leverage transactions using pessimistic locking to ensure all data are 100% consistent for all users and processes. 
+Transactional data stores that support strong consistency can leverage transactions using various locking strategies, such as pessimistic locking, to ensure all data are strongly consistent within the context of the enterprise, for all users and processes.
 
-The most common deployment architecture utilizing transactional data is as the data store tier in a 3-tier architecture having a presentation tier, business logic tier and data store tier, or an [N-tier](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) architecture which may have multiple middle-tiers handling business logic. 
+The most common deployment architecture that utilizes transactional data is the data store tier in a 3-tier architecture. A 3-tier architecture typically consists of a presentation tier, business logic tier, and data store tier. A related deployment architecture is the [N-tier](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) architecture, which may have multiple middle-tiers handling business logic.
 
 ![Example of a 3-tier application](./images/three-tier-application.png)
 
-<a name="requirements"></a>
-### Typical Requirements
-Transactional data tends to have the following requirements:
+<a name="traits"></a>
+### Typical Traits
+Transactional data tends to have the following traits:
 
 | Requirement | Description |
 | --- | --- |
@@ -39,6 +39,7 @@ Transactional data tends to have the following requirements:
 | Scale: | Small (MB's) to Large (a few TB's) |
 
 ## <a name="wheretogo"></a>Where to go from here
+
 Read Next: [Online Transaction Processing (OLTP) Solution Pattern](../pipeline-patterns/online-transaction-processing.md)
 
 See Also:
