@@ -3,15 +3,15 @@
 [About]()  
 [What are your options when choosing an NLP service?](#options)  
 [How do you choose?](#howtochoose)  
-[Key Selection Criteria](#criteria)  
-[Capability Matrix](#matrix)   
+[Key selection criteria](#criteria)  
+[Capability matrix](#matrix)   
 [Where to go from here](#wheretogo)  
 
 <a name="about"></a>
-Free-form text processing is performed against documents containing paragraphs of text, typically for the purpose of supporting search, but is also used to perform other natural language processing (NLP) tasks such as sentiment analysis, topic detection, language detection, key phrase extraction and document categorization. This article focuses on the technology choices that act in support of the latter.
+Free-form text processing is performed against documents containing paragraphs of text, typically for the purpose of supporting search, but is also used to perform other natural language processing (NLP) tasks such as sentiment analysis, topic detection, language detection, key phrase extraction, and document categorization. This article focuses on the technology choices that act in support of the latter.
 
 ## <a name="options"></a> What are your options when choosing an NLP service?
-In Azure, all of the following services provide Natural Language Processing capabilities:
+In Azure, all of the following services provide natural language processing capabilities:
 - [Azure HDInsight with Spark and Spark MLlib](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview)
 - [Microsoft Cognitive Services](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=cognitive)
 
@@ -19,58 +19,58 @@ In Azure, all of the following services provide Natural Language Processing capa
 ## <a name="howtochoose"></a> How do you choose?
 Each service brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements. 
 
-## <a name="criteria"></a> Key Selection Criteria
+## <a name="criteria"></a> Key selection criteria
 
-The following table summarize the key differences in capabilities between each. For NLP scenarios, begin choosing the appropriate service for your needs by answering these questions:
-- Do you want to leverage pre-built models instead of training your own models with your own data?
-    - If yes, then consider using the API's offered by Microsoft Cognitive Services.
+The following table summarize the key differences in capabilities between each. <!--You might want to move this after the list. It may make more sense to introduce the questions, and then introduce the table with something like: "Based on your responses to the questions, the following table will help you select the choice that's right for you." or something along those lines. Also, BTW, this is one of the best decision making processes I've seen. Normally you get a table that tries to answer all the questions, but doesn't. Breaking it out this way is much easier to follow. -->For NLP scenarios, begin choosing the appropriate service for your needs by answering these questions:
+- Do you want to leverage prebuilt models instead of training your own models with your own data?
+    - If yes, then consider using the APIs <!--not a contraction or possessive. looks weird, but is correct.--> offered by Microsoft Cognitive Services.
 - Do you need to train custom models against a large corpus of text data?
     - If yes, then consider using Azure HDInsight with Spark MLlib and Spark NLP.
-- Do you need low level NLP capabilities like tokenization, stemming, lemmatization, and TF/IDF?
+- Do you need low-level NLP capabilities like tokenization, stemming, lemmatization, and term frequency/inverse document frequency (TF/IDF)? <!--TF/IDF familiar to the audience?-->
     - If yes, consider using Azure HDInsight with Spark MLlib and Spark NLP. 
-- Do you need simple, high-level NLP capabilities like entity and intent identification, topic detection, spell check or sentiment analysis?
-    - If yes, consider using the API's offered by Microsoft Cognitive Services.     
+- Do you need simple, high-level NLP capabilities like entity and intent identification, topic detection, spell check, or sentiment analysis?
+    - If yes, consider using the APIs offered by Microsoft Cognitive Services.     
 
 
-## <a name="matrix"></a> Capability Matrix
+## <a name="matrix"></a> Capability matrix
 
-### General Capabilities
+### General capabilities
 | | Azure HDInsight | Microsoft Cognitive Services |  
 | --- | --- | --- | 
-| Provides pre-trained models as a service | No | Yes |  
+| Provides pretrained models as a service | No | Yes |  
 | REST API | Yes | Yes |  
 | Programmability | Python, Scala, Java | C#, Java, Node.js, Python, PHP, Ruby |  
 | Support processing of big data sets and large documents | Yes | No |
 
 
-### Low-Level Natural Langauge Processing Capabilities
+### Low-level natural language processing capabilities
 | | Azure HDInsight | Microsoft Cognitive Services |  
 | --- | --- | --- | 
-| Tokenizer | Yes - using Spark NLP | Yes - using Linguistic Analysis API |  
-| Stemmer | Yes - using Spark NLP | No |
-| Lemmatizer | Yes - using Spark NLP | No |
-| Part of speech tagging | Yes - using Spark NLP | Yes - using Linguistic Analysis API |
-| Term-Frequency/Inverse-Document Frequency (TF/IDF) | Yes - using Spark MLlib | No |
-| String similarity - edit distance calculation | Yes - using Spark MLlib | No |
-| N-gram calculation | Yes - using Spark MLlib | No |
-| Stop word removal | Yes - using Spark MLlib | No |
+| Tokenizer | Yes&mdash;using Spark NLP | Yes&mdash;using Linguistic Analysis API |  
+| Stemmer | Yes&mdash;using Spark NLP | No |
+| Lemmatizer | Yes&mdash;using Spark NLP | No |
+| Part of speech tagging | Yes&mdash;using Spark NLP | Yes&mdash;using Linguistic Analysis API |
+| Term frequency/inverse-document frequency (TF/IDF) | Yes&mdash;using Spark MLlib | No |
+| String similarity&mdash;edit distance calculation | Yes&mdash;using Spark MLlib | No |
+| N-gram calculation | Yes&mdash;using Spark MLlib | No |
+| Stop word removal | Yes&mdash;using Spark MLlib | No |
 
 
-### High-Level Natural Langauge Processing Capabilities
+### High-level natural language processing capabilities
 | | Azure HDInsight | Microsoft Cognitive Services |  
 | --- | --- | --- | 
-| Entity/Intent identification & extraction | No | Yes - using LUIS API |    
-| Topic detection | Yes - using Spark NLP | Yes - using the Text Analytics API |  
-| Spell Checking | Yes - using Spark NLP | Yes - using the Bing Spell Check API |
-| Sentiment analysis | Yes - using Spark NLP | Yes - using the Text Analytics API |
-| Language detection | No | Yes - using the Text Analytics API |
-| Supports multiple languages besides English | No | Yes - Language support varies by API | 
+| Entity/intent identification & extraction | No | Yes&mdash;using Language Understanding Intelligent Service (LUIS) API |    
+| Topic detection | Yes&mdash;using Spark NLP | Yes&mdash;using the Text Analytics API |  
+| Spell checking | Yes&mdash;using Spark NLP | Yes&mdash;using the Bing Spell Check API |
+| Sentiment analysis | Yes&mdash;using Spark NLP | Yes&mdash;using the Text Analytics API |
+| Language detection | No | Yes&mdash;using the Text Analytics API |
+| Supports multiple languages besides English | No | Yes&mdash;language support varies by API | 
 
 
 ## <a name="wheretogo"></a>Where to go from here
-See Also:
+See also: <!--No suggestion?-->
 
-Related Pipeline Patterns
+Related pipeline patterns
 - Working with text data
     - [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json.md)
     - [Processing free-form text data](../pipeline-patterns/processing-free-form-text.md)

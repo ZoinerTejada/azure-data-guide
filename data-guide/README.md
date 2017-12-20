@@ -18,13 +18,13 @@
 
 ## [Interactive Data Exploration](./common-architectures/interactive-data-exploration.md)
 
-# Pipeline Patterns
+# Pipeline patterns
 ## Working with transactional data
 ### [Online Transaction Processing (OLTP)](./pipeline-patterns/online-transaction-processing.md) 
 ### [Online Analytical Processing (OLAP)](./pipeline-patterns/online-analytical-processing.md)
 ### [Data Warehousing & Data Marts](./pipeline-patterns/data-warehousing.md)
 
-## Handling Unstructured Data
+## Handling unstructured data
 ### [Processing CSV and JSON files](./pipeline-patterns/processing-csv-and-json-files.md) 
 ### [Processing Free-form Text](./pipeline-patterns/processing-free-form-text.md)
 
@@ -38,7 +38,7 @@
 
 ## [Monitoring Data Solutions](./pipeline-patterns/monitoring-data-solutions.md)
 
-# Technology Choices
+# Technology choices
 ## Transactional data stores
 ### [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md) 
 ### [Online Analytical Processing (OLAP) data stores](./technology-choices/olap-data-stores.md)  
@@ -56,7 +56,7 @@
 
 ## [Data Serving Storage](./technology-choices/data-serving-storage.md)
 
-## Applied Artificial Intelligence & Cognitive Services
+## Applied artificial intelligence & cognitive services
 ### [Data Science and Machine Learning](./technology-choices/data-science-and-machine-learning.md)
 ### [Cognitive Services](./technology-choices/cognitive-services.md)
 ### [Text Search](./technology-choices/search-options.md)

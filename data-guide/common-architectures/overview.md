@@ -1,23 +1,25 @@
 # Common Data Architectures
 
+**In this article**
+
 [What do we mean by common data architectures?](#meaning)   
 [How do you approach using them?](#use)  
 [Where to go from here](#wheretogo)  
 
 ## <a name="meaning"></a> What do we mean by common data architectures?
-We provide common data architectures to represent the "big concepts" that deal with data that you need to know, and that by knowing them you are empowered to make the right architectural selections for your scenario and by extensions the right technology choices.  
+We provide common data architectures to represent the big concepts that deal with data that you need to know, so that by knowing them you are empowered to make the right architectural selections for your scenario and by extension the right technology choices.  
 
 ## <a name="use"></a> How do you approach using them?
-To understand how to apply a common data architecture to your scenario, start with the phrase "I need to work with..." and then complete the phrase with one of the following:
-- [Relational data](./relational-data.md)
-- [Non-relational data](./non-relational-data.md)
-- [Big data](./big-data.md)
-- [Data pipelines](./data-pipeline.md)
-- [Advanced analytics](./advanced-analytics.md)
+To understand how to apply a common data architecture to your scenario, start with the phrase "I need to work with..." and then complete the phrase with one of the following: <!--I made these lowercase because you're completing the sentence.-->
+- [relational data](./relational-data.md)
+- [non-relational data](./non-relational-data.md)
+- [big data](./big-data.md)
+- [data pipelines](./data-pipeline.md)
+- [advanced analytics](./advanced-analytics.md)
 
-The common data architectures will guide you down a path of concepts that get more granular from the concept down to the generic form of technologies used in the architecture, and ultimately to help you make a choice amongst the various Azure options that exist. 
+The common data architectures will guide you down a path of concepts that get more granular as you move from the concept down to the generic technologies used in the architecture, and ultimately help you make a choice amongst the various Azure options that exist. 
 
-Use the following flow chart to begin your exploration:
+Use the following flow chart to begin your exploration: <!-- Note that the image uses "Nonrelational" it should be hyphenated to match the text. Typically the prefix "non" doesn't take a hyphen, but this is one of those terms that does.-->
 
 ![Common Data Architectures Conceptual Flow Chart](./images/concept-flowchart.png) 
 
@@ -25,10 +27,10 @@ If you are curious about a specify topic, you can also navigate this flowchart f
 
 ## <a name="wheretogo"></a>Where to go from here
 
-Read Next: [Relational Data Common Architecture](./relational-data.md)
+Read next: [Relational Data Common Architecture](./relational-data.md)
 
-See Also:
+See also:
 
-Related Common Architectures
+Related common architectures
 - [Transactional Data](./transactional-data.md)
 - [Semantic Modeling](./semantic-modeling.md)
