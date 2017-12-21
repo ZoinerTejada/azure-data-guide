@@ -1,4 +1,4 @@
-# Data Warehousing 
+# Data warehousing 
 
 **In this article** <!--The patterns don't appear to have this heading. By design? I didn't add to all of them, just pointing it out.-->
 
@@ -12,7 +12,7 @@
 <a name="about"></a>
 A data warehouse is a central, organizational, relational repository of integrated data from one or more disparate sources, across many or all subject areas. Data warehouses store current and historical data and are used for reporting and analysis of the data in different ways.
 
-To move data into a data warehouse, it is extracted on a periodic basis from various sources that contain important business information. As the data is moved, it is formatted, cleaned, validated, summarized, and reorganized. It becomes a permanent storage space for data used for reporting, analysis, and forming important business decisions using business intelligence (BI) tools.
+To move data into a data warehouse, it is extracted on a periodic basis from various sources that contain important business information. As the data is moved, it can be formatted, cleaned, validated, summarized, and reorganized. Alternately, the data can be stored in the lowest level of detail, with aggregated views provided in the warehouse for reporting. In either case, the data warehouse becomes a permanent storage space for data used for reporting, analysis, and forming important business decisions using business intelligence (BI) tools.
 
 ![Data warehousing](./images/data-warehouses.png)
 
@@ -29,7 +29,7 @@ Consider using a data warehouse when you need to keep historical data separate f
 
 Data warehouses are optimized for read access, resulting in faster report generation compared to running reports against the source transaction system. In addition, data warehouses provide the following benefits:
 
-* All historical data from multiple sources can be stored and accessed from a data warehouse as the single source of truth. This frees up the operational and transactional systems to only store current and relevant data, potentially giving them a performance boost.
+* All historical data from multiple sources can be stored and accessed from a data warehouse as the single source of truth.
 * Improve data quality by cleaning up data as it is imported into the data warehouse, providing more accurate data as well as providing consistent codes and descriptions.
 * A data warehouse eliminates the need for reporting tools to compete with the transactional source systems for query processing cycles. Fundamentally, this is because in transactional systems reads will block writes, but reads do not block other reads. By allowing your transactional system to focus predominantly on handling writes, and your data warehouse to satisfy the reads, you enable users to analyze data faster, generate reports more easily, and reorganize data <!--Slice and dice is considered slang, and may be difficult for ESL readers. It doesn't appear often on MSDN so it's not a common term. I'm not sure exactly what you're trying to say here so replacing it is difficult. Does this work?-->in ways that are more performant.
 * A data warehouse can help consolidate data within a complex company that uses different software for different divisions.
@@ -50,6 +50,14 @@ Properly configuring a data warehouse to fit the needs of your business can brin
 In Azure, you may have one or more sources of data, whether from customer transactions, or from various business applications used by various departments. This data is traditionally stored in one or more [OLTP](online-transaction-processing.md) databases. The data could be persisted in other storage mediums such as network shares, Azure Storage Blobs, or a [data lake](../common-architectures/big-data.md#datalake). The data could also be stored by the data warehouse itself, such as in Azure SQL Data Warehouse or by a relational database like Azure SQL Database. The purpose of the analytical data store layer is to satisfy queries issued by analytics and reporting tools against the data warehouse or data mart. In Azure this analytical store capability can be met with Azure SQL Data Warehouse, with Azure HDInsight using Hive or Interactive Query. Because there is a requirement to move and transform data on a regular basis, you will need some level of orchestration to periodically move or copy data from your data storage to the data warehouse, which can be accomplished with Azure Data Factory or Oozie on Azure HDInsight.  
 
 ![Data warehousing in Azure](./images/data-warehousing.png)<!-- VM should be spelled out in the image as virtual machine.-->
+
+Related services:
+
+* [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
+* [SQL Server in a VM](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)
+* [Azure Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
+* [Apache Hive on HDInsight](https://docs.microsoft.com/azure/hdinsight/hadoop/hdinsight-use-hive)
+* [Interactive Query (Hive LLAP) on HDInsight](https://docs.microsoft.com/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
 
 
 ## <a name="wheretogo"></a>Where to go from here

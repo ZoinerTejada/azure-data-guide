@@ -72,11 +72,11 @@ Using a secure solution offers the following benefits:
 
 ## <a name="challenges"></a>Challenges
 
-Establishing a secure solution can surface some of the following challenges:
+Establishing a secure solution can cause you to face some of the following challenges:
 
-* Centralized monitoring and analysis of security events stored in numerous logs.
-* Extra effort involved in implementing encryption and authorization management across your applications and services.
-* Centralized identity management that works across all of your solution components, whether on-premises or in the cloud.
+* Centralizing the monitoring and analysis of security events stored in numerous logs.
+* Implementing encryption and authorization management across your applications and services.
+* Ensuring that centralized identity management works across all of your solution components, whether on-premises or in the cloud.
 
 ## <a name="inazure"></a>Secure solutions in Azure
 

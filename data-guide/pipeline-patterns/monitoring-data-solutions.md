@@ -37,20 +37,20 @@ Ideally, monitoring your data solutions should practiced from the moment of ince
 
 Monitoring offers the following benefits:
 
-* Detect emerging issues before they become real problems.
+* Detect emerging issues before they become real problems. In other words, predict problems before they happen.
 * Gain insight on the current state of your solution, based on historical records and having established a baseline.
 * Know when performance is taking a hit so you can scale accordingly, and research into what has changed to cause the issue.
 * You have a better chance at being proactive in ensuring smooth operation of your solution, rather than always reactively responding to issues and putting out fires that shouldn't have started in the first place.
 * Gather valuable data that will help you troubleshoot issues.
+* Make huge diagnostic logs usable by adding search and alerting mechanisms.
 
 ## <a name="challenges"></a>Challenges
 
 Establishing monitoring can have some of the following challenges:
 
-* Aggregate diagnostic and performance data into a single overall view, as opposed to viewing the monitoring information in multiple locations.
-* Make huge diagnostic logs usable by adding search and alerting mechanisms.
-* Configure alerts on the services you need most.
-* Predict problems before they happen.
+* Aggregating diagnostic and performance data into a single overall view can become its own big data problem.
+* Controlling access to sensitive logs and the personally identifiable information (PII) within those logs.
+* Capitalizing on being able to add alerts to key services by setting useful thresholds and other triggers on the services you need most.
 
 ## <a name="inazure"></a>Monitoring in Azure
 

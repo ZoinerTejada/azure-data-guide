@@ -7,7 +7,7 @@
 [Where to go from here](#wheretogo)  
 
 <a name="about"></a>
-Relational data is based upon the relational model whereby all data is expressed as tuples, and the tuples are grouped into relations. <!-- This sentence is very circular/redundant, I think this captures the essence. Also, should we define tuples for the audience?--> A data store that organizes data in terms of the relational model is referred to as a relational database. Relational databases use a tabular structure to materialize the relational model&mdash;that is, they expose all the data as rows in a table with a defined schema consisting of columns. Each column defines a name and a data type for all values stored in that column across all rows in the table. <!-- Correct? Or should it be ...defines the name and data type..?-->
+Relational data is data modeled using the relational model, whereby all data is expressed as tuples, and sets of tuples with the same headings form relations. A data store that organizes data using the relational model is referred to as a relational database. Relational databases use a tabular structure to materialize the relational model - that is they expose all the data as rows (tuples) in tables (relations). The database schema defines the columns (headings) of each table. Each column is defined with a name and a data type for all values stored in that column across all rows in the table.
 
 ![Example showing data using a relational database](./images/example-relational.png)
 
@@ -16,13 +16,16 @@ Most relational databases use the Structured Query Language (SQL) language that 
 Relational databases support varying forms of constraints, including:
 - Primary key fields that are used to uniquely identify rows within a table.
 - Foreign key fields that are used in one table to refer to a row in another table by referencing the primary key of other table. Foreign keys are used in maintaining referential integrity, ensuring that the referenced rows are not altered or deleted while the referencing row depends on them.
-- Primary indexes are used by the primary key to define the order of the data as it sits on disk.
-- Secondary indexes provide an alternative combination of fields by which to quickly locate the desired rows, without having to re-sort the entire data on disk. The index structure used by relational databases typically includes B+ trees, R-trees, and bitmaps. 
+- Primary indexes are being used by the primary key to define the order of the data as it sits on disk.
+- Secondary indexes provide an alternative combination of fields by which to quickly locate the desired rows, without having to re-sort the entire data on disk. The index structure used by relational databases typically includes B+ trees, R-trees and bitmaps. 
 - Entity integrity contraints that use expressions to define constraints that limit the values that can be stored within a single column, or in relationship to values in other columns of the same row.
 
-Additionally, relational databases allow for the storage of executable code routines in the form of stored procedures and functions, which enable a mixture of declarative and procedural approaches. 
+- Primary key and unique constraints, that are used to uniquely identify rows within a table.
+- Foreign key constraints that are created on a table to reference a row in another table by referencing the primary key or alternate key of the other table. Foreign key constraints are used in maintaining referential integrity, disallowing changes that would result in a mismatch in foreign key column values between referenced and referencing tables.
+- Primary and secondary indexes. Primary indexes, which are used by the primary key, define the order of the data as it sits on disk. Secondary indexes provide an alternative combination of fields by which to quickly locate the desired rows, without having to re-sort the entire data on disk. The index structure used by relational databases typically includes B+ trees, R-trees and bitmaps.
+- Check constraints, also known as entity integrity constraints, use expressions to define constraints that limit the values that can be stored within a single column, or in relationship to values in other columns of the same row.
 
-The design of a relational database schema emphasizes minimizing the duplication of data thru the use of [normal forms](https://en.wikipedia.org/wiki/Database_normalization#Normal_forms), in order to prevent data anomalies and maintain data integrity. Relational databases are commonly designed with the [third normal form](https://en.wikipedia.org/wiki/Third_normal_form) in mind. 
+Additionally, relational databases allow for the storage of executable code routines in the form of stored procedures and functions, which enable a mixture of declarative and procedural approaches.
 
 ## <a name="common"></a> Common architectures
 The common architectures for relational data are:

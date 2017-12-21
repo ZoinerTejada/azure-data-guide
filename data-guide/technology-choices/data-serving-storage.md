@@ -19,7 +19,8 @@ There is no single best data management choice for all data storage tasks. Diffe
 There are several options for data serving storage in Azure, depending on your needs:
 
 - [SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
-- [SQL Database](https://docs.microsoft.com/azure/sql-database/)
+- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
+- [SQL Server in Azure VM](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)
 - [HBase/Phoenix on HDInsight](https://docs.microsoft.com/azure/hdinsight/hbase/apache-hbase-overview)
 - [Hive LLAP on HDInsight](https://docs.microsoft.com/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
 - [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
@@ -34,6 +35,7 @@ These options provide various database models that are optimized for different t
 
 ## <a name="howtochoose"></a> How do you choose?
 Each data transfer solution brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements.
+Each data serving solution brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements.
 
 ## <a name="criteria"></a> Key selection criteria
 

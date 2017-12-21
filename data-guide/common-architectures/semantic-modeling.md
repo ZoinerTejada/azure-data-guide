@@ -1,9 +1,9 @@
-# Semantic Modeling
+# Semantic modeling
 
 **In this article**
 
 [About]()  
-[Typical requirements](#requirements)  
+[Typical Traits](#traits)  
 [Example use case](#usecase)  
 [Where to go from here](#wheretogo)  
 
@@ -29,10 +29,10 @@ Your organization has data stored in a large database that you want to make avai
 
 Another option is to encapsulate all the information needed into a semantic model that can be more easily queried by those users with a reporting tool of their choice. The data provided by the semantic model is pulled from a data warehouse, ensuring all users will see a single version of the truth. The semantic model will also provide friendly table and column names, relationships between tables, descriptions, calculations, and row level security.
 
-<a name="requirements"></a>
-### Typical requirements
+<a name="traits"></a>
+### Typical Traits
 
-Semantic modeling and analytical processing tends to have the following requirements: <!--Colons not necessary, the table structure implies the relationship.-->
+Semantic modeling and analytical processing tends to have the following traits:
 
 | Requirement | Description |
 | --- | --- |

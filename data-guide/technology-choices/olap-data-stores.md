@@ -33,7 +33,7 @@ The following tables summarize the key differences in capabilities between each.
     - If yes, then you will need one of the options that Azure AD integration.
 - Do you want to conduct real-time analytics?
     - If so, narrow your options to those that support real-time analytics. Real-time operational analytics targets the scenario of a single data source such as an enterprise resource planning (ERP) application on which you can run both the operational and the analytics workload. This does not replace the need for a separate data warehouse when you need to integrate data from multiple sources before running the analytics workload or when you require extreme analytics performance using pre-aggregated data such as cubes.
-- Do you need the ability to use OLAP cubes?
+- Do you need the ability to use OLAP cubes, such as to provide semantic models that make analytics more business user friendly?
     - If yes, then you will want an option that provides support for pre-aggregated data. This is typically preferred when providing aggregates helps business users consistently calculate data aggregates in a way that makes sense for your data. Pre-aggregated data can also provide a large performance boost when dealing with several columns across many rows.
 - Do you need the ability to integrate data from several sources, beyond your OLTP data store?
     - If so, consider options that easily integrate multiple data sources.
@@ -42,22 +42,26 @@ The following tables summarize the key differences in capabilities between each.
 
 ### General capabilities
 
-| | Azure Analysis Services | SQL Server Analysis Services | SQL Server + columnstore indexes |
-| --- | --- | --- | --- |
-| Is managed service | Yes | No | Yes (if using Azure SQL) |
-| Supports pre-aggregated data such as cubes | Yes | Yes | No |
-| Easily integrate multiple data sources | Yes | Yes | No |
-| Supports real-time analytics | No | No | Yes |
-| Requires process to copy data from source(s) | Yes | Yes | No |
-| Azure AD integration | Yes | No | Yes (Azure SQL) |
+| | Azure Analysis Services | SQL Server Analysis Services | SQL Server in Azure VM + Columnstore Indexes | Azure SQL Database + Columnstore Indexes |
+| --- | --- | --- | --- | --- |
+| Is managed service | Yes | No | No | Yes |
+| Supports pre-aggregated data such as cubes | Yes | Yes | No | No |
+| Easily integrate multiple data sources | Yes | Yes | No \* | No \* |
+| Supports real-time analytics | No | No | Yes | Yes |
+| Requires process to copy data from source(s) | Yes | Yes | No | No |
+| Azure Active Directory (AAD) integration | Yes | No | No \** | Yes |
 
-### Scalability capabilities
+\* While SQL Server or Azure SQL Database cannot be used to query from and integrate multiple external data sources, you can still build a pipeline that does this for you using [SSIS](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services) or [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/). SQL Server hosted in an Azure VM has additional options, such as linked servers (other SQL Servers, Oracle, etc.) and [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide). See [Options for Pipeline Orchestration, Control Flow, and Data Movement](../technology-choices/pipeline-orchestration-data-movement.md) for more information.
 
-| | Azure Analysis Services | SQL Server Analysis Services | SQL Server + columnstore indexes |
-| --- | --- | --- | --- |
-| Redundant regional servers for high availability  | [Yes](https://docs.microsoft.com/azure/analysis-services/analysis-services-bcdr) | No | Yes (Azure SQL) |
-| Supports query scale out  | Yes | No | No |
-| Dynamic scalability (scale up)  | Yes | No | Yes (Azure SQL) |
+\** Connecting to SQL Server running on an Azure VM is not supported using an Azure Active Directory account. Use a domain Active Directory account instead.
+
+### Scalability Capabilities
+
+| | Azure Analysis Services | SQL Server Analysis Services | SQL Server in Azure VM + Columnstore Indexes | Azure SQL Database + Columnstore Indexes |
+| --- | --- | --- | --- | --- |
+| Redundant regional servers for high availability  | [Yes](https://docs.microsoft.com/azure/analysis-services/analysis-services-bcdr) | No | Yes | Yes |
+| Supports query scale out  | Yes | No | No | No |
+| Dynamic scalability (scale up)  | Yes | No | Yes | No |
 
 ## <a name="wheretogo"></a>Where to go from here
 Read next:
@@ -76,3 +80,4 @@ Related technology choices
     - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
     - [Data Warehouses](../technology-choices/data-warehouses.md)
     - [Data serving storage](../technology-choices/data-serving-storage.md)
+    - [Options for Pipeline Orchestration, Control Flow, and Data Movement](../technology-choices/pipeline-orchestration-data-movement.md)
