@@ -34,7 +34,7 @@ These options provide various database models that are optimized for different t
 - [Graph](https://msdn.microsoft.com/en-us/library/dn313285.aspx#sec10) databases store information as a collection of objects and relationships. The purpose of a graph database is to enable an application to efficiently perform queries that traverse the network of objects and the relationships between them. For example, the objects might be employees in a human resources database, and you might want to facilitate queries such as "find all employees who directly or indirectly work for Scott."
 
 ## <a name="howtochoose"></a> How do you choose?
-Each data transfer solution brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements.
+Each data serving solution brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements.
 Each data serving solution brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements.
 
 ## <a name="criteria"></a> Key selection criteria

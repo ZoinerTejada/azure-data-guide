@@ -42,7 +42,7 @@ The following tables summarize the key differences in capabilities between each.
 
 ### General capabilities
 
-| | Azure Analysis Services | SQL Server Analysis Services | SQL Server in Azure VM + Columnstore Indexes | Azure SQL Database + Columnstore Indexes |
+| | Azure Analysis Services | SQL Server Analysis Services | SQL Server in Azure Virtual Machine + Columnstore Indexes | Azure SQL Database + Columnstore Indexes |
 | --- | --- | --- | --- | --- |
 | Is managed service | Yes | No | No | Yes |
 | Supports pre-aggregated data such as cubes | Yes | Yes | No | No |
@@ -53,11 +53,11 @@ The following tables summarize the key differences in capabilities between each.
 
 \* While SQL Server or Azure SQL Database cannot be used to query from and integrate multiple external data sources, you can still build a pipeline that does this for you using [SSIS](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services) or [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/). SQL Server hosted in an Azure VM has additional options, such as linked servers (other SQL Servers, Oracle, etc.) and [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide). See [Options for Pipeline Orchestration, Control Flow, and Data Movement](../technology-choices/pipeline-orchestration-data-movement.md) for more information.
 
-\** Connecting to SQL Server running on an Azure VM is not supported using an Azure Active Directory account. Use a domain Active Directory account instead.
+\** Connecting to SQL Server running on an Azure Virtual Machine is not supported using an Azure Active Directory account. Use a domain Active Directory account instead.
 
 ### Scalability Capabilities
 
-| | Azure Analysis Services | SQL Server Analysis Services | SQL Server in Azure VM + Columnstore Indexes | Azure SQL Database + Columnstore Indexes |
+| | Azure Analysis Services | SQL Server Analysis Services | SQL Server in Azure Virtual Machine + Columnstore Indexes | Azure SQL Database + Columnstore Indexes |
 | --- | --- | --- | --- | --- |
 | Redundant regional servers for high availability  | [Yes](https://docs.microsoft.com/azure/analysis-services/analysis-services-bcdr) | No | Yes | Yes |
 | Supports query scale out  | Yes | No | No | No |

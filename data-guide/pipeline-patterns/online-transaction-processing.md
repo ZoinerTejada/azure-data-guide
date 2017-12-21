@@ -16,7 +16,7 @@ Choose OLTP when you have a data pipeline from source to data storage that needs
 ## <a name="benefits"></a>Benefits
 OLTP systems are designed to efficiently process and store transactions, as well as query transactional data.
 
-The goal of efficiently processing and storing individual transactions by an OLTP system is in part accomplished by data normalization - that is, breaking the data up into smaller chunks that are less redundant. This supports efficiency because it enables the OLTP system to process large numbers of transactions independently, and avoids extra processing needed to maintain data integrity in the presence of redundant data.
+The goal of efficiently processing and storing individual transactions by an OLTP system is in part accomplished by data normalization&mdash;that is, breaking the data up into smaller chunks that are less redundant. This supports efficiency because it enables the OLTP system to process large numbers of transactions independently, and avoids extra processing needed to maintain data integrity in the presence of redundant data.
 
 ## <a name="challenges"></a>Challenges
 Implementing and using an OLTP system can create a few challenges:

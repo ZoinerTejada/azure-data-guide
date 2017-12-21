@@ -13,7 +13,7 @@
 In Azure, all of the following data stores will meet the core requirements for OLTP and for the management of transaction data:
 - [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
 - Azure SQL Database Managed Instance
-- [SQL Server in Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json)
+- [SQL Server in an Azure virtual machine](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json)
 - [Azure Database for MySQL](https://docs.microsoft.com/azure/mysql/)
 - [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)
 
@@ -42,8 +42,8 @@ The following table summarize the key differences in capabilities between each o
 ## <a name="matrix"></a> Capability matrix
 
 ### General capabilities 
-| | Azure SQL Database | Azure SQL Database managed instance | SQL Server in an Azure virtual machine| Azure Database for MySQL | Azure Database for PostgreSQL|<!--We're not supposed to abbreviate virtual machine. It may be better to say: Azure virtual machine with SQL Server or something else. I just spelled out and made it grammatical.-->
-| --- | --- | --- | --- | --- | --- | 
+| | Azure SQL Database | Azure SQL Database managed instance | SQL Server in an Azure virtual machine | Azure Database for MySQL | Azure Database for PostgreSQL |
+| --- | --- | --- | --- | --- | --- |
 | Is Managed Service | Yes | Yes | No | Yes | Yes |
 | Runs on Platform | N/A | N/A | Windows, Linux, Docker | N/A | N/A |
 | JSON, XML and Spatial Data Support | Yes | Yes | Yes | Yes | Yes |
@@ -51,41 +51,41 @@ The following table summarize the key differences in capabilities between each o
 
 \* Excludes client driver support, which allows many programming languages to connect to and use the OLTP data store.
 
-### Scalability Capabilities
-| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
+### Scalability capabilities
+| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in an Azure virtual machine| Azure Database for MySQL | Azure Database for PostgreSQL|
 | --- | --- | --- | --- | --- | --- |
-| Max Database Instance Size | [4 TB](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits) | 4 TB | 256 TB | [1 TB](https://docs.microsoft.com/azure/mysql/concepts-limits) | [1 TB](https://docs.microsoft.com/azure/postgresql/concepts-limits) |
-| Supports Capacity Pools  | Yes | Yes | Yes | No | No |
-| Supports Clusters Scale Out  | No | No | Yes | No | No |
+| Max database instance size | [4 TB](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits) | 4 TB | 256 TB | [1 TB](https://docs.microsoft.com/azure/mysql/concepts-limits) | [1 TB](https://docs.microsoft.com/azure/postgresql/concepts-limits) |
+| Supports capacity pools  | Yes | Yes | Yes | No | No |
+| Supports clusters scale out  | No | No | Yes | No | No |
 | Dynamic scalability (scale up)  | Yes | Yes | No | Yes | Yes |
 
 ### Analytic workload capabilities
 | | Azure SQL Database | Azure SQL Database managed instance | SQL Server in an Azure virtual machine| Azure Database for MySQL | Azure Database for PostgreSQL|
 | --- | --- | --- | --- | --- | --- | 
 | Temporal tables | Yes | Yes | Yes | No | No |
-| In-Memory (memory-optimized) Tables | Yes | Yes | Yes | No | No |
-| Columnstore Support | Yes | Yes | Yes | No | No |
-| Adaptive Query Processing | Yes | Yes | Yes | No | No |
+| In-memory (memory-optimized) tables | Yes | Yes | Yes | No | No |
+| Columnstore support | Yes | Yes | Yes | No | No |
+| Adaptive query processing | Yes | Yes | Yes | No | No |
 
-### Availability Capabilities
-| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
+### Availability capabilities
+| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in an Azure virtual machine| Azure Database for MySQL | Azure Database for PostgreSQL|
 | --- | --- | --- | --- | --- | --- | 
-| Supports Readable Secondaries | Yes | Yes | Yes | No | No | 
-| Supports Geo-graphic Replication | Yes | Yes | Yes | No | No | 
-| Supports Automatic Failover to Secondary | Yes | No | No | No | No|
-| Supports Point-in-time Restore | Yes | Yes | Yes | Yes | Yes |
+| Supports readable secondaries | Yes | Yes | Yes | No | No | 
+| Supports geographic replication | Yes | Yes | Yes | No | No | 
+| Supports automatic failover to secondary | Yes | No | No | No | No|
+| Supports point-in-time restore | Yes | Yes | Yes | Yes | Yes |
 
-### Security Capabilities
-| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
+### Security capabilities
+| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in an Azure virtual machine| Azure Database for MySQL | Azure Database for PostgreSQL|
 | --- | --- | --- | --- | --- | --- | 
-| Row Level Security | Yes | Yes | Yes | Yes | Yes |
-| Data Masking | Yes | Yes | Yes | No | No |
-| Transparent Data Encryption | Yes | Yes | Yes | Yes | Yes |
+| Row level security | Yes | Yes | Yes | Yes | Yes |
+| Data masking | Yes | Yes | Yes | No | No |
+| Transparent data encryption | Yes | Yes | Yes | Yes | Yes |
 | Restrict access to specific IP addresses | Yes | Yes | Yes | Yes | Yes |
 | Restrict access to allow VNET access only | Yes | Yes | Yes | No | No |
-| Azure Active Directory Authentication | Yes | Yes | Yes | No | No |
-| Active Directory Authentication | No | No | Yes | No | No |
-| Multi-factor Authentication | Yes | Yes | Yes | No | No |
+| Azure Active Directory authentication | Yes | Yes | Yes | No | No |
+| Active Directory authentication | No | No | Yes | No | No |
+| Multi-factor authentication | Yes | Yes | Yes | No | No |
 | [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) | Yes | Yes | Yes | No | No |
 | Private IP | No | Yes | Yes | No | No |
 
