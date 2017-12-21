@@ -44,12 +44,12 @@ Related services:
     - [Mobile Apps](https://docs.microsoft.com/azure/app-service-mobile/)
 
 ## <a name="wheretogo"></a>Where to go from here
-Read Next:
+Read next:
 [Online Transaction Processing (OLTP) data store technology choices](../technology-choices/oltp-data-stores.md)
 
-See Also:
+See also:
 
-Related Technology Choices
+Related technology choices
 - Transactional data stores
     - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
     - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)

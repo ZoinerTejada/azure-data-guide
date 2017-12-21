@@ -1,5 +1,7 @@
 # Common Data Architectures
 
+**In this article**
+
 [What do we mean by common data architectures?](#meaning)   
 [How do you approach using them?](#use)  
 [Where to go from here](#wheretogo)  
@@ -18,7 +20,7 @@ To understand how to apply a common data architecture to your scenario, start wi
 
 For implementation examples of these common data architectures, see [Implementation Examples](../overview.md#implementation-examples) in the [Azure Data Architecture Guide Overview](../overview.md).
 
-Use the following flow chart to begin your exploration:
+Use the following flow chart to begin your exploration: <!-- Note that the image uses "Nonrelational" it should be hyphenated to match the text. Typically the prefix "non" doesn't take a hyphen, but this is one of those terms that does.-->
 
 ![Common Data Architectures Conceptual Flow Chart](./images/concept-flowchart.png)
 
@@ -28,10 +30,10 @@ If you are curious about a specific topic, you can also navigate this flowchart 
 
 ## <a name="wheretogo"></a>Where to go from here
 
-Read Next: [Relational Data Common Architecture](./relational-data.md)
+Read next: [Relational Data Common Architecture](./relational-data.md)
 
-See Also:
+See also:
 
-Related Common Architectures
+Related common architectures
 - [Transactional Data](./transactional-data.md)
 - [Semantic Modeling](./semantic-modeling.md)

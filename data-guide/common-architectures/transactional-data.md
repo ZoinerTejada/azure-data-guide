@@ -22,41 +22,41 @@ Transactional data tends to have the following traits:
 
 | Requirement | Description |
 | --- | --- |
-| Normalization: | Highly normalized |
-| Schema: | Schema on write, strongly enforced|
-| Consistency: | Strong consistency, ACID guarantees |
-| Integrity: | High integrity |
-| Uses Transactions: | Yes |
-| Locking Strategy: | Pessimistic or Optimistic|
-| Updateable: | Yes |
-| Appendable: | Yes |
-| Workload: | Heavy writes, moderate reads |
-| Indexing: | Primary and secondary indexes |
-| Datum size: | Small to medium sized |
-| Model: | Relational |
-| Data shape: | Tabular |
-| Query flexibility: | Highly flexible |
-| Scale: | Small (MB's) to Large (a few TB's) |
+| Normalization | Highly normalized |
+| Schema | Schema on write, strongly enforced|
+| Consistency | Strong consistency, ACID guarantees |
+| Integrity | High integrity |
+| Uses transactions | Yes |
+| Locking strategy | Pessimistic or Optimistic|
+| Updateable | Yes |
+| Appendable | Yes |
+| Workload | Heavy writes, moderate reads |
+| Indexing | Primary and secondary indexes |
+| Datum size | Small to medium sized |
+| Model | Relational |
+| Data shape | Tabular |
+| Query flexibility | Highly flexible |
+| Scale | Small (MBs) to Large (a few TBs) | <!--I know it looks weird, but these are plural, not possessive or contractions.-->
 
 ## <a name="wheretogo"></a>Where to go from here
 
 Read Next: [Online Transaction Processing (OLTP) Solution Pattern](../pipeline-patterns/online-transaction-processing.md)
 
-See Also:
+See also:
 
-Related Common Architectures
+Related common architectures
 - [Relational data stores](./relational-data.md)
 
-Alternative Common Architectures
+Alternative common architectures
 - [Non-relational and No-SQL data stores](./non-relational-data.md)
 
-Related Pipeline Patterns
+Related pipeline patterns
 - Working with transactional data
     - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
     - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
     - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
-Related Technology Choices
+Related technology choices
 - Transactional data stores
     - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
     - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)

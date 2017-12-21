@@ -3,8 +3,8 @@
 [About]()  
 [What are your options when choosing an OLTP data store?](#options)  
 [How do you choose?](#howtochoose)  
-[Key Selection Criteria](#criteria)  
-[Capability Matrix](#matrix)   
+[Key selection criteria](#criteria)  
+[Capability matrix](#matrix)   
 [Where to go from here](#wheretogo)  
 
 <a name="about"></a>
@@ -18,9 +18,9 @@ In Azure, all of the following data stores will meet the core requirements for O
 - [Azure Database for PostgreSQL](https://docs.microsoft.com/azure/postgresql/)
 
 ## <a name="howtochoose"></a> How do you choose?
-Each data store brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements. 
+Each data store brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements. 
 
-## <a name="criteria"></a> Key Selection Criteria
+## <a name="criteria"></a> Key selection criteria
 
 The following table summarize the key differences in capabilities between each option. For the OLTP scenarios, begin choosing the appropriate database for your needs by answering these questions:
 
@@ -37,12 +37,12 @@ The following table summarize the key differences in capabilities between each o
 - Does your database need to be highly available across geo-graphic regions?
     - If yes, consider the options that provide support for geo-graphic replication. Also consider the options that support the automatic failover from the primary to the secondary.
 - Does your database have specific security needs?
-    - If yes, examine the options that provide capabilities like Row Level Security, Data Masking and Transparent Data Encryption.
+    - If yes, examine the options that provide capabilities like row level security, data masking, and transparent data encryption.
 
-## <a name="matrix"></a> Capability Matrix
+## <a name="matrix"></a> Capability matrix
 
-### General Capabilities
-| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
+### General capabilities 
+| | Azure SQL Database | Azure SQL Database managed instance | SQL Server in an Azure virtual machine| Azure Database for MySQL | Azure Database for PostgreSQL|<!--We're not supposed to abbreviate virtual machine. It may be better to say: Azure virtual machine with SQL Server or something else. I just spelled out and made it grammatical.-->
 | --- | --- | --- | --- | --- | --- | 
 | Is Managed Service | Yes | Yes | No | Yes | Yes |
 | Runs on Platform | N/A | N/A | Windows, Linux, Docker | N/A | N/A |
@@ -59,8 +59,8 @@ The following table summarize the key differences in capabilities between each o
 | Supports Clusters Scale Out  | No | No | Yes | No | No |
 | Dynamic scalability (scale up)  | Yes | Yes | No | Yes | Yes |
 
-### Analytic Workload Capabilities
-| | Azure SQL Database | Azure SQL Database Managed Instance | SQL Server in Azure VM| Azure Database for MySQL | Azure Database for PostgreSQL|
+### Analytic workload capabilities
+| | Azure SQL Database | Azure SQL Database managed instance | SQL Server in an Azure virtual machine| Azure Database for MySQL | Azure Database for PostgreSQL|
 | --- | --- | --- | --- | --- | --- | 
 | Temporal tables | Yes | Yes | Yes | No | No |
 | In-Memory (memory-optimized) Tables | Yes | Yes | Yes | No | No |
@@ -90,18 +90,18 @@ The following table summarize the key differences in capabilities between each o
 | Private IP | No | Yes | Yes | No | No |
 
 ## <a name="wheretogo"></a>Where to go from here
-Read Next:
-Data Warehouse Solution Pattern
+Read next:
+ [Data Warehousing Solution Pattern](../pipeline-patterns/data-warehousing.md)
 
-See Also:
+See also:
 
-Related Pipeline Patterns
+Related pipeline patterns
 - Working with transactional data
     - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
     - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
     - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
-Related Technology Choices
+Related technology choices
 - Transactional data stores
     - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
     - [Data Warehouses](../technology-choices/data-warehouses.md)
