@@ -31,10 +31,12 @@ HOT PATH: Source data (web, mobile) --> Event Hubs --> Azure Stream Analytics (w
 
 ### Highlighted services
 
-* [Service1]()
-* [Service2]()
-* [Service3]()
-* [Service4]()
+* [Azure Storage blobs](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
+* [Interactive Query (Hive LLAP) on HDInsight](https://docs.microsoft.com/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
+* [Power BI](https://docs.microsoft.com/power-bi/)
+* [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs/)
+* [Azure Stream Analytics](https://docs.microsoft.com/azure/stream-analytics/)
+* [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
 
 ### In this guide
 
@@ -68,19 +70,20 @@ Deep learning sample arch: https://github.com/Azure/cortana-intelligence-product
 * [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/preview/overview-what-is-azure-ml)
 * [Deep Learning Virtual Machines](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview)
 * [Apache Spark on HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql)
-* [Service4]()
+* [Azure Storage blobs](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
+* [HDInsight with Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview)
+* [Azure App Service](https://docs.microsoft.com/azure/app-service/)
 
 ### In this guide
 
 * Common Data Architectures
-    * [Link1]()
-    * [Link2]()
+    * [Big Data](./common-architectures/big-data.md)
+    * [Advanced Analytics](./common-architectures/advanced-analytics.md)
 * Pipeline Patterns
-    * [Link1]()
-    * [Link2]()
+    * [Machine Learning at scale](./pipeline-patterns/machine-learning-at-scale.md)
 * Technology Choices
-    * [Link1]()
-    * [Link2]()
+    * [Options for processing CSV and JSON files](./technology-choices/csv-json-options.md)
+    * [Data science and machine learning](./technology-choices/data-science-and-machine-learning.md)
 
 ## Hybrid
 
@@ -98,20 +101,20 @@ https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybr
 
 * [Azure Stack](https://docs.microsoft.com/azure/azure-stack/azure-stack-poc)
 * [ExpressRoute](https://docs.microsoft.com/azure/expressroute/expressroute-introduction)
-* [Service3]()
-* [Service4]()
+* [Azure App Service](https://docs.microsoft.com/azure/app-service/)
+* [SQL Server Stretch Database](https://docs.microsoft.com/azure/sql-server-stretch-database/)
 
 ### In this guide
 
 * Common Data Architectures
-    * [Link1]()
-    * [Link2]()
+    * [Relational data](./common-architectures/relational-data.md)
 * Pipeline Patterns
-    * [Link1]()
-    * [Link2]()
+    * [Hybrid on-premises and cloud solutions](./pipeline-patterns/hybrid-on-premises-and-cloud.md)
+    * [Online Transaction Processing (OLTP)](./pipeline-patterns/online-transaction-processing.md)
 * Technology Choices
-    * [Link1]()
-    * [Link2]()
+    * [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md)
+    * [Data transfer](./technology-choices/data-transfer.md)
+    * [Data ingest](./technology-choices/data-ingest.md)
 
 ## Clickstream Analysis
 
@@ -123,22 +126,23 @@ Source (web/mobile) --> Event Hubs or Apache Kafka --> Apache Spark on HDInsight
 
 ### Highlighted services
 
-* [Event Hubs](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-introduction)
-* [Apache Spark on HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql)
-* [Service3]()
-* [Service4]()
+* [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs/)
+* [HDInsight with Apache Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql)
+* [HDInsight with Kafka](https://docs.microsoft.com/azure/hdinsight/kafka/apache-kafka-get-started)
+* [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/)
 
 ### In this guide
 
 * Common Data Architectures
-    * [Link1]()
-    * [Link2]()
+    * [Big Data](./common-architectures/big-data.md)
 * Pipeline Patterns
-    * [Link1]()
-    * [Link2]()
+    * [Processing CSV and JSON files](./pipeline-patterns/processing-csv-and-json-files.md)
+    * [Processing free-form text](./pipeline-patterns/processing-free-form-text.md)
 * Technology Choices
-    * [Link1]()
-    * [Link2]()
+    * [Search technology choices](./technology-choices/search-options.md)
+    * [Data ingest](./technology-choices/data-ingest.md)
+    * [Natural language processing](./technology-choices/natural-language-processing.md)
+    * [Real-time processing](./technology-choices/real-time-processing.md)
 
 ## Business Intelligence
 
@@ -154,23 +158,24 @@ Source data --> SQL Data Warehouse --> Azure Analysis Services --> Power BI
 
 ### Highlighted services
 
-* [Power BI]()
-* [Azure Analysis Services]()
-* [Azure SQL Data Warehouse]()
-* [Service4]()
+* [Power BI](https://docs.microsoft.com/power-bi/)
+* [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/)
+* [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
+* [Azure Data Factory]()
 
 ### In this guide
 
 * Common Data Architectures
-    * [Link1]()
-    * [Link2]()
+    * [Semantic modeling](./common-architectures/semantic-modeling.md)
+    * [Data pipeline](./common-architectures/data-pipeline.md)
 * Pipeline Patterns
-    * [Link1]()
-    * [Link2]()
+    * [Data warehousing](./pipeline-patterns/data-warehousing.md)
+    * [Online Analytical Processing (OLAP)](./pipeline-patterns/online-analytical-processing.md)
 * Technology Choices
     * [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
+    * [Data warehouses](./technology-choices/data-warehouses.md)
 
-## Smart Applications (MS term is Intelligent Applications)
+## Intelligent Applications
 
 Quickly add intelligence to your applications with Cognitive Services, and coordinate automated interactions using Azure Bot Service. This can save you months of creating and refining sophisticated algorithms to naturally interact with your users through speech, text, vision, knowledge, and search capabilities.
 
