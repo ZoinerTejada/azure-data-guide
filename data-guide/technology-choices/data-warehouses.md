@@ -16,6 +16,7 @@ SMP (small/medium data):
 
 - [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
 - [SQL Server in a virtual machine](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)
+- Azure SQL Database managed instance
 
 MPP (big data):
 
@@ -23,7 +24,7 @@ MPP (big data):
 - [Apache Hive on HDInsight](https://docs.microsoft.com/azure/hdinsight/hadoop/hdinsight-use-hive)
 - [Interactive Query (Hive LLAP) on HDInsight](https://docs.microsoft.com/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
 
-The list above is broken into two categories: [SMP](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) (symmetric multiprocessing) and [MPP](https://en.wikipedia.org/wiki/Massively_parallel) (massively parallel). As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is oftentimes used for big data. The delineation between small/medium and big data has, in part, to do with your organization's definition and supporting infrastructure, as well as the [limitation of the data sizes imposed by the technology choices within](oltp-data-stores.md#scalability-capabilities) your infrastructure. Beyond data sizes, the type of workload pattern you plan to support are likely a greater determining factor. For instance, complex queries may be too slow for an SMP solution, and require an MPP solution instead. MPP-based systems are likely to impose a performance penalty with small data sizes, due to how jobs are distributed and consolidated across nodes. If your data sizes are already exceeding 1 TB and are expected to continually grow, you may want to consider selecting an MPP solution.
+The list above is broken into two categories: [SMP](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) (symmetric multiprocessing) and [MPP](https://en.wikipedia.org/wiki/Massively_parallel) (massively parallel). As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is oftentimes used for big data. The delineation between small/medium and big data has, in part, to do with your organization's definition and supporting infrastructure, as well as the [limitation of the data sizes imposed by the technology choices within](oltp-data-stores.md#scalability-capabilities) your infrastructure. Beyond data sizes, the type of workload pattern you plan to support are likely a greater determining factor. For instance, complex queries may be too slow for an SMP solution, and require an MPP solution instead. MPP-based systems are likely to impose a performance penalty with small data sizes, due to how jobs are distributed and consolidated across nodes. All things considered, the general guidance is if your data sizes are already exceeding 1 TB and are expected to continually grow, you may want to consider selecting an MPP solution. However, if your data sizes are less than this, but your workloads are exceeding the available resources of your SMP solution, then MPP may be your best option as well.
 
 As mentioned in the [data warehousing pipeline pattern](../pipeline-patterns/data-warehousing.md#data-warehousing-in-azure) article, the data accessed or stored by your data warehouse could come from a number of data sources, including a [data lake](../common-architectures/big-data.md#datalake), such as [Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/). For a video session that compares the different strengths of MPP services that can use Azure Data Lake, see [Azure Data Lake and Azure Data Warehouse: Applying Modern Practices to Your App](https://azure.microsoft.com/resources/videos/build-2016-azure-data-lake-and-azure-data-warehouse-applying-modern-practices-to-your-app/).
 
@@ -68,16 +69,16 @@ Based on your responses to the questions above, the following tables will help y
 
 ### General capabilities
 
-| | Azure SQL Database | SQL Server in a virtual machine | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
-| --- | --- | --- | --- | --- | --- |
-| Is managed service | Yes | No | Yes | Yes&mdash;with manual configuration/scaling | Yes&mdash;with manual configuration/scaling |
-| Requires data orchestration (holds copy of data/historical data) | No | No | Yes | Yes | Yes |
-| Easily integrate multiple data sources | No | No | Yes | Yes | Yes |
-| Supports pausing compute | No | No | Yes | No \*** | No \*** |
-| Relational data store | Yes | Yes | Yes | No | No |
-| Real-time reporting | Yes | Yes | No | No | Yes |
-| Flexible backup restore points | Yes | Yes | No * | Yes ** | Yes ** |
-| SMP/MPP | SMP | SMP | MPP | MPP | MPP |
+| | Azure SQL Database | SQL Server in a virtual machine | Azure SQL Database managed instance | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
+| --- | --- | --- | --- | --- | --- | -- |
+| Is managed service | Yes | No | Yes | Yes | Yes&mdash;with manual configuration/scaling | Yes&mdash;with manual configuration/scaling |
+| Requires data orchestration (holds copy of data/historical data) | No | No | No | Yes | Yes | Yes |
+| Easily integrate multiple data sources | No | No | No | Yes | Yes | Yes |
+| Supports pausing compute | No | No | No | Yes | No \*** | No \*** |
+| Relational data store | Yes | Yes | Yes | Yes | No | No |
+| Real-time reporting | Yes | Yes | Yes | No | No | Yes |
+| Flexible backup restore points | Yes | Yes | Yes | No * | Yes ** | Yes ** |
+| SMP/MPP | SMP | SMP | SMP | MPP | MPP | MPP |
 
 \* With SQL Data Warehouse, you can restore a database to any available restore point within the last seven days. Snapshots start every four to eight hours and are available for seven days. When a snapshot is older than seven days, it expires and its restore point is no longer available.
 
@@ -87,26 +88,26 @@ Based on your responses to the questions above, the following tables will help y
 
 ### Scalability capabilities
 
-| | Azure SQL Database | SQL Server in a virtual machine | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
-| --- | --- | --- | --- | --- | --- |
-| Redundant regional servers for high availability  | Yes | Yes | Yes | No | No |
-| Supports query scale out (distributed queries)  | No | No | Yes | Yes | Yes |
-| Dynamic scalability (scale up)  | Yes | No | Yes * | No | No |
+| | Azure SQL Database | SQL Server in a virtual machine | Azure SQL Database managed instance | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
+| --- | --- | --- | --- | --- | --- | -- |
+| Redundant regional servers for high availability  | Yes | Yes | Yes | Yes | No | No |
+| Supports query scale out (distributed queries)  | No | No | No | Yes | Yes | Yes |
+| Dynamic scalability (scale up)  | Yes | No | Yes | Yes * | No | No |
 | Supports in-memory caching of data | Yes | Yes | Yes | No | Yes |
 
 \* SQL Data Warehouse allows you to scale up or down compute by [adjusting the number of data warehouse units (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-manage-compute-overview).
 
 ### Security capabilities
 
-| | Azure SQL Database | SQL Server in a virtual machine | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
-| --- | --- | --- | --- | --- | --- |
-| Authentication  | SQL / Azure Active Directory | SQL / Azure Active Directory | SQL / Azure Active Directory | local / Azure Active Directory * | local / Azure Active Directory * |
-| Authorization  | Yes | Yes | Yes | Yes * | Yes * |
-| Auditing  | Yes | Yes | Yes | Yes * | Yes * |
-| Data encryption at rest | Yes ** | Yes ** | Yes ** | Yes * | Yes * |
-| Row-level security | Yes | Yes | No | Yes * | Yes * |
-| Supports firewalls | Yes | Yes | Yes | Yes \*** | Yes \*** |
-| Dynamic data masking | Yes | Yes | No | Yes * | Yes * |
+| | Azure SQL Database | SQL Server in a virtual machine | Azure SQL Database managed instance | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
+| --- | --- | --- | --- | --- | --- | -- |
+| Authentication  | SQL / Azure Active Directory | SQL / Azure Active Directory / Active Directory | SQL / Azure Active Directory | SQL / Azure Active Directory | local / Azure Active Directory * | local / Azure Active Directory * |
+| Authorization  | Yes | Yes | Yes | Yes | Yes * | Yes * |
+| Auditing  | Yes | Yes | Yes | Yes | Yes * | Yes * |
+| Data encryption at rest | Yes ** | Yes ** | Yes ** | Yes ** | Yes * | Yes * |
+| Row-level security | Yes | Yes | Yes | No | Yes * | Yes * |
+| Supports firewalls | Yes | Yes | Yes | Yes | Yes \*** | Yes \*** |
+| Dynamic data masking | Yes | Yes | Yes | No | Yes * | Yes * |
 
 \* Requires using a [domain-joined HDInsight cluster](https://docs.microsoft.com/azure/hdinsight/domain-joined/apache-domain-joined-introduction).
 
