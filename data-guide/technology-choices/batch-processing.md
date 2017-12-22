@@ -1,4 +1,4 @@
-# Batch Processing Technology Choices
+# Batch processing
 
 [About]()  
 [What are your options when choosing a technology for batch processing?](#options)  
@@ -14,6 +14,7 @@ The key requirement of such batch processing engines is that they are capable of
 
 ## <a name="options"></a> What are your options when choosing a technology for batch processing?
 In Azure, all of the following data stores will meet the core requirements supporting batch processing:
+
 - [Azure Data Lake Analytics](https://docs.microsoft.com/azure/data-lake-analytics/)
 - [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
 - [HDInsight with Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview)
@@ -21,11 +22,13 @@ In Azure, all of the following data stores will meet the core requirements suppo
 - [HDInsight with Hive LLAP](https://docs.microsoft.com/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
 
 ## <a name="howtochoose"></a> How do you choose?
+
 Each service brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements. 
 
 ## <a name="criteria"></a> Key selection criteria
 
-The following table summarize the key differences in capabilities between each. <!--See note from analysis-visualizations-reporting.md-->For real-time processing scenarios, begin choosing the appropriate service for your needs by answering these questions:
+For batch processing processing scenarios, begin choosing the appropriate service for your needs by answering these questions:
+
 - Do you want a managed service or do you prefer to setup and manage the cluster of virtual machines running the processing?
     - If yes, then narrow your options to those that are managed services.
 - Do you want to author batch processing logic declaratively (for example, as SQL queries) or imperatively (for example, Python or Java code)?
@@ -37,21 +40,23 @@ The following table summarize the key differences in capabilities between each. 
 
 ## <a name="matrix"></a> Capability matrix
 
+Based on your responses to the questions above, the following tables will help you select the choice that's right for you.
+
 ### General capabilities
 
-| | Azure Data Lake Analytics | SQL Data Warehouse | HDInsight with Spark | HDInsight with Hive | HDInsight with Hive LLAP |
+| | Azure Data Lake Analytics | Azure SQL Data Warehouse | HDInsight with Spark | HDInsight with Hive | HDInsight with Hive LLAP |
 | --- | --- | --- | --- | --- | --- |
 | Is managed service | Yes | Yes | Yes&mdash;with manual configuration/scaling | Yes&mdash;with manual configuration/scaling | Yes&mdash;with manual configuration/scaling |
 | Supports pausing compute | No | Yes | No | No | No |
 | Relational data store | Yes | Yes | No | No | No |
 | Programmability | U-SQL | T-SQL | Python, Scala, Java, R | HiveQL | HiveQL |
 | Programming paradigm | Mixture of declarative and imperative  | Declarative | Mixture of declarative and imperative | Declarative | Declarative | 
-| Pricing model | Per batch job (by resources utilized) | By cluster hour | By cluster hour | By cluster hour | By cluster hour |  
+| Pricing model | Per batch job (by job run/hour * analytics unit used) | By cluster hour | By cluster hour | By cluster hour | By cluster hour |  
 
 ### Integration capabilities
 | | Azure Data Lake Analytics | SQL Data Warehouse | HDInsight with Spark | HDInsight with Hive | HDInsight with Hive LLAP |
 | --- | --- | --- | --- | --- | --- |
-| Query from Azure Data Lake Store | Yes | Yes | Yes | Yes | Yes |
+| Access from Azure Data Lake Store | Yes | Yes | Yes | Yes | Yes |
 | Query from Azure Storage | Yes | Yes | Yes | Yes | Yes |
 | Query from external relational stores (like Azure SQL Database, SQL Server in virtual machine or Azure SQL Data Warehouse) | Yes | No | Yes | No | No |
 
@@ -68,7 +73,7 @@ The following table summarize the key differences in capabilities between each. 
 | Authentication  | Azure Active Directory | SQL / Azure Active Directory | No | local / Azure Active Directory * | local / Azure Active Directory * |
 | Authorization  | Yes | Yes| No | Yes * | Yes * |
 | Auditing  | Yes | Yes | No | Yes * | Yes * |
-| Data encryption at rest | Yes| Yes | Yes | Yes | Yes |
+| Data encryption at rest | Yes| Yes ** | Yes | Yes | Yes |
 | Row-level security | No | Yes | No | Yes * | Yes * |
 | Supports firewalls | Yes | Yes | Yes | Yes \*** | Yes \*** |
 | Dynamic data masking | No | No | No | Yes * | Yes * |
