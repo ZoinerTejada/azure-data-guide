@@ -132,6 +132,8 @@ Hive LLAP on HDInsight
 Azure Analysis Services
 Cosmos DB
 
+## [Options for processing CSV and JSON files](./technology-choices/csv-json-options.md)
+
 ## [Machine Learning Model Training]()
 ### [Azure Machine Learning (Studio)]()
 ### [Azure Machine Learning Experimentation Service]()

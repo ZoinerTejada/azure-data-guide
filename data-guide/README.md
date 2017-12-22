@@ -56,6 +56,8 @@
 
 ## [Data Serving Storage](./technology-choices/data-serving-storage.md)
 
+## [Options for processing CSV and JSON files](./technology-choices/csv-json-options.md)
+
 ## Applied artificial intelligence & cognitive services
 ### [Data Science and Machine Learning](./technology-choices/data-science-and-machine-learning.md)
 ### [Cognitive Services](./technology-choices/cognitive-services.md)
