@@ -1,5 +1,5 @@
 
-# Cognitive Services Technology Choices
+# Cognitive services technology choices
 
 [About]()  
 [What are your options when choosing amongst the cognitive services?](#options)  
