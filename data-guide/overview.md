@@ -174,6 +174,7 @@ Source data --> SQL Data Warehouse --> Azure Analysis Services --> Power BI
 * Technology Choices
     * [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
     * [Data warehouses](./technology-choices/data-warehouses.md)
+    * [Options for pipeline orchestration, control flow, and data movement](./technology-choices/pipeline-orchestration-data-movement.md)
 
 ## Intelligent Applications
 
@@ -192,22 +193,22 @@ Custom Speech Service
 
 ### Highlighted services
 
-* [Service1]()
-* [Service2]()
-* [Service3]()
-* [Service4]()
+* [Azure App Service](https://docs.microsoft.com/azure/app-service/)
+* [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
+* [Azure Bot Service](https://docs.microsoft.com/bot-framework/bot-service-overview-introduction)
+* [Custom Speech Service](https://docs.microsoft.com/azure/cognitive-services/custom-speech-service/cognitive-services-custom-speech-home)
+* [Azure Cognitive Services](https://azure.microsoft.com/services/cognitive-services)
+* [Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c)
 
 ### In this guide
 
 * Common Data Architectures
-    * [Link1]()
-    * [Link2]()
+    * [Advanced Analytics](./common-architectures/advanced-analytics.md)
 * Pipeline Patterns
-    * [Link1]()
-    * [Link2]()
+    * [Online Transaction Processing (OLTP)](./pipeline-patterns/online-transaction-processing.md)
 * Technology Choices
-    * [Link1]()
-    * [Link2]()
+    * [Online Transaction Processing (OLTP) data stores](./technology-choices/oltp-data-stores.md)
+    * [Cognitive Services](./technology-choices/cognitive-services.md)
 
 ## Data Warehousing
 
@@ -222,22 +223,26 @@ Multiple data sources (IoT, logs, internal sources, social media) --> Azure Data
 
 ### Highlighted services
 
-* [Service1]()
-* [Service2]()
-* [Service3]()
-* [Service4]()
+* [Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/)
+* [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
+* [Azure Data Factory](https://github.com/ZoinerTejada/azure-data-guide/blob/master/data-guide)
+* [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/get-started-with-polybase)
+* [Power BI](https://docs.microsoft.com/power-bi/)
 
 ### In this guide
 
 * Common Data Architectures
-    * [Link1]()
-    * [Link2]()
+    * [Semantic modeling](./common-architectures/semantic-modeling.md)
+    * [Relational data](./common-architectures/relational-data.md)
 * Pipeline Patterns
-    * [Link1]()
-    * [Link2]()
+    * [Data warehousing](./pipeline-patterns/data-warehousing.md)
+    * [Online Analytical Processing (OLAP)](./pipeline-patterns/online-analytical-processing.md)
 * Technology Choices
-    * [Link1]()
-    * [Link2]()
+    * [Data warehouses](./technology-choices/data-warehouses.md)
+    * [Data ingest](./technology-choices/data-ingest.md)
+    * [Options for pipeline orchestration, control flow, and data movement](./technology-choices/pipeline-orchestration-data-movement.md)
+    * [Data transfer](./technology-choices/data-transfer.md)
+    * [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
 
 ## ETL
 
@@ -249,22 +254,23 @@ Application Insights --> Blob Storage --> Azure Data Factory (transform with SSI
 
 ### Highlighted services
 
-* [Azure Data Factory]()
+* [Azure Data Factory](https://github.com/ZoinerTejada/azure-data-guide/blob/master/data-guide)
 * [Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
-* [Service3]()
-* [Service4]()
+* [Azure Storage blobs](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
+* [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
+* [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
 
 ### In this guide
 
 * Common Data Architectures
-    * [Link1]()
-    * [Link2]()
+    * [Data pipeline](./common-architectures/data-pipeline.md)
+    * [Relational data](./common-architectures/relational-data.md)
 * Pipeline Patterns
-    * [Link1]()
-    * [Link2]()
+    * [Online Transaction Processing (OLTP)](./pipeline-patterns/online-transaction-processing.md)
+    * [Monitoring data solutions](./pipeline-patterns/monitoring-data-solutions.md)
 * Technology Choices
-    * [Link1]()
-    * [Link2]()
+    * [Options for pipeline orchestration, control flow, and data movement](./technology-choices/pipeline-orchestration-data-movement.md)
+    * [Data ingest](./technology-choices/data-ingest.md)
 
 # How this guide is structured
 This guide is structured so that your entry point to the content can be at the level of the common architecture, the pipeline pattern, or the technology choices for a particular pipeline scenario. 
