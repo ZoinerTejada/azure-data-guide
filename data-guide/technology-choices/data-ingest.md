@@ -1,4 +1,4 @@
-# Data Ingest
+# Data ingest
 
 [About]()  
 [What are your options when choosing a data ingest method?](#options)  
@@ -13,23 +13,25 @@
 There are several options for ingesting data into Azure, depending on your needs:
 
 - [File storage](#filestorage)
-    - Azure Storage Blob Containers
-    - Azure Data Lake Store
+    - [Azure Storage blobs](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
+    - [Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/)
 - [NoSQL databases](#nosql)
-    - Cosmos DB
-    - HBase on HDInsight
+    - [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/)
+    - [HBase on HDInsight](http://hbase.apache.org/)
 - [Streaming/real-time ingest](#streaming)
-    - Event Hubs
-    - IoT Hub
-    - Kafka on HDInsight
+    - [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs/)
+    - [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/)
+    - [Kafka on HDInsight](https://docs.microsoft.com/azure/hdinsight/kafka/apache-kafka-get-started)
 
 ### <a name="filestorage"></a> File storage
 
-#### Azure Storage blob containers
-<!--So the style guide says: Microsoft Azure Blob storage on first use. After that it's just Blob storage. I'm not sure whether the section title should change to Azure Blob storage, or if containers is a key word there, or what. Also I made blob lowercase because generic blob container, not a reference to the actual service are lowercase.-->
-Microsoft Azure Blob storage is a Microsoft-managed cloud service that provides storage that is highly available, secure, durable, scalable, and redundant. Microsoft takes care of maintenance and handles critical problems for you.
+#### Azure Storage blobs
+
+Azure Storage is a Microsoft-managed cloud service that provides storage that is highly available, secure, durable, scalable, and redundant. Microsoft takes care of maintenance and handles critical problems for you. Azure Storage is the most ubiquitous storage solution Azure provides, due to the number of services and tools that can be used with it.
 
 There are various Azure Storage services you can use to store data. The most flexible service option for storing blobs from a number of data sources is [Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction). Blobs are basically files like those that you store on your computer (or tablet, mobile device, and so on). They can be pictures, Microsoft Excel files, HTML files, virtual hard disks (VHDs), big data such as logs, database backups&mdash;pretty much anything. Blobs are stored in containers, which are similar to folders. A container provides a grouping of a set of blobs. All blobs must be in a container. An account can contain an unlimited number of containers. A container can store an unlimited number of blobs.
+
+Azure Storage is an excellent choice for big data and analytics solutions, given its flexibility, high availability, and low cost, compared to other options, such as Azure Data Lake Store. Its option of [three storage tiers](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers) allow you to store your data most cost-effectively, depending on how you use it. These include the hot storage tier for frequently accessed data, cool storage tier for less frequently accessed data, and the archive storage tier for rarely accessed data.
 
 After storing files in Blob storage, you can access them from anywhere in the world using URLs, the REST interface, or one of the Azure SDK storage client libraries. Storage client libraries are available for multiple languages, including Node.js, Java, PHP, Ruby, Python, and .NET.
 
@@ -39,15 +41,24 @@ There are three types of blobs&mdash;block blobs, page blobs (used for VHD files
 - **Page blobs** are used to hold random access files up to 8 TB in size. These are used for the VHD files that back virtual machines.
 - **Append blobs** are made up of blocks like the block blobs, but are optimized for append operations. These are used for things like logging information to the same blob from multiple virtual machines.
 
-Azure Blob storage can be accessed from Hadoop (available through HDInsight). HDInsight can use a blob container in Azure Storage as the default file system for the cluster. Through a Hadoop distributed file system (HDFS) interface, the full set of components in HDInsight can operate directly on structured or unstructured data stored as blobs. Azure Blob storage can also be accessed via Azure SQL Data Warehouse using its PolyBase feature. 
+Azure Blob storage can be accessed from Hadoop (available through HDInsight). HDInsight can use a blob container in Azure Storage as the default file system for the cluster. Through a Hadoop distributed file system (HDFS) interface provided by a WASB driver, the full set of components in HDInsight can operate directly on structured or unstructured data stored as blobs. Azure Blob storage can also be accessed via Azure SQL Data Warehouse using its PolyBase feature.
+
+Other options that make Azure Storage a good choice are:
+
+- [Multiple concurrency strategies](https://docs.microsoft.com/azure/storage/common/storage-concurrency?toc=%2fazure%2fstorage%2fblobs%2ftoc.json)
+- [Flexible disaster recovery and high availability options](https://docs.microsoft.com/azure/storage/common/storage-disaster-recovery-guidance?toc=%2fazure%2fstorage%2fblobs%2ftoc.json), like Geo-redundant storage (GRS) and Read-access geo-redundant storage (RA-GRS)
+- [Encryption at rest](https://docs.microsoft.com/azure/storage/common/storage-service-encryption?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) to help protect and safeguard your data
+- [Role-Based Access Control (RBAC)](https://docs.microsoft.com/azure/storage/common/storage-security-guide?toc=%2fazure%2fstorage%2fblobs%2ftoc.json#management-plane-security) to control access using Azure Active Directory users and groups
 
 #### Azure Data Lake Store
 
-[Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/) <!--Acronyms using Azure are prohibited except in a few, rare cases.However, just Data Lake or Data Lake Store is permitted.--> is an enterprise-wide hyper-scale repository for big data analytic workloads. Data Lake enables you to capture data of any size, type, and ingestion speed in one single [secure](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-overview#DataLakeStoreSecurity) location for operational and exploratory analytics.
+[Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/) is an enterprise-wide hyper-scale repository for Big Data analytic workloads. Data Lake enables you to capture data of any size, type, and ingestion speed in one single [secure](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-overview#DataLakeStoreSecurity) location for operational and exploratory analytics.
 
-Data Lake Store does not impose any limits on account sizes, file sizes, or the amount of data that can be stored in a data lake. Data is stored durably by making multiple copies and there is no limit on the duration of time that the data can be stored in the Data Lake. <!--Should be capped unless this is a generic instance, although the style guide doesn't appear to consider that like it does for some terms.-->In addition to making multiple copies of files to guard against any unexpected failures, Data lake spreads parts of a file over a number of individual storage servers. This improves the read throughput when reading the file in parallel for performing data analytics.
+Data Lake Store does not impose any limits on account sizes, file sizes, or the amount of data that can be stored in a data lake. Data is stored durably by making multiple copies and there is no limit on the duration of time that the data can be stored in the Data Lake. In addition to making multiple copies of files to guard against any unexpected failures, Data lake spreads parts of a file over a number of individual storage servers. This improves the read throughput when reading the file in parallel for performing data analytics.
 
-Data Lake Store can be accessed from Hadoop (available through HDInsight) using the WebHDFS-compatible REST APIs. It is specifically designed to enable analytics on the stored data and is tuned for performance for data analytics scenarios. Out of the box, it includes all the enterprise-grade capabilities&mdash;security, manageability, scalability, reliability, and availability&mdash;essential for real-world enterprise use cases. Data Lake Store can also be accessed via Azure SQL Data Warehouse using its PolyBase feature. 
+As an alternative to Azure Storage, Data Lake Store can be accessed from Hadoop (available through HDInsight) using the WebHDFS-compatible REST APIs. You may consider using this as an alternative to Azure Storage when your individual or combined file sizes exceed that which is supported by Azure Storage. However, there are [performance tuning guidelines](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-performance-tuning-guidance#optimizing-io-intensive-jobs-on-hadoop-and-spark-workloads-on-hdinsight) you should follow when using Data Lake Store as your primary storage for an HDInsight cluster, with specific guidelines for [Spark](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-performance-tuning-spark), [Hive](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-performance-tuning-hive), [MapReduce](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-performance-tuning-mapreduce), and [Storm](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-performance-tuning-storm). Also, be sure to check Data Lake Store's [regional availability](https://azure.microsoft.com/regions/#services), because it is not available in as many regions as Azure Storage, and it needs to be located in the same region as your HDInsight cluster.
+
+Coupled with Azure Data Lake Analytics, Data Lake Store is specifically designed to enable analytics on the stored data and is tuned for performance for data analytics scenarios. Data Lake Store can also be accessed via Azure SQL Data Warehouse using its PolyBase feature.
 
 ### <a name="nosql"></a> NoSQL databases
 
@@ -100,7 +111,7 @@ It is not uncommon to use a combination of IoT Hub and Event Hubs or [Kafka](htt
 
 [Apache Kafka](https://kafka.apache.org/) is an open-source distributed streaming platform that can be used to build real-time data pipelines and streaming applications. Kafka also provides message broker functionality similar to a message queue, where you can publish and subscribe to named data streams. It is horizontally scalable, fault-tolerant, and extremely fast.
 
-[Kafka on HDInsight](https://docs.microsoft.com/azure/hdinsight/kafka/apache-kafka-get-started) provides you with a managed, highly scalable, and highly available service in Azure.
+[Kafka on HDInsight](https://docs.microsoft.com/azure/hdinsight/kafka/apache-kafka-get-started) provides you with a managed, highly scalable, and highly available service in Azure. Both Kafka and Event Hubs can be used as your stream buffering layer in your real-time data pipeline when ingesting events. Use the [Streaming/real-time ingest capabilities](#streamingreal-time-ingest-capabilities) matrix to compare these options.
 
 Some common use cases for Kafka are:
 
@@ -110,11 +121,12 @@ Some common use cases for Kafka are:
 * **Transformation**: Using stream processing, you can combine and enrich data from multiple input topics into one or more output topics.
 
 ## <a name="howtochoose"></a> How do you choose?
+
 Each data ingest service brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements.
 
 ## <a name="criteria"></a> Key selection criteria
 
-The following tables summarize the key differences in capabilities between each. <!--See note from analysis-visualizations-reporting.md-->For data ingest scenarios, choose the appropriate system for your needs by answering these questions:
+For data ingest scenarios, choose the appropriate system for your needs by answering these questions:
 
 - Do you need managed, high speed, cloud-based storage for any type of text or binary data?
     - If yes, then select one of the file storage options.
@@ -128,21 +140,25 @@ The following tables summarize the key differences in capabilities between each.
     - If so, narrow your streaming/real-time ingest capability options to those that provide cloud-to-device communication patterns.
 - Does your streaming solution require the ability to manage access for individual devices, and have the ability to revoke access to a specific device?
     - If yes, select the service with a security capability that provides per-device identity and revocable access control.
+- Can you use the service in your region?
+    - Check the [regional availability for each Azure service](https://azure.microsoft.com/regions/#services) to find out. If the service you want to use is not in your region, or nearby, then that could automatically disqualify it from your options. This is especially true in situations when data sovereignty is a high priority.
 
 ## <a name="matrix"></a> Capability matrix
 
+Based on your responses to the questions above, the following tables will help you select the choice that's right for you.
+
 ### File storage capabilities
-<!--These are some dense tables, but they do provide a good way to see the options at a glance. I tried not to mess with them too much. But in some places it might be better to use a line break for the next item, rather than a comma then a capped word. I leave that up to you. Also, there are some text dense boxes where you have multiple sentences. I added periods to the last sentence in those cases because it looked weird to me to have a sentence or two that ended with a period and the last one to not have one. -->
+
 |  | Azure Data Lake Store | Azure Blob Storage containers |
 | --- | --- | --- |
 | Purpose | Optimized storage for big data analytics workloads |General purpose object store for a wide variety of storage scenarios |
-| Use cases | Batch, interactive, streaming analytics and machine learning data such as log files, IoT data, click streams, large datasets | Any type of text or binary data, such as application back end, backup data, media storage for streaming, and general purpose data |
+| Use cases | Batch, streaming analytics, and machine learning data such as log files, IoT data, click streams, large datasets | Any type of text or binary data, such as application back end, backup data, media storage for streaming, and general purpose data |
 | Key concepts | Data Lake Store account contains folders, which in turn contains data stored as files | Storage account has containers, which in turn has data in the form of blobs |
 | Structure | Hierarchical file system | Object store with flat namespace |
 | API | REST API over HTTPS | REST API over HTTP/HTTPS |
-| Server-side API | [WebHDFS-compatible REST API](https://msdn.microsoft.com/library/azure/mt693424.aspx) | [Azure Blob Storage REST API](https://msdn.microsoft.com/library/azure/dd135733.aspx) |
+| Server-side API | Proprietary [WebHDFS-compatible REST API](https://msdn.microsoft.com/library/azure/mt693424.aspx) | [Azure Blob Storage REST API](https://msdn.microsoft.com/library/azure/dd135733.aspx) |
 | Hadoop file system client | Yes |Yes |
-| Data operations&mdash;authentication | Based on [Azure Active Directory Identities](https://docs.microsoft.com/azure/active-directory/active-directory-authentication-scenarios) | Based on shared secrets [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account) and [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
+| Data operations&mdash;authentication | Based on [Azure Active Directory Identities](https://docs.microsoft.com/azure/active-directory/active-directory-authentication-scenarios) | Based on shared secrets [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account) and [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1), and [Role-Based Access Control (RBAC)](https://docs.microsoft.com/azure/security/security-storage-overview) |
 | Data operations&mdash;authentication protocol | OAuth 2.0. Calls must contain a valid JWT (JSON web token) issued by Azure Active Directory | Hash-based message authentication code (HMAC). Calls must contain a Base64-encoded SHA-256 hash over a part of the HTTP request. |
 | Data operations&mdash;authorization | POSIX access control lists (ACLs). ACLs based on Azure Active Directory identities can be set file and folder level. | For account-level authorization use [Account Access Keys](https://docs.microsoft.com/azure/storage/common/storage-create-storage-account#manage-your-storage-account)<br>For account, container, or blob authorization use [Shared Access Signature Keys](https://docs.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
 | Data Operations&mdash;Auditing | Available. See [here](data-lake-store-diagnostic-logs) for information. |Available |
