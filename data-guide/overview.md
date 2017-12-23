@@ -89,6 +89,8 @@ Deep learning sample arch: https://github.com/Azure/cortana-intelligence-product
 
 When you need hybrid on-premises and cloud options, nothing comes close to Azure. Use [Azure Stack](https://docs.microsoft.com/azure/azure-stack/azure-stack-poc) to deliver Azure services from your own datacenter, using the same tools in both environments for unmatched consistency, allowing you to deploy your data solution to the location that best meets your needs. [Use ExpressRoute](https://docs.microsoft.com/azure/azure-stack/azure-stack-connect-expressroute) for a private, dedicated and high speed connection that extends your on-premises network into Azure.
 
+![Hybrid](./images/implementation-example_hybrid.png)
+
 [Azure Stack hosting functions/web apps] - [express route or internet] -> [App Services that consume data from on-premises]
 [SQL Server Database on-premises] - [express route or internet] -> [Azure stretch database]
 
