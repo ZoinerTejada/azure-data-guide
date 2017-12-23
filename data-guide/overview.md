@@ -148,11 +148,12 @@ Source (web/mobile) --> Event Hubs or Apache Kafka --> Apache Spark on HDInsight
 
 Azure offers a rich data and analytics platform so you can build scalable BI and reporting solutions. Create rich, interactive reports with Power BI by having it connect to Azure Analysis Services, which uses a highly optimized in-memory engine to provide responses to queries against user-friendly semantic models within a fraction of a second. The underlying data is provided by Azure SQL Data Warehouse, acting as a central repository of integrated data from one or more disparate sources.
 
+![Business Intelligence](./images/implementation-example_business-intelligence.png)
+
 Source data --> SQL Data Warehouse --> Azure Analysis Services --> Power BI
 
 -----------------------------------------
     Azure Data Factory drives the process
------------------------------------------
 
 ### Highlighted services
 
