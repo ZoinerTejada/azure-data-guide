@@ -23,6 +23,8 @@ The following examples are technology implementations we have seen directly in o
 
 Create cloud-scale, enterprise-ready Hadoop clusters in a matter of minutes for batch and real-time data processing. With Azure, you can build your entire big data processing and analytics pipeline from massive data ingest to world-class business intelligence and reporting, using the technology that's right for you.
 
+![On-Demand Big Data Analytics](./images/implementation-example_big-data-analytics.png)
+
 COLD PATH: Source data (web, mobile) --> Azure Blob storage --> HDInsight Interactive Query (Hive LLAP) --> Power BI (HDI Interactive Query connector)
 
 HOT PATH: Source data (web, mobile) --> Event Hubs --> Azure Stream Analytics (windowing queries for pre-aggregation) --> Azure SQL Server (in-memory columnstore) --> Power BI
