@@ -243,9 +243,11 @@ Multiple data sources (IoT, logs, internal sources, social media) --> Azure Data
     * [Data transfer](./technology-choices/data-transfer.md)
     * [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
 
-## ETL
+## Extract, Transform, Load (ETL)
 
 Capture web application logs and custom telemetry with Application Insights, and create, schedule, and manage your ETL data pipeline using Azure Data Factory. Deploy your SSIS packages to Azure with the Azure-SSIS integration runtime (IR) in Azure Data Factory to apply data transformation as a step in the ETL pipeline before loading the transformed data into Azure SQL Database.
+
+![ETL](./images/implementation-example_etl.png)
 
 Application Insights --> Blob Storage --> Azure Data Factory (transform with SSIS packages and load transformed data to destination) --> Azure SQL Database
 
