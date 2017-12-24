@@ -1,4 +1,4 @@
-# Machine Learning at Scale
+# Machine learning at scale
 
 [About]()  
 [When to use this data architecture](#whentouse)  
