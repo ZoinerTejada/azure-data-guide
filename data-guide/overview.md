@@ -179,6 +179,8 @@ Source data --> SQL Data Warehouse --> Azure Analysis Services --> Power BI
 
 Quickly add intelligence to your applications with Cognitive Services, and coordinate automated interactions using Azure Bot Service. This can save you months of creating and refining sophisticated algorithms to naturally interact with your users through speech, text, vision, knowledge, and search capabilities.
 
+![Intelligent Applications](./images/implementation-example_intelligent-applications.png)
+
 Azure Active Directory B2C   Cognitive Services 
    ^                              ^ 
    |                              | 
