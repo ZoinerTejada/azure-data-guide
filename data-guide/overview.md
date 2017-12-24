@@ -213,6 +213,8 @@ Custom Speech Service
 
 Store data coming in from multiple sources into Azure Data Lake in their native format. SQL Data Warehouse can directly query against the data with a combination of external tables and schema on read capabilities through PolyBase. Use Azure Data Factory to store the data you need within your warehouse, and quickly analyze and visualize the combined data with Power BI.
 
+![Data Warehousing](./images/implementation-example_data-warehousing.png)
+
 Multiple data sources (IoT, logs, internal sources, social media) --> Azure Data Lake Store --> SQL Data Warehouse --> Power BI 
                                                                       ----------------------------- 
                                                                         Orchestration: PolyBase/ADF 
