@@ -2,7 +2,7 @@
 
 This guide presents a structured approach for designing data-centric solutions on Microsoft Azure. It is based on proven practices that we have learned from customer engagements and is intended as an entry point for all data-related topics in Azure. The guide covers the big picture concepts in common data architectures and leads you to the pipeline patterns used by that architecture. The pipeline patterns are used to describe how the various processing and storage components fit together when handling the data. Finally, the technology choices will help you narrow the list of candidate Azure services appropriate to your pipeline pattern, down to those services that are most appropriate to your specific requirements.
 
-The [Implementation Examples](#implementation-examples) section below offers a snapshot of recommended services for our top customer scenarios. The examples show you a possible technology implementation and lead you into the content to understand the right technology choices for your business.
+The [Implementation Examples](#implementation-examples) section below offers a snapshot of recommended services for our top customer scenarios. Each example show you one possible technology implementation and leads you into the content to understand the right technology choices for your business.
 
 ![Overview of the structure of the guide](./images/overview-flowchart.png)
 
