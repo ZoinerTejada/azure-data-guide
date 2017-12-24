@@ -63,7 +63,7 @@ ADVANCED ANALYTICS: Apache Spark on HDInsight (or Databricks?) to train the mode
 
 DEEP LEARNING: Images (Azure Blob storage) / Metadata (Cosmos DB) --> Deep Learning Virtual Machine (train model) --> Azure Machine Learning services (containerized Docker-based web services to expose trained ML model through a predictive web service) --> Azure App Services (host web app that consumes web services and displays scored images)
 
-Deep learning sample arch: https://github.com/Azure/cortana-intelligence-product-detection-from-images/tree/master/technical_deployment
+[Deep learning sample architecture](https://github.com/Azure/cortana-intelligence-product-detection-from-images/tree/master/technical_deployment).
 
 ### Highlighted services
 
@@ -94,8 +94,7 @@ When you need hybrid on-premises and cloud options, nothing comes close to Azure
 [Azure Stack hosting functions/web apps] - [express route or internet] -> [App Services that consume data from on-premises]
 [SQL Server Database on-premises] - [express route or internet] -> [Azure stretch database]
 
-Sample architecture:
-https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/expressroute-vpn-failover
+[Hybrid sample architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/expressroute-vpn-failover).
 
 ### Highlighted services
 
