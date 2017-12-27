@@ -159,7 +159,7 @@ Source data --> SQL Data Warehouse --> Azure Analysis Services --> Power BI
 * [Power BI](https://docs.microsoft.com/power-bi/)
 * [Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-overview)
 * [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
-* [Azure Data Factory]()
+* [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/)
 
 ### In this guide
 
@@ -244,7 +244,7 @@ Multiple data sources (IoT, logs, internal sources, social media) --> Azure Data
 
 ## Extract, Transform, Load (ETL)
 
-Capture web application logs and custom telemetry with [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview), and create, schedule, and manage your ETL data pipeline using [Azure Data Factory](https://github.com/ZoinerTejada/azure-data-guide/blob/master/data-guide). Deploy your SSIS packages to Azure--with the [Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) (IR) in Azure Data Factory--to apply data transformation as a step in the ETL pipeline, before loading the transformed data into [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/).
+Capture web application logs and custom telemetry with [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview), and create, schedule, and manage your ETL data pipeline using [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/). Deploy your SSIS packages to Azure--with the [Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) (IR) in Azure Data Factory--to apply data transformation as a step in the ETL pipeline, before loading the transformed data into [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/).
 
 ![ETL](./images/implementation-example_etl.png)
 
@@ -252,7 +252,7 @@ Application Insights --> Blob Storage --> Azure Data Factory (transform with SSI
 
 ### Highlighted services
 
-* [Azure Data Factory](https://github.com/ZoinerTejada/azure-data-guide/blob/master/data-guide)
+* [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/)
 * [Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
 * [Azure Storage blobs](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
 * [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
