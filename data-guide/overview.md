@@ -210,7 +210,7 @@ Custom Speech Service
 
 ## Data Warehousing
 
-Store data coming in from multiple sources into [Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/), in their native format. [SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is) can directly query against the data with a combination of external tables and schema on read capabilities through [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/get-started-with-polybase). Use [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/) to store the data you need within your warehouse, and quickly analyze and visualize the combined data with [Power BI](https://docs.microsoft.com/power-bi/).
+Store data coming in from multiple sources into [Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview), in their native format. [SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is) can directly query against the data with a combination of external tables and schema on read capabilities through [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/get-started-with-polybase). Use [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/) to store the data you need within your warehouse, and quickly analyze and visualize the combined data with [Power BI](https://docs.microsoft.com/power-bi/).
 
 ![Data Warehousing](./images/implementation-example_data-warehousing.png)
 
@@ -221,7 +221,7 @@ Multiple data sources (IoT, logs, internal sources, social media) --> Azure Data
 
 ### Highlighted services
 
-* [Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/)
+* [Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview)
 * [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
 * [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/)
 * [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/get-started-with-polybase)
