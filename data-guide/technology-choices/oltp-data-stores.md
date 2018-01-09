@@ -91,7 +91,7 @@ The following table summarize the key differences in capabilities between each o
 
 ## <a name="wheretogo"></a>Where to go from here
 Read next:
- [Data Warehousing Solution Pattern](../pipeline-patterns/data-warehousing.md)
+ [Data Warehousing Pipeline Pattern](../pipeline-patterns/data-warehousing.md)
 
 See also:
 

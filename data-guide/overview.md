@@ -1,13 +1,15 @@
 # Azure Data Architecture Guide
 
-This guide presents a structured approach for designing data-centric solutions on Microsoft Azure. It is based on proven practices that we have learned from customer engagements and is intended as an entry point for all data-related topics in Azure. The guide covers the big picture concepts in common data architectures and leads you to the pipeline patterns used by that architecture. The pipeline patterns are used to describe how the various processing and storage components fit together when handling the data. Finally, the technology choices will help you narrow the list of candidate Azure services appropriate to your pipeline pattern, down to those services that are most appropriate to your specific requirements.
+This guide presents a structured approach for designing data-centric solutions on Microsoft Azure. It is based on proven practices derived from customer engagements and is intended as an entry point for all data-related topics in Azure. The guide covers the big picture concepts in common data architectures and leads you to the pipeline patterns used by that architecture. The pipeline patterns are used to describe how the various processing and storage components fit together when handling the data. Finally, the technology choices will help you narrow the list of candidate Azure services--that are appropriate to your pipeline pattern--down to those services that are most appropriate to your specific requirements.
 
-The [Implementation Examples](#implementation-examples) section below offers a snapshot of recommended services for our top customer scenarios. The examples show you a possible technology implementation and lead you into the content to understand the right technology choices for your business.
+The [Implementation Examples](#implementation-examples) section below offers a snapshot of recommended services for our top customer scenarios. Each example shows you one possible technology implementation and leads you into the content to understand the right technology choices for your business.
+
+<br>
 
 ![Overview of the structure of the guide](./images/overview-flowchart.png)
 
 # Introduction
-The cloud is changing the way applications are designed, including how data is processed and stored. Instead of a single, general purpose database that handles all of a solution's data, the _polyglot persistence_ approach is to use multiple, specialized databases and datastores&mdash;each optimized to provide specific capabilities needed by the solution. This approach is called polyglot persistence. The perspective on data in the solution changes as a result. It is no longer the case that there are multiple layers of business logic and a single data layer. Instead modern, polyglot persistence solutions are designed around the notion of a data pipeline that describes how data flows through a solution, where it's processed, where it's stored, and how it's consumed by the next component in the pipeline. 
+The cloud is changing the way applications are designed, including how data is processed and stored. Instead of a single, general-purpose database that handles all of a solution's data, the _polyglot persistence_ approach is to use multiple, specialized databases and datastores&mdash;each optimized to provide specific capabilities needed by the solution. This approach is called polyglot persistence. The perspective on data in the solution changes as a result. It is no longer the case that there are multiple layers of business logic and a single data layer. Instead modern, polyglot persistence solutions are designed around the notion of a data pipeline that describes how data flows through a solution, where it's processed, where it's stored, and how it's consumed by the next component in the pipeline. 
 
 The cloud is changing the way applications are designed, including how data is processed and stored. Instead of a single general-purpose database that handles all of a solution's data, the _polyglot persistence_ approach is to use multiple, specialized databases and datastores — each optimized to provide specific capabilities needed by the solution. This approach is called polyglot persistence. The perspective on data in the solution changes as a result. It is no longer the case that there are multiple layers of business logic and a single data layer. Instead modern, polyglot persistence solutions are designed around the notion of a data pipeline which describe how data flows through a solution, where it is processed, where it is stored and how its consumed by the next component in the pipeline. 
 
@@ -23,11 +25,13 @@ The following examples are technology implementations we have seen directly in o
 
 Create cloud-scale, enterprise-ready Hadoop clusters in a matter of minutes for batch and real-time data processing. With Azure, you can build your entire big data processing and analytics pipeline from massive data ingest to world-class business intelligence and reporting, using the technology that's right for you.
 
+<br>
+
+![On-Demand Big Data Analytics](./images/implementation-example_big-data-analytics.png)
+
 COLD PATH: Source data (web, mobile) --> Azure Blob storage --> HDInsight Interactive Query (Hive LLAP) --> Power BI (HDI Interactive Query connector)
 
 HOT PATH: Source data (web, mobile) --> Event Hubs --> Azure Stream Analytics (windowing queries for pre-aggregation) --> Azure SQL Server (in-memory columnstore) --> Power BI
-
-4-8 service icons
 
 ### Highlighted services
 
@@ -57,13 +61,15 @@ HOT PATH: Source data (web, mobile) --> Event Hubs --> Azure Stream Analytics (w
 
 Go beyond historical reporting and exploratory analysis of your data by enabling predictive processing and automated decision making with Azure services like [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/preview/overview-what-is-azure-ml) and [Apache Spark on HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql). When you need to harness the power of multiple GPUs to build sophisticated deep neural architectures and train them on a large data set, get a jump start on the task with [Deep Learning Virtual Machines](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview) and [CNTK](https://github.com/Microsoft/CNTK/wiki), the unified deep-learning toolkit by Microsoft.
 
+<br>
+
+![Advanced Analytics & Deep Learning](./images/implementation-example_advanced-analytics-deep-learning.png)
+
 ADVANCED ANALYTICS: Apache Spark on HDInsight (or Databricks?) to train the model --> Azure Machine Learning services (containerized Docker-based web services to expose trained ML model through a predictive web service) --> Web/mobile application that consumes the model
 
 DEEP LEARNING: Images (Azure Blob storage) / Metadata (Cosmos DB) --> Deep Learning Virtual Machine (train model) --> Azure Machine Learning services (containerized Docker-based web services to expose trained ML model through a predictive web service) --> Azure App Services (host web app that consumes web services and displays scored images)
 
-Deep learning sample arch: https://github.com/Azure/cortana-intelligence-product-detection-from-images/tree/master/technical_deployment
-
-4-8 service icons
+[Deep learning sample architecture](https://github.com/Azure/cortana-intelligence-product-detection-from-images/tree/master/technical_deployment).
 
 ### Highlighted services
 
@@ -87,15 +93,16 @@ Deep learning sample arch: https://github.com/Azure/cortana-intelligence-product
 
 ## Hybrid
 
-When you need hybrid on-premises and cloud options, nothing comes close to Azure. Use [Azure Stack](https://docs.microsoft.com/azure/azure-stack/azure-stack-poc) to deliver Azure services from your own datacenter, using the same tools in both environments for unmatched consistency, allowing you to deploy your data solution to the location that best meets your needs. [Use ExpressRoute](https://docs.microsoft.com/azure/azure-stack/azure-stack-connect-expressroute) for a private, dedicated and high speed connection that extends your on-premises network into Azure.
+When you need hybrid on-premises and cloud options, nothing comes close to Azure. Use [Azure Stack](https://docs.microsoft.com/azure/azure-stack/azure-stack-poc) to deliver Azure services from your own datacenter, using the same tools in both environments for unmatched consistency, allowing you to deploy your data solution to the location that best meets your needs. Use [ExpressRoute](https://docs.microsoft.com/azure/azure-stack/azure-stack-connect-expressroute) for a private, dedicated and high speed connection that extends your on-premises network into Azure.
+
+<br>
+
+![Hybrid](./images/implementation-example_hybrid.png)
 
 [Azure Stack hosting functions/web apps] - [express route or internet] -> [App Services that consume data from on-premises]
 [SQL Server Database on-premises] - [express route or internet] -> [Azure stretch database]
 
-Sample architecture:
-https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/expressroute-vpn-failover
-
-4-8 service icons
+[Hybrid sample architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/expressroute-vpn-failover).
 
 ### Highlighted services
 
@@ -118,11 +125,13 @@ https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybr
 
 ## Clickstream Analysis
 
-Engage with your customers and uncover insights from data generated by clickstream logs in real-time using Azure. Rapidly ingest incoming data through Event Hubs (replace with Kafka?), process with Spark streaming and Spark ML for predicting product recommendations, then use the Spark to Azure Cosmos DB connector to save the processed data to Cosmos DB for global distribution to your customers, wherever they are.
+Engage with your customers and uncover insights from data generated by clickstream logs in real-time, using Azure. Rapidly ingest incoming data through [Event Hubs](https://docs.microsoft.com/azure/event-hubs/) (or leverage [Apache Kafka](https://docs.microsoft.com/azure/hdinsight/kafka/apache-kafka-get-started)), process it with [Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql) streaming and Spark ML for predicting product recommendations, then use the Spark to [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/) connector to save the processed data to Cosmos DB for global distribution to your customers, wherever they are.
+
+<br>
+
+![Clickstream Analytics](./images/implementation-example_clickstream-analytics.png)
 
 Source (web/mobile) --> Event Hubs or Apache Kafka --> Apache Spark on HDInsight (Spark ML) -- Spark Connector --> Cosmos DB --> web/mobile apps for personalized product recommendations
-
-4-8 service icons
 
 ### Highlighted services
 
@@ -146,22 +155,23 @@ Source (web/mobile) --> Event Hubs or Apache Kafka --> Apache Spark on HDInsight
 
 ## Business Intelligence
 
-Azure offers a rich data and analytics platform so you can build scalable BI and reporting solutions. Create rich, interactive reports with Power BI by having it connect to Azure Analysis Services, which uses a highly optimized in-memory engine to provide responses to queries against user-friendly semantic models within a fraction of a second. The underlying data is provided by Azure SQL Data Warehouse, acting as a central repository of integrated data from one or more disparate sources.
+Azure offers a rich data and analytics platform so you can build scalable BI and reporting solutions. Create rich, interactive reports with [Power BI](https://docs.microsoft.com/power-bi/) by having it connect to [Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-overview/), which uses a highly optimized in-memory engine to provide responses to queries against user-friendly semantic models, within a fraction of a second. The underlying data is provided by [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is), which acts as a central repository of integrated data from one or more disparate sources.
+
+<br>
+
+![Business Intelligence](./images/implementation-example_business-intelligence.png)
 
 Source data --> SQL Data Warehouse --> Azure Analysis Services --> Power BI
 
------------------------------------------
+     -----------------------------------------
     Azure Data Factory drives the process
------------------------------------------
-
-4-8 service icons
 
 ### Highlighted services
 
 * [Power BI](https://docs.microsoft.com/power-bi/)
-* [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/)
+* [Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-overview)
 * [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
-* [Azure Data Factory]()
+* [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/)
 
 ### In this guide
 
@@ -178,7 +188,11 @@ Source data --> SQL Data Warehouse --> Azure Analysis Services --> Power BI
 
 ## Intelligent Applications
 
-Quickly add intelligence to your applications with Cognitive Services, and coordinate automated interactions using Azure Bot Service. This can save you months of creating and refining sophisticated algorithms to naturally interact with your users through speech, text, vision, knowledge, and search capabilities.
+Quickly add intelligence to your applications with [Cognitive Services](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=cognitive), and coordinate automated interactions using [Azure Bot Service](https://docs.microsoft.com/bot-framework/bot-service-overview-introduction). This can save you months of creating and refining sophisticated algorithms to naturally interact with your users through speech, text, vision, knowledge, and search capabilities.
+
+<br>
+
+![Intelligent Applications](./images/implementation-example_intelligent-applications.png)
 
 Azure Active Directory B2C   Cognitive Services 
    ^                              ^ 
@@ -189,15 +203,13 @@ Web/mobile app <--> Azure Bot Service --> Azure SQL Database
    v 
 Custom Speech Service 
 
-4-8 service icons
-
 ### Highlighted services
 
 * [Azure App Service](https://docs.microsoft.com/azure/app-service/)
 * [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
 * [Azure Bot Service](https://docs.microsoft.com/bot-framework/bot-service-overview-introduction)
 * [Custom Speech Service](https://docs.microsoft.com/azure/cognitive-services/custom-speech-service/cognitive-services-custom-speech-home)
-* [Azure Cognitive Services](https://azure.microsoft.com/services/cognitive-services)
+* [Azure Cognitive Services](https://docs.microsoft.com/en-us/azure/#pivot=products&panel=cognitive)
 * [Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c)
 
 ### In this guide
@@ -212,20 +224,22 @@ Custom Speech Service
 
 ## Data Warehousing
 
-Store data coming in from multiple sources into Azure Data Lake in their native format. SQL Data Warehouse can directly query against the data with a combination of external tables and schema on read capabilities through PolyBase. Use Azure Data Factory to store the data you need within your warehouse, and quickly analyze and visualize the combined data with Power BI.
+Store data coming in from multiple sources into [Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview), in their native format. [SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is) can directly query against the data with a combination of external tables and schema on read capabilities through [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/get-started-with-polybase). Use [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/) to store the data you need within your warehouse, and quickly analyze and visualize the combined data with [Power BI](https://docs.microsoft.com/power-bi/).
+
+<br>
+
+![Data Warehousing](./images/implementation-example_data-warehousing.png)
 
 Multiple data sources (IoT, logs, internal sources, social media) --> Azure Data Lake Store --> SQL Data Warehouse --> Power BI 
                                                                       ----------------------------- 
                                                                         Orchestration: PolyBase/ADF 
                                                                       ----------------------------- 
 
-4-8 service icons
-
 ### Highlighted services
 
-* [Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/)
+* [Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-overview)
 * [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
-* [Azure Data Factory](https://github.com/ZoinerTejada/azure-data-guide/blob/master/data-guide)
+* [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/)
 * [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/get-started-with-polybase)
 * [Power BI](https://docs.microsoft.com/power-bi/)
 
@@ -244,17 +258,19 @@ Multiple data sources (IoT, logs, internal sources, social media) --> Azure Data
     * [Data transfer](./technology-choices/data-transfer.md)
     * [Analysis, Visualizations, & Reporting](./technology-choices/analysis-visualizations-reporting.md)
 
-## ETL
+## Extract, Transform, Load (ETL)
 
-Capture web application logs and custom telemetry with Application Insights, and create, schedule, and manage your ETL data pipeline using Azure Data Factory. Deploy your SSIS packages to Azure with the Azure-SSIS integration runtime (IR) in Azure Data Factory to apply data transformation as a step in the ETL pipeline before loading the transformed data into Azure SQL Database.
+Capture web application logs and custom telemetry with [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview), and create, schedule, and manage your ETL data pipeline using [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/). Deploy your SSIS packages to Azure--with the [Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) (IR) in Azure Data Factory--to apply data transformation as a step in the ETL pipeline, before loading the transformed data into [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/).
+
+<br>
+
+![ETL](./images/implementation-example_etl.png)
 
 Application Insights --> Blob Storage --> Azure Data Factory (transform with SSIS packages and load transformed data to destination) --> Azure SQL Database
 
-4-8 service icons
-
 ### Highlighted services
 
-* [Azure Data Factory](https://github.com/ZoinerTejada/azure-data-guide/blob/master/data-guide)
+* [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/)
 * [Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
 * [Azure Storage blobs](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
 * [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)
@@ -276,7 +292,6 @@ Application Insights --> Blob Storage --> Azure Data Factory (transform with SSI
 This guide is structured so that your entry point to the content can be at the level of the common architecture, the pipeline pattern, or the technology choices for a particular pipeline scenario. 
 
 At the end of each article a read next link is provided that you can follow to take a linear path through the content. In addition, links to alternate and related content are provided to guide you to material that provides additional perspective on the options, as well as provides links back up to the related parent topics and links to drill down into further detail. <!--This last sentence is confusing. What do you mean by links back up to the related parent topics? I looked at some docs and can't figure it out. Do you really need anything after options?-->
-
 
 ## <a name="wheretogo"></a>Where to go from here
 Read next:

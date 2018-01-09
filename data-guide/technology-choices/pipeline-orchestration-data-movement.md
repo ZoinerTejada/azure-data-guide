@@ -69,7 +69,7 @@ Answer the following questions to help you narrow down your choices, then use th
 
 ## <a name="wheretogo"></a>Where to go from here
 Read next:
-[Data Warehouse Solution Pattern](../pipeline-patterns/data-warehousing.md)
+[Data Warehouse Pipeline Pattern](../pipeline-patterns/data-warehousing.md)
 
 See also:
 
